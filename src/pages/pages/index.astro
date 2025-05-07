@@ -2,24 +2,110 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
-import { fetchPages } from "../../lib/api";
-import type { Page } from "../../types";
+import { fetchLinkHubs } from "../../lib/api";
+import type { LinkHub } from "../../types";
 
-const sections: Page[] = await fetchPages();
+const hubs: LinkHub[] = await fetchLinkHubs();
 ---
 
 <BaseLayout>
   <Header slot="header" />
-  <h1 slot="title">Home</h1>
+  <title slot="title">Link Hubs – Corrison</title>
 
-  {
-    sections.map((sec: Page) => (
-      <section class="mb-8">
-        <h2 class="text-2xl font-bold mb-2">{sec.title}</h2>
-        <p>{sec.content}</p>
-      </section>
-    ))
-  }
+  <div class="container mx-auto px-4 py-12">
+    <header class="mb-12 text-center">
+      <h1 class="text-4xl font-bold mb-4">Link Hubs</h1>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Collections of curated links to helpful resources and partners
+      </p>
+    </header>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      {
+        hubs.map((hub) => (
+          <a
+            href={`/linkhubs/${hub.slug}`}
+            class="group bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col h-full border border-gray-100 overflow-hidden"
+          >
+            <div class="p-8 flex flex-col h-full">
+              <div class="mb-4 text-blue-500">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-12 w-12"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
+                {hub.title}
+              </h3>
+              {hub.description && (
+                <p class="text-gray-600 mb-4">{hub.description}</p>
+              )}
+              <div class="mt-auto">
+                <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                  <span class="text-sm text-gray-500">
+                    {hub.links.length}{" "}
+                    {hub.links.length === 1 ? "link" : "links"}
+                  </span>
+                  <span class="text-blue-600 group-hover:translate-x-1 transition-transform duration-300 flex items-center">
+                    View Hub
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 ml-1"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+
+    {
+      hubs.length === 0 && (
+        <div class="text-center py-16 bg-gray-50 rounded-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-16 w-16 mx-auto mb-4 text-gray-300"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
+            />
+          </svg>
+          <h2 class="text-2xl font-semibold mb-2">No Link Hubs Found</h2>
+          <p class="text-gray-600">
+            Check back later for new collections or go to our home page.
+          </p>
+        </div>
+      )
+    }
+  </div>
 
   <Footer slot="footer" />
 </BaseLayout>

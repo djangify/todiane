@@ -11,24 +11,126 @@ const hub: LinkHub = await fetchLinkHub(slug);
 
 <BaseLayout>
   <Header slot="header" />
-  <section class="container mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold mb-6">{hub.title}</h1>
-    <ul class="space-y-2">
+  <title slot="title">{hub.title} – Corrison</title>
+
+  <section class="container mx-auto px-4 py-12 max-w-4xl">
+    <header class="mb-10 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">{hub.title}</h1>
       {
-        hub.links.map((link) => (
-          <li>
-            <a
-              href={link.url}
-              target="_blank"
-              rel="noopener"
-              class="text-blue-600 hover:underline"
-            >
-              {link.title}
-            </a>
-          </li>
-        ))
+        hub.description && (
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            {hub.description}
+          </p>
+        )
       }
-    </ul>
+    </header>
+
+    <div class="bg-white rounded-xl shadow-md p-8 mb-10">
+      {
+        hub.links.length > 0 ? (
+          <ul class="grid gap-4 md:grid-cols-2">
+            {hub.links.map((link) => (
+              <li>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener"
+                  class="flex items-center p-4 rounded-lg border border-gray-100 hover:bg-blue-50 hover:border-blue-200 transition-colors group"
+                >
+                  {link.icon_url ? (
+                    <img
+                      src={link.icon_url}
+                      alt=""
+                      class="w-10 h-10 mr-4 rounded-full"
+                    />
+                  ) : (
+                    <div class="w-10 h-10 mr-4 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </div>
+                  )}
+                  <div class="flex-grow">
+                    <span class="text-lg font-medium text-gray-900 group-hover:text-blue-600 transition-colors">
+                      {link.title}
+                    </span>
+                    <p class="text-xs text-gray-500 truncate">{link.url}</p>
+                  </div>
+                  <div class="ml-4 text-gray-400 group-hover:text-blue-500 transition-colors">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5 transform group-hover:translate-x-1 transition-transform"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  </div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div class="text-center py-12 text-gray-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-16 w-16 mx-auto mb-4 text-gray-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"
+              />
+            </svg>
+            <p>No links available in this hub yet.</p>
+          </div>
+        )
+      }
+    </div>
+
+    <div class="mt-12 text-center">
+      <a
+        href="/linkhubs"
+        class="inline-flex items-center text-blue-600 hover:text-blue-800"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5 mr-2"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Back to All Link Hubs
+      </a>
+    </div>
   </section>
+
   <Footer slot="footer" />
 </BaseLayout>
