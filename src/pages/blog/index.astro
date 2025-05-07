@@ -1,20 +1,28 @@
 ---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 import { fetchPosts } from "../../lib/api";
-const posts = await fetchPosts();
+import type { BlogPost } from "../../types";
+
+const posts: BlogPost[] = await fetchPosts();
 ---
 
-<html>
-  <head><title>Blog</title></head>
-  <body>
-    <h1>Blog</h1>
-    <ul>
-      {
-        posts.map((post) => (
-          <li>
-            <a href={`/blog/${post.slug}`}>{post.title}</a>
-          </li>
-        ))
-      }
-    </ul>
-  </body>
-</html>
+<BaseLayout>
+  <Header slot="header" />
+  <h1 slot="title">Blog</h1>
+
+  <ul class="space-y-4">
+    {
+      posts.map((post: BlogPost) => (
+        <li>
+          <a href={`/blog/${post.slug}`} class="text-blue-600 hover:underline">
+            {post.title}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <Footer slot="footer" />
+</BaseLayout>

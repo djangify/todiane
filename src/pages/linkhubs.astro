@@ -1,22 +1,33 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import { fetchLinks } from "../lib/api";
-const links = await fetchLinks();
+import type { LinkItem } from "../types";
+
+const links: LinkItem[] = await fetchLinks();
 ---
 
-<html>
-  <head><title>Links</title></head>
-  <body>
-    <h1>Link Hub</h1>
-    <ul>
-      {
-        links.map((link) => (
-          <li>
-            <a href={link.url} target="_blank" rel="noopener">
-              {link.label}
-            </a>
-          </li>
-        ))
-      }
-    </ul>
-  </body>
-</html>
+<BaseLayout>
+  <Header slot="header" />
+  <h1 slot="title">Link Hub</h1>
+
+  <ul class="space-y-2">
+    {
+      links.map((link: LinkItem) => (
+        <li>
+          <a
+            href={link.url}
+            target="_blank"
+            rel="noopener"
+            class="text-blue-600 hover:underline"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+
+  <Footer slot="footer" />
+</BaseLayout>

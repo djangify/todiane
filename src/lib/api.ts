@@ -1,6 +1,4 @@
-// src/lib/api.ts
-
-import type { BlogPost, LinkItem, PageSection } from '../types';
+import type { PageSection, BlogPost, LinkItem } from '../types';
 
 const API = import.meta.env.PUBLIC_API_BASE_URL;
 

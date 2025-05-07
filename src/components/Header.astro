@@ -1,0 +1,19 @@
+---
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/blog", label: "Blog" },
+  { href: "/linkhub", label: "Links" },
+];
+---
+
+<header class="bg-white shadow-md">
+  <nav class="container mx-auto p-4 flex space-x-4">
+    {
+      links.map((link) => (
+        <a href={link.href} class="text-gray-700 hover:text-blue-600">
+          {link.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>
