@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import type { Page } from "../types";
+import { fetchPages } from "../lib/api";
+
+const pages: Page[] = await fetchPages();
+---
+
+<BaseLayout>
+  <Header slot="header" />
+  <section class="container mx-auto px-4 py-12">
+    <h1 class="text-4xl font-bold mb-6">Our Pages</h1>
+    <div class="grid md:grid-cols-2 gap-6">
+      {
+        pages.map((page) => (
+          <a
+            href={`/pages/${page.slug}`}
+            class="block bg-white rounded shadow hover:shadow-lg overflow-hidden"
+          >
+            {page.hero_image && (
+              <img
+                src={page.hero_image}
+                alt={page.title}
+                class="w-full h-48 object-cover"
+              />
+            )}
+            <div class="p-4">
+              <h2 class="text-2xl font-semibold">{page.title}</h2>
+              {page.subtitle && <p class="text-gray-600">{page.subtitle}</p>}
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+  <Footer slot="footer" />
+</BaseLayout>
