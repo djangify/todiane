@@ -1,0 +1,39 @@
+---
+// src/pages/blog/[slug].astro
+
+export const prerender = false;
+
+import type { BlogPost } from "../../types";
+import { fetchPost } from "../../lib/api";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const slug = Astro.params.slug!;
+const post: BlogPost = await fetchPost(slug);
+---
+
+<BaseLayout>
+  <Header slot="header" />
+
+  <article class="prose mx-auto my-8">
+    <h1>{post.title}</h1>
+    <time datetime={post.published_at ?? ""}>
+      {new Date(post.published_at!).toLocaleDateString()}
+    </time>
+    <div set:html={post.content} />
+    {
+      post.youtube_url && (
+        <iframe
+          src={post.youtube_url}
+          title="YouTube video player"
+          width="560"
+          height="315"
+          allowfullscreen
+        />
+      )
+    }
+  </article>
+
+  <Footer slot="footer" />
+</BaseLayout>

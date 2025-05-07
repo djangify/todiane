@@ -6,11 +6,11 @@ import "../styles/global.css";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><slot name="title" /></title>
+    <title><slot name="title" /> – Corrison</title>
   </head>
   <body class="min-h-screen flex flex-col">
     <slot name="header" />
-    <main class="flex-grow container mx-auto p-4">
+    <main class="flex-grow">
       <slot />
     </main>
     <slot name="footer" />

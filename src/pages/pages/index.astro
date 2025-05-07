@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { fetchPages } from "../../lib/api";
+import type { Page } from "../../types";
+
+const sections: Page[] = await fetchPages();
+---
+
+<BaseLayout>
+  <Header slot="header" />
+  <h1 slot="title">Home</h1>
+
+  {
+    sections.map((sec: Page) => (
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold mb-2">{sec.title}</h2>
+        <p>{sec.content}</p>
+      </section>
+    ))
+  }
+
+  <Footer slot="footer" />
+</BaseLayout>
