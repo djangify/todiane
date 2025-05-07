@@ -1,19 +1,12 @@
 ---
-const links = [
-  { href: "/", label: "Home" },
-  { href: "/blog", label: "Blog" },
-  { href: "/linkhub", label: "Links" },
-];
+
 ---
 
-<header class="bg-white shadow-md">
-  <nav class="container mx-auto p-4 flex space-x-4">
-    {
-      links.map((link) => (
-        <a href={link.href} class="text-gray-700 hover:text-blue-600">
-          {link.label}
-        </a>
-      ))
-    }
+<header class="bg-white shadow">
+  <nav class="container mx-auto px-4 py-3 flex space-x-6">
+    <a href="/" class="hover:text-blue-600">Home</a>
+    <a href="/blog" class="hover:text-blue-600">Blog</a>
+    <a href="/pages" class="hover:text-blue-600">Pages</a>
+    <a href="/linkhubs" class="hover:text-blue-600">Links</a>
   </nav>
 </header>
