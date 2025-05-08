@@ -7,8 +7,8 @@ const footerLinks = [
     links: [
       { label: "Home", href: "/" },
       { label: "Blog", href: "/blog" },
-      { label: "Pages", href: "/pages" },
-      { label: "Links", href: "/linkhubs" },
+      { label: "About", href: "/about" },
+      { href: "/linkhubs", label: "My Work" },
     ],
   },
   {
@@ -60,8 +60,8 @@ const getSocialIcon = (icon: string) => {
 };
 ---
 
-<footer class="bg-gray-50 border-t">
-  <div class="container mx-auto px-4 py-12">
+<footer class="bg-gray-50 mx-auto text-center border-t">
+  <div class="container px-4 py-12">
     <!-- Top section with links -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
       <!-- Company info and logo -->
@@ -74,7 +74,7 @@ const getSocialIcon = (icon: string) => {
         </p>
 
         <!-- Social media links -->
-        <div class="flex space-x-4 mt-6">
+        <div class="flex space-x-4 mt-6 justify-center mx-auto w-full">
           {
             socialLinks.map((link) => (
               <a
@@ -119,13 +119,23 @@ const getSocialIcon = (icon: string) => {
     >
       <p>&copy; {year} Corrison Group. All rights reserved.</p>
       <div class="mt-4 md:mt-0">
-        <a href="/privacy" class="hover:text-blue-600 transition-colors"
-          >Privacy Policy</a
+        <a
+          href="https://www.djangify.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-blue-600 transition-colors"
         >
+          Developed by
+        </a>
         <span class="mx-2">•</span>
-        <a href="/terms" class="hover:text-blue-600 transition-colors"
-          >Terms of Service</a
+        <a
+          href="https://www.djangify.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="hover:text-blue-600 transition-colors"
         >
+          Djangify
+        </a>
       </div>
     </div>
   </div>
