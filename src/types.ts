@@ -15,6 +15,7 @@ export interface BlogPost {
 }
 
 /** Page model */
+/** Page model */
 export interface Page {
   title: string;
   slug: string;
@@ -27,6 +28,25 @@ export interface Page {
   order: number;
   created_at: string;
   updated_at: string;
+
+  // New fields for hero section
+  hero_title?: string;
+  hero_subtitle?: string;
+  hero_content?: string;
+
+  // Fields for feature section
+  has_feature_section: boolean;
+  feature_section_title?: string;
+  features?: PageFeature[];
+}
+
+/** PageFeature model */
+export interface PageFeature {
+  id: number;
+  title?: string;
+  content: string;
+  icon?: string;
+  order: number;
 }
 
 /** Link within a LinkHub */

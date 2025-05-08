@@ -2,65 +2,73 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { fetchLinkHubs } from "../lib/api";
-import type { LinkHub } from "../types";
+import { fetchPage } from "../lib/api";
+import type { Page } from "../types";
 
-const hubs: LinkHub[] = await fetchLinkHubs();
+// Fetch the "about" page data
+const page = await fetchPage("about");
 ---
 
 <BaseLayout>
   <Header slot="header" />
-  <title slot="title">Link Hubs – Corrison</title>
+  <title slot="title">{page.title} – Corrison</title>
 
-  <div class="container mx-auto px-4 py-12">
-    <header class="mb-12 text-center">
-      <h1 class="text-4xl font-bold mb-4">Link Hubs</h1>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Collections of curated links to helpful resources and partners
-      </p>
-    </header>
-
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-      {
-        hubs.map((hub) => (
-          <a
-            href={`/linkhubs/${hub.slug}`}
-            class="group bg-white rounded-lg shadow-md hover:shadow-xl transition duration-300 flex flex-col h-full border border-gray-100 overflow-hidden"
-          >
-            <div class="p-8 flex flex-col h-full">
-              <div class="mb-4 text-blue-500">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-12 w-12"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-                  />
-                </svg>
+  {/* Hero Section */}
+  {
+    page.hero_title && (
+      <section class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row items-center">
+            {page.hero_image && (
+              <div class="md:w-1/2 mb-8 md:mb-0">
+                <img
+                  src={page.hero_image}
+                  alt={page.hero_title}
+                  class="rounded-lg shadow-lg"
+                />
               </div>
-              <h3 class="text-2xl font-bold mb-3 group-hover:text-blue-600 transition-colors">
-                {hub.title}
-              </h3>
-              {hub.description && (
-                <p class="text-gray-600 mb-4">{hub.description}</p>
+            )}
+            <div class="md:w-1/2 md:pl-8">
+              <h1 class="text-4xl font-bold mb-4">{page.hero_title}</h1>
+              {page.hero_subtitle && (
+                <p class="text-xl text-gray-600 mb-6">{page.hero_subtitle}</p>
               )}
-              <div class="mt-auto">
-                <div class="flex justify-between items-center pt-4 border-t border-gray-100">
-                  <span class="text-sm text-gray-500">
-                    {hub.links.length}{" "}
-                    {hub.links.length === 1 ? "link" : "links"}
-                  </span>
-                  <span class="text-blue-600 group-hover:translate-x-1 transition-transform duration-300 flex items-center">
-                    View Hub
+              <div class="prose max-w-none" set:html={page.hero_content} />
+            </div>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
+  {/* Main Content */}
+  <div class="container mx-auto px-4 py-12">
+    {!page.hero_title && <h1 class="text-4xl font-bold mb-8">{page.title}</h1>}
+    {
+      page.subtitle && (
+        <p class="text-xl text-gray-600 max-w-3xl mb-8">{page.subtitle}</p>
+      )
+    }
+    <div class="prose max-w-none" set:html={page.content} />
+  </div>
+
+  {/* Feature Section (only if enabled) */}
+  {
+    page.has_feature_section && (
+      <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">
+            {page.feature_section_title}
+          </h2>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            {page.features &&
+              page.features.map((feature) => (
+                <div class="bg-white p-8 rounded-lg shadow-sm text-center">
+                  <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 ml-1"
+                      class="h-8 w-8 text-green-500"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -69,43 +77,24 @@ const hubs: LinkHub[] = await fetchLinkHubs();
                         stroke-linecap="round"
                         stroke-linejoin="round"
                         stroke-width="2"
-                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                        d={
+                          feature.icon ||
+                          "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        }
                       />
                     </svg>
-                  </span>
+                  </div>
+                  {feature.title && (
+                    <h3 class="text-xl font-semibold mb-3">{feature.title}</h3>
+                  )}
+                  <p class="text-gray-700">{feature.content}</p>
                 </div>
-              </div>
-            </div>
-          </a>
-        ))
-      }
-    </div>
-
-    {
-      hubs.length === 0 && (
-        <div class="text-center py-16 bg-gray-50 rounded-lg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-16 w-16 mx-auto mb-4 text-gray-300"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"
-            />
-          </svg>
-          <h2 class="text-2xl font-semibold mb-2">No Link Hubs Found</h2>
-          <p class="text-gray-600">
-            Check back later for new collections or go to our home page.
-          </p>
+              ))}
+          </div>
         </div>
-      )
-    }
-  </div>
+      </section>
+    )
+  }
 
   <Footer slot="footer" />
 </BaseLayout>
