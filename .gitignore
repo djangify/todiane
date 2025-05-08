@@ -22,6 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
-
+.htaccess/
 .vscode/
 .venv/
+stderr.log

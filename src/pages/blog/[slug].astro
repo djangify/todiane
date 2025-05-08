@@ -1,16 +1,22 @@
 ---
-// src/pages/blog/[slug].astro
-
-export const prerender = false;
-
 import type { BlogPost } from "../../types";
-import { fetchPost } from "../../lib/api";
+import { fetchPosts } from "../../lib/api";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 
-const slug = Astro.params.slug!;
-const post: BlogPost = await fetchPost(slug);
+// Generate all blog post routes at build time
+export async function getStaticPaths() {
+  const posts = await fetchPosts();
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+// The post is now passed as a prop from getStaticPaths
+const { post } = Astro.props;
 ---
 
 <BaseLayout>

@@ -1,9 +1,9 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import { fetchLinkHubs } from "../../lib/api";
-import type { LinkHub } from "../../types";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { fetchLinkHubs } from "../lib/api";
+import type { LinkHub } from "../types";
 
 const hubs: LinkHub[] = await fetchLinkHubs();
 ---
