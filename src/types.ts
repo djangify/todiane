@@ -15,7 +15,6 @@ export interface BlogPost {
 }
 
 /** Page model */
-/** Page model */
 export interface Page {
   title: string;
   slug: string;
@@ -49,21 +48,25 @@ export interface PageFeature {
   order: number;
 }
 
-/** Link within a LinkHub */
+/** Link with media capabilities model */
 export interface Link {
+  id: number;
   title: string;
   url: string;
   icon_url?: string;
+  media_type: 'link' | 'video' | 'pdf' | 'audio' | 'image';
+  media_type_display: string;
+  description?: string;
+  author?: string;
   order: number;
 }
 
 /** LinkHub model */
 export interface LinkHub {
+  id: number;
   title: string;
   slug: string;
   description?: string;
-  created_at: string;
-  is_published: boolean;
-  published_at?: string;
+  order: number;
   links: Link[];
 }

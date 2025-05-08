@@ -30,3 +30,4 @@ export function fetchLinkHubs(): Promise<LinkHub[]> {
 export function fetchLinkHub(slug: string): Promise<LinkHub> {
   return fetch(`${API}/api/v1/linkhubs/${slug}/`).then(r => check<LinkHub>(r, "link hub"));
 }
+
