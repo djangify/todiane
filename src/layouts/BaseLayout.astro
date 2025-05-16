@@ -24,12 +24,19 @@ const {
     <!-- Title -->
     <title>{title}</title>
 
-    <!-- Preload fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Open+Sans&display=swap"
       rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-…"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
 
     <!-- Open Graph / Social Media Meta Tags -->
@@ -46,7 +53,7 @@ const {
     <slot name="head" />
   </head>
   <body
-    class="min-h-screen flex flex-col font-sans antialiased text-gray-900 bg-gray-50"
+    class="min-h-screen flex flex-col font-sans antialiased text-gray-900 bg-slate-50"
   >
     <slot name="header" />
     <main class="flex-grow">

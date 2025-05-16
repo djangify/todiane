@@ -23,7 +23,7 @@ const { post } = Astro.props;
   <Header slot="header" />
   <title slot="title">{post.title} – Corrison</title>
 
-  <article class="container mx-auto px-4 py-12 max-w-4xl">
+  <article class="container mx-auto bg-white px-8 py-12 max-w-4xl">
     <!-- Header section -->
     <header class="mb-10">
       <h1 class="text-4xl md:text-5xl font-bold mb-6">{post.title}</h1>
@@ -126,7 +126,7 @@ const { post } = Astro.props;
           <a
             href={post.attachment}
             download
-            class="flex items-center text-blue-600 hover:text-blue-800"
+            class="flex items-center text-purple-600 hover:text-purple-800"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +156,7 @@ const { post } = Astro.props;
           href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`${Astro.url.origin}/blog/${post.slug}`)}`}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-gray-500 hover:text-blue-400 transition-colors"
+          class="text-gray-500 hover:text-purple-400 transition-colors"
         >
           <span class="sr-only">Share on Twitter</span>
           <svg
@@ -174,7 +174,7 @@ const { post } = Astro.props;
           href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(`${Astro.url.origin}/blog/${post.slug}`)}`}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-gray-500 hover:text-blue-600 transition-colors"
+          class="text-gray-500 hover:text-purple-600 transition-colors"
         >
           <span class="sr-only">Share on Facebook</span>
           <svg
@@ -193,7 +193,7 @@ const { post } = Astro.props;
           href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`${Astro.url.origin}/blog/${post.slug}`)}`}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-gray-500 hover:text-blue-700 transition-colors"
+          class="text-gray-500 hover:text-purple-700 transition-colors"
         >
           <span class="sr-only">Share on LinkedIn</span>
           <svg

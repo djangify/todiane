@@ -4,9 +4,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        sans: ['Merriweather', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
     },
+
   },
   plugins: [
     require('@tailwindcss/typography'),
