@@ -2,10 +2,12 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { fetchLinkHubs } from "../lib/api";
+import { fetchLinkHub } from "../lib/api";
 import type { LinkHub, Link } from "../types";
 
-const hubs: LinkHub[] = await fetchLinkHubs();
+// const hubs: LinkHub[] = await fetchLinkHubs();
+const hub: LinkHub = await fetchLinkHub("dclinkhubs");
+const hubs: LinkHub[] = [hub];
 
 // Helper function to render the appropriate media preview
 const renderMediaPreview = (link: Link) => {
@@ -142,7 +144,7 @@ const getActionText = (mediaType: string) => {
 
 <BaseLayout>
   <Header slot="header" />
-  <title slot="title">Media Portfolio – Corrison</title>
+  <title slot="title">Media Portfolio – Diane Corriette</title>
 
   <div class="container mx-auto px-4 py-12">
     {

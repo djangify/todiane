@@ -3,21 +3,21 @@ const year = new Date().getFullYear();
 
 const footerLinks = [
   {
-    title: "Pages",
+    title: "Websites",
     links: [
       { label: "Home", href: "/" },
-      { label: "Blog", href: "/blog" },
+      { label: "Links", href: "/dclinkhubs" },
     ],
   },
   {
-    title: "Connect",
+    title: "Projects",
     links: [
       { label: "Contact Us", href: "/contact" },
-      { href: "/linkhubs", label: "Demos" },
+      { href: "/dclinkhubs", label: "Demos" },
     ],
   },
   {
-    title: "Legal",
+    title: "SOMETHING",
     links: [
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },
@@ -26,10 +26,18 @@ const footerLinks = [
 ];
 
 const socialLinks = [
-  { label: "Twitter", href: "https://twitter.com/", icon: "twitter" },
+  { label: "Twitter", href: "https://x.com/djangify", icon: "twitter" },
   { label: "Facebook", href: "https://facebook.com/", icon: "facebook" },
-  { label: "LinkedIn", href: "https://linkedin.com/", icon: "linkedin" },
-  { label: "Instagram", href: "https://instagram.com/", icon: "instagram" },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/todiane",
+    icon: "linkedin",
+  },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/dicorriette",
+    icon: "instagram",
+  },
 ];
 
 // Helper function to render the appropriate social icon
@@ -64,10 +72,11 @@ const getSocialIcon = (icon: string) => {
       <!-- Company info and logo -->
       <div class="col-span-2 md:col-span-1">
         <div class="mb-4">
-          <a href="/" class="text-teal-700 font-bold text-xl">Corrison</a>
+          <a href="/" class="text-teal-700 font-bold text-xl">Diane Corriette</a
+          >
         </div>
         <p class="text-gray-600 mb-4">
-          Providing innovative digital solutions for your business needs.
+          Full-Stack Software Developer & Tech VA
         </p>
 
         <!-- Social media links -->
@@ -114,7 +123,7 @@ const getSocialIcon = (icon: string) => {
     <div
       class="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500"
     >
-      <p>&copy; {year} Corrison Group. All rights reserved.</p>
+      <p>&copy; {year} Djangify. All rights reserved.</p>
       <div class="mt-4 md:mt-0">
         <a
           href="https://www.djangify.com"
