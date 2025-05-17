@@ -164,7 +164,7 @@ const getActionText = (mediaType: string) => {
                 href={link.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow overflow-hidden flex flex-col h-full border border-gray-100 group"
+                class="bg-white rounded-lg shadow-sm hover:shadow-xl transition-shadow overflow-hidden flex flex-col h-full border border-gray-100 group"
               >
                 {/* Media Preview - Different for each media type */}
                 <Fragment set:html={renderMediaPreview(link)} />
@@ -183,7 +183,7 @@ const getActionText = (mediaType: string) => {
                     )}
                   </div>
 
-                  <h3 class="text-xl font-semibold mb-2 group-hover:text-purple-600 transition-colors">
+                  <h3 class="text-xl font-semibold mb-2 group-hover:text-teal-700 transition-colors">
                     {link.title}
                   </h3>
 
@@ -192,7 +192,7 @@ const getActionText = (mediaType: string) => {
                   )}
 
                   <div class="mt-auto pt-4 border-t border-gray-100 flex justify-between items-center">
-                    <span class="text-purple-600 font-medium group-hover:translate-x-1 transition-transform duration-300 flex items-center">
+                    <span class="text-teal-700 font-medium group-hover:translate-x-1 transition-transform duration-300 flex items-center">
                       {getActionText(link.media_type)}
 
                       <svg
