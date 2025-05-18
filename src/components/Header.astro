@@ -1,7 +1,10 @@
 ---
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/dclinkhubs", label: "Portfolio" },
+  { href: "#top", label: "Top" },
+  { href: "#current", label: "Current Role" },
+  { href: "#previous", label: "Experience" },
+  { href: "#about", label: "About" },
+  { href: "#links", label: "Links" },
 ];
 ---
 
@@ -71,15 +74,22 @@ const links = [
     </div>
   </div>
 </header>
-
 <script>
   // Mobile menu toggle functionality
   const mobileMenuButton = document.getElementById("mobile-menu-button");
   const mobileMenu = document.getElementById("mobile-menu");
 
   if (mobileMenuButton && mobileMenu) {
+    // 1) toggle open/close when you tap the “hamburger”
     mobileMenuButton.addEventListener("click", () => {
       mobileMenu.classList.toggle("hidden");
+    });
+
+    // 2) automatically close whenever you tap any link inside the mobile menu
+    mobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
     });
   }
 </script>
