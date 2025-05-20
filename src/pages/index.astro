@@ -27,8 +27,9 @@ const page: Page = await fetchPage("todiane");
 							<div class="md:w-1/2 mb-8 md:mb-0">
 								<img
 									src={page.hero_image}
-									alt={page.hero_title}
-									class="rounded-lg"
+									alt="Diane's work from home setup "
+									width="450"
+									height="450"
 								/>
 							</div>
 						)}
@@ -92,7 +93,7 @@ const page: Page = await fetchPage("todiane");
 									<div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
 										{feature.icon ? (
 											<i
-												class={`text-2xl text-slate-500 ${feature.icon}`}
+												class={`text-2xl text-teal-700 ${feature.icon}`}
 												aria-hidden="true"
 											/>
 										) : (

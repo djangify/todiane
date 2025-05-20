@@ -18,7 +18,9 @@
   /* Any custom utility classes */
 }
 
-@layer base {
+
+
+/>@layer base {
   html {
     font-size: 18px;
   }
