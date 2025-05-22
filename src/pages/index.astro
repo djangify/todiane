@@ -4,6 +4,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import { getHeroicon } from "../lib/heroicons";
 
 // Data loaders
 import { fetchPage } from "../lib/api";
@@ -89,12 +90,14 @@ const page: Page = await fetchPage("todiane");
 					<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 						{page.features &&
 							page.features.map((feature) => (
-								<div class="bg-white p-8 rounded-lg text-center border-1 border-teal-700">
+								<div class="bg-white border-1 border-teal-700 p-8 rounded-lg text-center">
 									<div class="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
 										{feature.icon ? (
-											<i
-												class={`text-2xl text-teal-700 ${feature.icon}`}
-												aria-hidden="true"
+											<Fragment
+												set:html={getHeroicon(
+													feature.icon,
+													"h-8 w-8 text-slate-500",
+												)}
 											/>
 										) : (
 											<svg

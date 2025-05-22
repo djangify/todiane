@@ -34,6 +34,8 @@ export interface Page {
   hero_content?: string;
   hero_button_text?: string;
   hero_button_url?: string;
+  hero_image_src?: string;
+  hero_right_content?: string;
 
   // Middle & end sections 
   middle_section_title?: string;
@@ -55,14 +57,13 @@ export interface PageFeature {
   order: number;
 }
 
-
 /** Link with media capabilities model */
 export interface Link {
   id: number;
   title: string;
   url: string;
-  icon_url?: string;
-  media_type: 'link' | 'video' | 'pdf' | 'audio' | 'image';
+  icon?: string;
+  media_type: 'link' | 'video' | 'pdf' | 'audio' | 'image' | 'donation';
   media_type_display: string;
   description?: string;
   author?: string;
@@ -75,7 +76,7 @@ export interface LinkHub {
   title: string;
   slug: string;
   description?: string;
+  background_image?: string;
   order: number;
   links: Link[];
 }
-
