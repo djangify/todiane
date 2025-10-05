@@ -1,0 +1,42 @@
+.blog-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin: 1rem 0 1.5rem 1.5rem;
+  padding-left: 1.25rem;
+  list-style-position: outside;
+}
+
+.blog-content ul {
+  list-style-type: disc;
+}
+
+.blog-content ol {
+  list-style-type: decimal;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1.5rem 0 1rem;
+}
+
+.blog-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 1rem 0 0.75rem;
+}
+
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  display: block;
+}

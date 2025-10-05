@@ -32,7 +32,7 @@ class PostAdminForm(forms.ModelForm):
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     form = PostAdminForm
-    exclude = ["introduction"]  # hides the introduction field
+    # exclude = ["introduction"]  # hides the introduction field
     list_display = [
         "title",
         "category",
