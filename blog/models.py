@@ -96,6 +96,8 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
+        from django.urls import reverse
+
         return reverse("blog:detail", kwargs={"slug": self.slug})
 
     def save(self, *args, **kwargs):
