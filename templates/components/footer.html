@@ -22,7 +22,7 @@
         <ul class="space-y-1">
           <li><a href="{% url 'core:home' %}" class="hover:text-[--color-brand-secondary] transition">Home</a></li>
           
-          <li><a href="{% url 'core:about' %}" class="hover:text-[--color-brand-secondary] transition">About</a></li>
+          {% comment %} <li><a href="{% url 'core:about' %}" class="hover:text-[--color-brand-secondary] transition">About</a></li> {% endcomment %}
           
         </ul>
       </div>
@@ -33,7 +33,8 @@
         <ul class="space-y-1">
           
           <li><a href="{% url 'blog:list' %}" class="hover:text-[--color-brand-secondary] transition">Blog</a></li>
-          <li><a href="{% url 'core:support_policy' %}" class="hover:text-[--color-brand-secondary] transition">Support</a></li>
+          <li><a href="{% url 'core:pdf_creation' %}" class="hover:text-[--color-brand-secondary] transition">PDF Creation</a></li>
+          <li><a href="{% url 'core:digital_marketing_specialist' %}" class="hover:text-[--color-brand-secondary] transition">Digital Marketing</a></li>
           
         </ul>
       </div>
@@ -46,7 +47,7 @@
           <li><a href="{% url 'core:ai_writing_policy' %}" class="hover:text-[--color-brand-secondary] transition">AI Policy</a></li>
           <li><a href="{% url 'core:cookie_policy' %}" class="hover:text-[--color-brand-secondary] transition">Cookie Policy</a></li>
           <li><a href="{% url 'core:privacy_policy' %}" class="hover:text-[--color-brand-secondary] transition">Privacy Policy</a></li>
-          <li><a href="{% url 'core:terms_conditions' %}" class="hover:text-[--color-brand-secondary] transition">Terms & Conditions</a></li>
+          <li><a href="{% url 'core:affiliate_policy' %}" class="hover:text-[--color-brand-secondary] transition">Affiliate Policy</a></li>
         </ul>
       </div>
     </div>

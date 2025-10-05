@@ -39,13 +39,13 @@ class SupportForm(forms.Form):
         ack_subject = "We’ve received your support request"
         ack_message = (
             f"Hi {cleaned['name']},\n\n"
-            "Thank you for reaching out to AI Marketing Platform Support. "
+            "Thank you for reaching out to Diane Corriette's Support. "
             "Your request has been received and our team will respond within 48 hours (Mon–Fri).\n\n"
             "Here’s a copy of your message:\n"
             f"Subject: {cleaned['subject']}\n"
             f"Message: {cleaned['message']}\n\n"
             "Best regards,\n"
-            "The AI Marketing Platform Support Team"
+            "Diane Corriette"
         )
         send_mail(
             ack_subject,

@@ -53,7 +53,7 @@ def category_list(request, slug):
         "posts": posts,
         "categories": Category.objects.all(),
         "title": f"{category.name} - Blog",
-        "meta_description": f"Latest blog and updates about {category.name} from AI Marketing Platform",
+        "meta_description": f"Latest blog and updates about {category.name} from Diane Coriette",
     }
 
     return render(request, "blog/category.html", context)

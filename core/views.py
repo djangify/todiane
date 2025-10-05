@@ -15,70 +15,24 @@ def home(request):
     return render(request, "core/home.html")
 
 
-def about(request):
-    """About page view."""
-    return render(request, "core/about.html")
-
-
-def policies_index_view(request):
-    """View function for the policies index page."""
-    breadcrumbs = [{"title": "Policies", "url": None}]
-    template_name = "core/policy/policies_index.html"
-    return render(request, template_name, {"breadcrumbs": breadcrumbs})
-
-
 def privacy_view(request):
-    breadcrumbs = [
-        {"title": "Policies", "url": reverse("core:policies_index")},
-        {"title": "Privacy Policy", "url": None},
-    ]
-    template_name = "core/policy/privacy.html"
-    return render(request, template_name, {"breadcrumbs": breadcrumbs})
+    """Display the Privacy Policy page."""
+    return render(request, "core/policy/privacy.html")
 
 
 def cookie_view(request):
-    breadcrumbs = [
-        {"title": "Policies", "url": reverse("core:policies_index")},
-        {"title": "Cookie Policy", "url": None},
-    ]
-    template_name = "core/policy/cookies.html"
-    return render(request, template_name, {"breadcrumbs": breadcrumbs})
+    """Display the Cookie Policy page."""
+    return render(request, "core/policy/cookies.html")
 
 
 def affiliate_view(request):
-    breadcrumbs = [
-        {"title": "Affiliate", "url": reverse("core:policies_index")},
-        {"title": "Affiliate Policy", "url": None},
-    ]
-    template_name = "core/policy/affiliate.html"
-    return render(request, template_name, {"breadcrumbs": breadcrumbs})
-
-
-def terms_view(request):
-    breadcrumbs = [
-        {"title": "Policies", "url": reverse("core:policies_index")},
-        {"title": "Terms & Conditions", "url": None},
-    ]
-    template_name = "core/policy/terms.html"
-    return render(request, template_name, {"breadcrumbs": breadcrumbs})
+    """Display the Affiliate Policy page."""
+    return render(request, "core/policy/affiliate.html")
 
 
 def ai_writing_view(request):
-    breadcrumbs = [
-        {"title": "Policies", "url": reverse("core:policies_index")},
-        {"title": "AI Writing Policy", "url": None},
-    ]
-    template_name = "core/policy/ai-writing-policy.html"
-    return render(request, template_name, {"breadcrumbs": breadcrumbs})
-
-
-def support_view(request):
-    breadcrumbs = [
-        {"title": "Policies", "url": reverse("core:policies_index")},
-        {"title": "Support Policy", "url": None},
-    ]
-    template_name = "core/policy/support.html"
-    return render(request, template_name, {"breadcrumbs": breadcrumbs})
+    """Display the AI Writing Policy page."""
+    return render(request, "core/policy/ai-writing-policy.html")
 
 
 def handler500(request):
