@@ -5,5 +5,5 @@ app_name = "prompt_generator"
 
 urlpatterns = [
     path("", views.generator_list, name="generator_list"),
-    path("<int:pk>/", views.generator_detail, name="generator_detail"),
+    path("<uuid:pk>/", views.generator_detail, name="generator_detail"),
 ]

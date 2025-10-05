@@ -1,0 +1,60 @@
+{% load static %}
+<nav class="border-b border-[color:var(--color-brand-primary)] sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center">
+      <img src="{% static 'images/amp-logo-icon.webp' %}" alt="AI Marketing Platform Logo" class="h-8">
+       <span class="pl-2 hidden sm:inline-block text-[color:var(--color-brand-primary)] font-medium uppercase">To Diane</span>
+    </a>
+
+    <!-- Desktop Navigation -->
+    <ul class="hidden sm:flex items-center gap-6 text-sm font-medium uppercase ">
+      <li><a href="/" class="text-[color:var(--color-brand-primary)] hover:text-[color:var(--color-brand-accent)] transition">Home</a></li>
+      <li><a href="/#about" class="text-[color:var(--color-brand-primary)] hover:text-[color:var(--color-brand-accent)] transition">About</a></li>
+      <li><a href="{% url 'blog:list' %}" class="text-[color:var(--color-brand-primary)] hover:text-[color:var(--color-brand-accent)] transition">Blog</a></li>
+      
+    </ul>
+
+    <!-- Right Section -->
+    <div class="flex items-center gap-4">
+      <!-- Projects Button -->
+      <a href="#"
+         class="uppercase border-2 border-[color:var(--color-brand-primary)] text-[color:var(--color-brand-primary)] text-xs sm:text-sm px-3 py-1.5 rounded font-semibold hover:bg-[color:var(--color-brand-primary)] hover:text-white transition">
+        Projects
+        <i class="fa-solid fa-angles-right ml-2"></i>
+      </a>
+
+      
+      <!-- Hamburger (visible on mobile) -->
+      <button id="menu-toggle" aria-label="Toggle menu"
+              class="sm:hidden flex flex-col justify-between w-8 h-6 focus:outline-none">
+        <span class="block h-0.5 w-full bg-[color:var(--color-brand-primary)] rounded"></span>
+        <span class="block h-0.5 w-full bg-[color:var(--color-brand-primary)] rounded"></span>
+        <span class="block h-0.5 w-full bg-[color:var(--color-brand-primary)] rounded"></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu"
+       class="hidden flex-col items-center bg-[color:var(--color-brand-light)] text-[color:var(--color-brand-primary)] py-4 space-y-3 border-t border-[color:var(--color-brand-primary)] sm:hidden">
+
+    <a href="/" class="block w-full text-center py-2 hover:text-[color:var(--color-brand-accent)] transition">Home</a>
+    <a href="/#about" class="block w-full text-center py-2 hover:text-[color:var(--color-brand-accent)] transition">About</a>
+    <a href="{% url 'blog:list' %}" class="block w-full text-center py-2 hover:text-[color:var(--color-brand-accent)] transition">Blog</a>
+    
+  </div>
+
+  <!-- Toggle Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    });
+  </script>
+</nav>

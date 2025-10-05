@@ -15,19 +15,7 @@
     {% endif %}
 
   <!-- Header -->
-  <header class="bg-white shadow">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="{% url 'prompt_generator:generator_list' %}" class="text-xl font-bold text-gray-800">
-        Diane Corriette
-      </a>
-      <nav class="space-x-6">
-        <a href="{% url 'prompt_generator:generator_list' %}" class="text-gray-600 hover:text-gray-900">Home</a>
-        <a href="{% url 'prompt_templates:template_list' %}" class="text-gray-600 hover:text-gray-900">Templates</a>
-        <a href="#" class="text-gray-600 hover:text-gray-900">Contact</a>
-        <a href="{% url 'accounts:dashboard' %}" class="text-gray-600 hover:text-gray-900">Dashboard</a>
-      </nav>
-    </div>
-  </header>
+  {% include 'components/navbar.html' %}
 
   <!-- Main Content -->
   <main class="flex-grow max-w-7xl mx-auto px-4 py-8">
@@ -35,16 +23,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-white border-t py-6 mt-8">
-    <div class="max-w-7xl mx-auto px-4 text-sm text-gray-500 flex justify-between">
-      <p>&copy; {{ now|date:"Y" }} Diane Corriette. All rights reserved.</p>
-      <div class="space-x-4">
-        <a href="#" class="hover:text-gray-700">About</a>
-        <a href="#" class="hover:text-gray-700">Contact</a>
-        <a href="#" class="hover:text-gray-700">Privacy Policy</a>
-      </div>
-    </div>
-  </footer>
+ {% include 'components/footer.html' %}
 
   <!-- Scripts -->
     <script src="{% static 'js/messages.js' %}"></script>
