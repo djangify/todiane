@@ -12,6 +12,27 @@ urlpatterns = [
         TemplateView.as_view(template_name="core/pdf-creation.html"),
         name="pdf_creation",
     ),
+    # Project pages
+    path(
+        "portfolio",
+        TemplateView.as_view(template_name="core/projects/portfolio.html"),
+        name="portfolio",
+    ),
+    path(
+        "tracker",
+        TemplateView.as_view(template_name="core/projects/tracker.html"),
+        name="tracker",
+    ),
+    path(
+        "stream",
+        TemplateView.as_view(template_name="core/projects/stream.html"),
+        name="stream",
+    ),
+    path(
+        "posterpalace",
+        TemplateView.as_view(template_name="core/projects/posterpalace.html"),
+        name="posterpalace",
+    ),
     path(
         "digital-marketing-specialist",
         TemplateView.as_view(template_name="core/digital-marketing-specialist.html"),
