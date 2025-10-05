@@ -1,37 +1,137 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{% block title %}Prompt Library{% endblock %}</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="bg-gray-100 text-gray-900 font-sans flex flex-col min-h-screen">
-  {% if messages %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Description -->
+    <meta name="description" content="{% block meta_description %}Diane Corriette - Digital Marketing Specalist{% endblock %}">
+
+    <meta name="keywords" content="{% block meta_keywords %}Digital Marketing Specalist, Diane Corriette,   All-in-one marketing platforms,  Digital marketing PDFs for small business{% endblock %}">
+
+    {% block open_graph_tags %}
+    <meta property="fb:app_id" content="2433552923679047" />
+    <meta property="og:title" content="Diane Corriette - Digital Marketing Specialist"
+      property="og:description"
+      content="Digital Marketing Specalist, Small business marketing systems, AI search readiness guide, All-in-one marketing platforms, Tokenization, Lifestyle business"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{% static 'images/aimarketingplatform-logo.png' %}" />
+    {% endblock %}
+
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"
+    />
+    
+  
+    <link rel="stylesheet" href="{% static 'css/output.css' %}" />
+    
+    <link rel="icon" type="image/ico" href="{% static 'images/favicon.ico' %}">
+    <title>{% block title %}Techical Virtual Assistant / Web Developer{% endblock %}</title>
+    {% block extra_meta %}{% endblock %}
+  </head>
+  <body class="text-lg 2xl:max-w-screen-2xl 2xl:mx-auto 2xl:bg-primary">
+     {% if messages %}
       <section aria-label="Notifications" role="alert">
           {% include 'partials/_messages.html' %}
       </section>
     {% endif %}
+   
+  
+      {% include 'components/navbar.html' %}
 
-  <!-- Header -->
-  {% include 'components/navbar.html' %}
+    {% block content %}
+    {% endblock %}
 
-  <!-- Main Content -->
-  <main class="flex-grow max-w-7xl mx-auto px-4 py-8">
-    {% block content %}{% endblock %}
-  </main>
+    {% include 'components/footer.html' %}
 
-  <!-- Footer -->
- {% include 'components/footer.html' %}
-
-  <!-- Scripts -->
-    <script src="{% static 'js/messages.js' %}"></script>
-    <script src="{% static 'js/favourite-prompt.js' %}"></script>
-    <script src="{% static 'js/favourite-template.js' %}"></script>
- 
     
-    {% block scripts %}{% endblock %}
+    <!-- Cookie Consent -->
+   <aside id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-labelledby="cookie-title">
+    <div class="cookie-container">
+      <div class="cookie-text">
+        <h2 id="cookie-title" class="sr-only">Cookie Consent</h2>
+        We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. 
+        <a href="{% url 'core:cookie_policy' %}" class="cookie-link">Cookie Policy</a>
+      </div>
+      <div class="cookie-actions">
+        <button id="accept-cookies" class="cookie-btn accept">Accept</button>
+        <button id="decline-cookies" class="cookie-btn decline">Decline</button>
+      </div>
+    </div>
+  </aside>  
+<!-- Scripts -->
+{% block extra_js %}
+<script src="{% static 'js/app.js' %}"></script>
+<script src="{% static 'js/messages.js' %}"></script>
+<script src="{% static 'js/catergory-filter.js' %}"></script>
+<script src="{% static 'js/accordion.js' %}"></script>
+<script src="{% static 'js/favourite-template.js' %}"></script>
+<script src="{% static 'js/favourite-prompt.js' %}"></script>
 
-</body>
+ <!-- Cookie Consent Script (show once, then never again) -->
+<!-- Cookie Consent Script (works first time, then gone) -->
+<script>
+(function () {
+  function ready(fn) {
+    if (document.readyState !== 'loading') { fn(); }
+    else { document.addEventListener('DOMContentLoaded', fn); }
+  }
+
+  ready(function () {
+    try {
+      var banner = document.getElementById('cookie-banner');
+      if (!banner) return;
+
+      var accept = document.getElementById('accept-cookies');
+      var decline = document.getElementById('decline-cookies');
+
+      // If already decided, remove banner entirely and bail
+      var decision = null;
+      try { decision = localStorage.getItem('cookieConsent'); } catch (e) {}
+      if (decision === 'accepted' || decision === 'declined') {
+        if (banner.parentNode) banner.parentNode.removeChild(banner);
+        return;
+      }
+
+      // Show the banner (ignore classes; force visible)
+      banner.style.display = 'block';
+      banner.setAttribute('aria-hidden', 'false');
+
+      function hideAndRemember(value) {
+        try { localStorage.setItem('cookieConsent', value); } catch (e) {}
+        // Remove from DOM so it *cannot* linger due to CSS
+        if (banner && banner.parentNode) {
+          banner.parentNode.removeChild(banner);
+        }
+      }
+
+      if (accept) accept.addEventListener('click', function (e) {
+        e.preventDefault();
+        hideAndRemember('accepted');
+      });
+
+      if (decline) decline.addEventListener('click', function (e) {
+        e.preventDefault();
+        hideAndRemember('declined');
+      });
+    } catch (err) {
+      // Fail-closed: if something unexpected happens, don't block the page
+      console.error('Cookie banner error:', err);
+    }
+  });
+})();
+</script>
+
+
+
+
+{% endblock %}
+
+  </body>
 </html>

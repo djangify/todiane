@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+/* Global typography and link defaults */
+@layer base {
+  h1 {
+    @apply text-4xl font-bold text-[--color-brand-primary];
+  }
+
+  h2 {
+    @apply text-3xl font-semibold text-[--color-brand-primary];
+  }
+
+  p {
+    @apply text-lg text-[--color-font-main] leading-relaxed;
+  }
+
+  a {
+    @apply text-[--color-brand-secondary] hover:text-[--color-brand-accent] transition-colors;
+  }
+}
+
+/* Tailwind v4 theme color variables */
+@theme {
+  /* Core brand palette */
+  --color-brand-primary: #4c1d95;
+  /* dark violet (main brand) */
+  --color-brand-secondary: #216a95;
+  /* rose (secondary) */
+  --color-brand-accent: #9ba3b4;
+  /* gray accent */
+  --color-brand-dark: #7c3aed;
+  /* violet for hover and emphasis */
+  --color-brand-light: #f8fafc;
+  /* soft light background */
+
+  /* Font */
+  --color-font-main: #222222;
+  /* primary text */
+
+  /* Extended palette for badges and alerts */
+  --color-badge-rose: #fecdd3;
+  /* light rose */
+  --color-badge-mint: #bbf7d0;
+  /* mint green (optional contrast) */
+  --color-badge-yellow: #fef9c3;
+  /* soft yellow */
+  --color-badge-red-light: #fee2e2;
+  /* light red for SALE */
+  --color-badge-red-text: #7f1d1d;
+  /* readable red text */
+}

@@ -15,7 +15,7 @@ OLDsettings.py
 
 # Node/Tailwind
 node_modules/
-static/src/
+
 package-lock.json
 package.json
 tailwind.config.js
@@ -54,6 +54,8 @@ db.sqlite3
 db.sqlite3-journal
 media/
 staticfiles/
+static/images/
+static/css/output.css
 export.json
 
 # OS specific

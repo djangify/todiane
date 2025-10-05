@@ -6,39 +6,51 @@
     <!-- Text content -->
     <div class="flex flex-col gap-y-6 lg:gap-y-10 xl:self-center">
       <div class="space-y-3 lg:space-y-4">
-         <h6 class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg">
-          Build an AI-Visible Website
+        <h6 class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg">
+          Personal Portfolio
         </h6>
-        <h1 class="text-4xl font-bold lg:text-6xl text-[color:var(--color-brand-primary)] leading-tight">
-          Get Your Website Ready for AI Search
+        <h1 class="text-5xl font-semibold lg:text-6xl text-[color:var(--color-brand-primary)]">
+          Diane Corriette
         </h1>
       </div>
 
-      <p class="lg:text-lg text-[color:var(--color-font-main)] leading-relaxed max-w-2xl">
-        AI search engines like Google AI Overviews, Bing Copilot, and ChatGPT no longer show long lists of links — they choose trusted content.
-        The AI Marketing Platform helps you build structured, AI-ready websites using
-        <strong>cluster pages, FAQs, and schema markup</strong> so your business is recognised and featured in AI results.
-      </p>
+      <!-- Updated accent sidebar (wider + rounded) -->
+      <div class="flex flex-col bg-[color:var(--color-brand-light)] gap-y-4 lg:gap-y-5 xl:pl-16 xl:relative xl:before:content-[''] xl:before:absolute xl:before:top-0 xl:before:left-0 xl:before:h-full xl:before:w-[8px] xl:before:rounded-full xl:before:bg-[color:var(--color-brand-accent)]">
+        
+        <ul class="flex gap-x-5 mb-4 text-[color:var(--color-brand-primary)]">
+          <li class="hover:text-[color:var(--color-brand-accent)] transition-colors cursor-pointer lg:text-2xl">
+            <a href="https://www.linkedin.com/in/todianedev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="hover:text-[color:var(--color-brand-accent)] transition-colors cursor-pointer lg:text-2xl">
+            <a href="https://www.instagram.com/dicorriette" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li class="hover:text-[color:var(--color-brand-accent)] transition-colors cursor-pointer lg:text-2xl">
+            <a href="https://github.com/todiane" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+        </ul>
 
-      <div class="flex flex-wrap gap-4 mt-2">
-        <a href="/ai-search-readiness/" class="uppercase px-6 py-3 rounded bg-[color:var(--color-brand-primary)] text-[color:var(--color-brand-light)] hover:bg-[color:var(--color-brand-accent)] transition">
-          Learn More
-        </a>
-        <a href="/local-business-ai-search/" class="uppercase px-6 py-3 rounded border border-[color:var(--color-brand-primary)] text-[color:var(--color-brand-primary)] hover:bg-[color:var(--color-badge-mint)] transition">
-          Local AI Search
-        </a>
+        <p class="lg:text-lg text-[color:var(--color-font-main)] leading-relaxed space-y-4">
+          I am a Digital Marketing specialist with a full-stack software developer qualification. I like to build stuff.
+          <strong>This is my personal portfolio</strong>.
+          I am always happy to consider freelance work and collaborations so get in touch via social media. LinkedIn is best.
+          
+        </p>
+
+        <div class="flex flex-wrap gap-5 mt-8">
+          <a class="uppercase bg-[color:var(--color-brand-primary)] text-[color:var(--color-brand-light)] border border-[color:var(--color-brand-primary)] px-6 py-3 rounded-md hover:bg-[color:var(--color-brand-accent)] transition-colors" href="/shop/">Visit Portfolio</a>
+          <a class="uppercase bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand-light)] border border-[color:var(--color-brand-accent)] px-6 py-3 rounded-md hover:bg-[color:var(--color-brand-secondary)] transition-colors" href="/#contact">Work With Me</a>
+        </div>
       </div>
     </div>
 
-    <!-- Image -->
-    <figure class="flex justify-center lg:justify-end items-center">
-      <img
-        src="{% static 'images/aimarketing-home.webp' %}"
-        alt="AI search readiness for modern websites"
-        class="max-w-full h-auto"
-        loading="eager"
-      />
+    <figure class="lg:max-w-[550px] mt-10 lg:mt-0">
+      <img src="{% static 'images/djangify-digital-marketing-specialist.webp' %}" alt="Digital marketing and ecommerce systems for small businesses" class="rounded-lg border border-[color:var(--color-brand-accent)] shadow-sm" />
     </figure>
-
   </section>
 </div>
