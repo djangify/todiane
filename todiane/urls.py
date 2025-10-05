@@ -11,7 +11,8 @@ def home(request):
 urlpatterns = [
     path("", home, name="home"),
     path("admin/", admin.site.urls),
-    path("accounts/", include("accounts.urls", namespace="accounts")),
+    path("blog/", include("blog.urls", namespace="blog")),
+    path("core/", include("core.urls", namespace="core")),
     path("prompts/", include("prompt_generator.urls")),
     path("prompt_templates/", include("prompt_templates.urls")),
 ]

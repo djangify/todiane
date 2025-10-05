@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}AI Search Readiness & Local Visibility Frameworks{% endblock %}
+
+{% block content %}
+<header class="bg-[--color-brand-primary] text-[--color-brand-light] relative  flex flex-col gap-y-5 lg:gap-y-20">
+  {% include 'core/hero.html' %}
+</header>
+
+<main>
+  <!-- About Section -->
+  <section
+    id="about"
+    class="scroll-mt-8 p-6 flex flex-col gap-y-10 bg-[--color-brand-secondary] text-[--color-font-main] lg:gap-x-10 lg:flex-row-reverse *:basis-full md:p-16 2xl:rounded"
+  >
+    <div class="space-y-5 *:space-y-2 lg:self-center xl:space-y-10">
+      <div>
+         <h6 class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg">
+          About
+        </h6>
+        <h2 class="text-2xl capitalize font-bold lg:text-3xl text-[--color-brand-light]">
+          AI Search Readiness for Modern Websites
+        </h2>
+      </div>
+
+      <div class="space-y-5 *:space-y-2 lg:self-center xl:space-y-10 text-[--color-brand-light]/90">
+        <p>
+          Search is no longer just about ranking — it’s about being chosen. The AI Marketing Platform helps your website become
+          <strong>visible, structured, and ready for AI-driven results</strong>. We focus on the frameworks that make search engines and AI assistants trust your content.
+        </p>
+        <p>
+          From <strong>AI Search Readiness</strong> to <strong>Local AI Search</strong>, we provide practical systems, guides, and templates that prepare your business to appear in AI overviews, summaries, and local recommendations.
+        </p>
+        <p>
+          Whether you’re improving an existing site or starting fresh, our goal is simple — give you the structure, clarity, and tools that help AI recognise and feature your business in the answers people see first.
+        </p>
+        <p>
+          <a
+            class="uppercase p-2 border-2 border-[--color-brand-accent] self-start hover:text-[--color-brand-accent] transition cursor-pointer text-xs rounded sm:text-lg mt-8 sm:px-4 text-[--color-brand-light]"
+            href="/about/"
+          >
+            About the Platform
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid gap-5 sm:grid-cols-1 md:grid-cols-2 *:gap-y-5 *:items-center *:border-2 *:border-[--color-brand-accent] *:rounded *:p-8 bg-[--color-brand-light] text-[--color-font-main]">
+      <div>
+        <figure class="h-12 flex items-center justify-center">
+          <img src="{% static 'images/service-1.png' %}" 
+              alt="AI Search Frameworks" 
+              class="h-full w-auto object-contain" />
+        </figure>
+        <h5 class="text-xl text-[--color-brand-primary] text-center">
+          AI Search Frameworks
+        </h5>
+        <p class="text-center">
+          Build AI-friendly site structures with cluster pages, FAQs, and schema that help AI tools understand and feature your content.
+        </p>
+      </div>
+
+      <div>
+        <figure class="h-12 flex items-center justify-center">
+          <img src="{% static 'images/service-2.png' %}" 
+              alt="Local AI Search" 
+              class="h-full w-auto object-contain" />
+        </figure>
+        <h5 class="text-xl text-[--color-brand-primary] text-center">
+          Local AI Search
+        </h5>
+        <p class="text-center">
+          Optimise your Google Business Profile, reviews, and service pages so your business appears in AI-driven local answers and maps.
+        </p>
+      </div>
+
+      <div>
+        <figure class="h-12 flex items-center justify-center">
+          <img src="{% static 'images/service-3.png' %}" 
+              alt="Prompt Library" 
+              class="h-full w-auto object-contain" />
+        </figure>
+        <h5 class="text-xl text-[--color-brand-primary] text-center">
+          Prompt Library
+        </h5>
+        <p class="text-center">
+          Use structured prompts to generate content, FAQs, and schema ideas for AI-ready pages — no AI integration needed.
+        </p>
+      </div>
+
+      <div>
+        <figure class="h-12 flex items-center justify-center">
+          <img src="{% static 'images/service-4.png' %}" 
+              alt="Guides and Checklists" 
+              class="h-full w-auto object-contain" />
+        </figure>
+        <h5 class="text-xl text-[--color-brand-primary] text-center">Guides & Checklists</h5>
+        <p class="text-center">
+          Follow step-by-step checklists that make AI search visibility simple — from setup to structured content and optimisation.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="scroll-mt-16">
+    {% include 'contact/contact.html' %}
+  </section>
+
+  <!-- News Section -->
+  <section id="news" class="scroll-mt-16">
+    {% include 'base/news.html' %}
+  </section>
+
+  <!-- Motto -->
+  <section class="p-6 mb-8 text-[--color-font-main] md:p-16 2xl:rounded bg-[--color-brand-light]">
+    <div class="p-2 flex flex-col gap-y-5 lg:w-3/4 lg:mx-auto lg:relative lg:after lg:after:h-2 lg:after:w-16 lg:after:-bottom-6 lg:after:left-2/4 lg:after:-translate-x-2/4">
+      <blockquote>
+        <p class="before:content-['\201C'] after:content-['\201D'] text-xl text-center lg:text-2xl text-[--color-brand-dark]">
+          The next phase of search isn’t about ranking higher — it’s about being the answer.
+        </p>
+      </blockquote>
+      <p class="text-center font-bold text-[--color-brand-primary]">
+        — AI Marketing Platform
+      </p>
+    </div>
+  </section>
+</main>
+{% endblock %}
