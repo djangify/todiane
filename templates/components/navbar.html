@@ -1,5 +1,7 @@
 {% load static %}
-<nav class="border-b border-[color:var(--color-brand-accent)] sticky top-0 z-50">
+<nav class="border-b border-[color:var(--color-brand-accent)] bg-white shadow-sm sticky top-0 z-50">
+
+
   <div class="max-w-7xl mx-auto px-4 flex justify-between items-center h-16">
 
     <!-- Logo -->
@@ -38,7 +40,7 @@
 
   <!-- Mobile Menu -->
   <div id="mobile-menu"
-       class="hidden flex-col items-center bg-[color:var(--color-brand-light)] text-[color:var(--color-font-main)] py-4 space-y-3 border-t border-[color:var(--color-brand-accent)] sm:hidden">
+     class="hidden fixed inset-0 z-40 flex flex-col items-center justify-center bg-[color:var(--color-brand-light)] text-[color:var(--color-font-main)] py-4 space-y-3 border-t border-[color:var(--color-brand-accent)] backdrop-blur-md sm:hidden">
 
     <a href="/" class="block w-full text-center py-2 text-[color:var(--color-font-main)] transition">Home</a>
     <a href="/#about" class="block w-full text-center py-2 hover:text-[color:var(--color-font-main)] transition">About</a>
@@ -47,14 +49,16 @@
   </div>
 
   <!-- Toggle Script -->
+ 
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.getElementById("menu-toggle");
-      const menu = document.getElementById("mobile-menu");
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    const links = menu.querySelectorAll("a");
 
-      toggle.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
-    });
-  </script>
+    toggle.addEventListener("click", () => menu.classList.toggle("hidden"));
+    links.forEach(link => link.addEventListener("click", () => menu.classList.add("hidden")));
+  });
+</script>
+
 </nav>

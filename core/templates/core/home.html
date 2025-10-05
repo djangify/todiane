@@ -38,7 +38,7 @@
           practical websites, eCommerce systems, and marketing frameworks that actually work.
         </p>
 
-        <p>
+        <p class="mb-8">
           Whether you want to learn the setup process through DIY PDFs and guides, or prefer a done-for-you service,
           I’ll make sure your systems are connected, automated, and ready for growth. Your website will be structured,
           search-ready, and simple to manage.
@@ -59,7 +59,7 @@
     <div class="grid gap-5 sm:grid-cols-1 md:grid-cols-2 *:gap-y-5 *:items-center *:border-2 *:border-[--color-brand-accent] *:rounded-lg *:p-8 bg-[--color-brand-light] text-[--color-font-main]">
       <div>
         <figure class="h-12 flex items-center justify-center">
-          <img src="{% static 'images/service-1.png' %}" alt="eCommerce" class="h-full w-auto object-contain" />
+          <img src="{% static 'images/service-1.webp' %}" alt="eCommerce" class="h-full w-auto object-contain" />
         </figure>
         <h5 class="text-xl text-[--color-brand-primary] text-center">eCommerce</h5>
         <p class="text-center">
@@ -70,7 +70,7 @@
 
       <div>
         <figure class="h-12 flex items-center justify-center">
-          <img src="{% static 'images/service-2.png' %}" alt="Lifestyle Business" class="h-full w-auto object-contain" />
+          <img src="{% static 'images/service-2.webp' %}" alt="Lifestyle Business" class="h-full w-auto object-contain" />
         </figure>
         <h5 class="text-xl text-[--color-brand-primary] text-center">Lifestyle Business</h5>
         <p class="text-center">
@@ -81,7 +81,7 @@
 
       <div>
         <figure class="h-12 flex items-center justify-center">
-          <img src="{% static 'images/service-3.png' %}" alt="Who I Am" class="h-full w-auto object-contain" />
+          <img src="{% static 'images/service-3.webp' %}" alt="Who I Am" class="h-full w-auto object-contain" />
         </figure>
         <h5 class="text-xl text-[--color-brand-primary] text-center">Who I Am</h5>
         <p class="text-center">
@@ -92,7 +92,7 @@
 
       <div>
         <figure class="h-12 flex items-center justify-center">
-          <img src="{% static 'images/service-4.png' %}" alt="Guides and Workbooks" class="h-full w-auto object-contain" />
+          <img src="{% static 'images/service-4.webp' %}" alt="Guides and Workbooks" class="h-full w-auto object-contain" />
         </figure>
         <h5 class="text-xl text-[--color-brand-primary] text-center">Guides & Workbooks</h5>
         <p class="text-center">
@@ -108,16 +108,5 @@
     {% include "blog/components/blog.html" %}
   </section>
 
-  <!-- Motto -->
-  <section class="p-6 mb-8 text-[--color-font-main] md:p-16 2xl:rounded bg-[--color-brand-light]">
-    <div class="p-2 flex flex-col gap-y-5 lg:w-3/4 lg:mx-auto lg:relative lg:after lg:after:h-2 lg:after:w-16 lg:after:-bottom-6 lg:after:left-2/4 lg:after:-translate-x-2/4">
-      <blockquote>
-        <p class="before:content-['\201C'] after:content-['\201D'] text-xl text-center lg:text-2xl text-[--color-brand-dark]">
-          The next phase of search isn’t about ranking higher — it’s about being the answer.
-        </p>
-      </blockquote>
-      <p class="text-center font-bold text-[--color-brand-primary]">— Djangify</p>
-    </div>
-  </section>
 </main>
 {% endblock %}
