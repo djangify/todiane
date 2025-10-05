@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.utils.html import format_html
 from django.contrib.admin.widgets import AdminTextareaWidget
 from .models import Category, Post
+from tinymce.widgets import TinyMCE
 
 
 @admin.register(Category)
@@ -13,12 +14,15 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class PostAdminForm(forms.ModelForm):
+    content = forms.CharField(widget=TinyMCE(attrs={"cols": 80, "rows": 30}))
+
     class Meta:
         model = Post
         fields = "__all__"
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        # Keep your existing ad_code setup
         if "ad_code" in self.fields:
             self.fields["ad_code"].widget = AdminTextareaWidget(
                 attrs={"rows": 6, "class": "vLargeTextField"}
@@ -28,7 +32,7 @@ class PostAdminForm(forms.ModelForm):
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     form = PostAdminForm
-
+    exclude = ["introduction"]  # hides the introduction field
     list_display = [
         "title",
         "category",
