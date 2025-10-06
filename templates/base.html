@@ -53,29 +53,25 @@
 
     
     <!-- Cookie Consent -->
-   <aside id="cookie-banner" class="cookie-banner hidden" role="dialog" aria-labelledby="cookie-title">
-    <div class="cookie-container">
-      <div class="cookie-text">
-        <h2 id="cookie-title" class="sr-only">Cookie Consent</h2>
-        We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. 
-        <a href="{% url 'core:cookie_policy' %}" class="cookie-link">Cookie Policy</a>
-      </div>
-      <div class="cookie-actions">
-        <button id="accept-cookies" class="cookie-btn accept">Accept</button>
-        <button id="decline-cookies" class="cookie-btn decline">Decline</button>
-      </div>
+    <aside id="cookie-banner" class="cookie-banner hidden fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] md:w-auto z-50 bg-[color:var(--color-brand-light)] text-[color:var(--color-font-main)] border border-[color:var(--color-brand-accent)] rounded-2xl shadow-lg px-6 py-4  flex-col md:flex-row items-center justify-between gap-3 md:gap-6" role="dialog" aria-labelledby="cookie-title">
+    <div class="cookie-text text-sm md:text-base">
+      <h2 id="cookie-title" class="sr-only">Cookie Consent</h2>
+      We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. 
+      <a href="{% url 'core:cookie_policy' %}" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-dark)] underline ml-1">Cookie Policy</a>
     </div>
-  </aside>  
+    <div class="cookie-actions flex gap-3">
+      <button id="accept-cookies" class="cookie-btn px-4 py-2 bg-[color:var(--color-brand-primary)] text-[color:var(--color-brand-light)] rounded-lg hover:bg-[color:var(--color-brand-dark)] transition">Accept</button>
+      <button id="decline-cookies" class="cookie-btn px-4 py-2 border border-[color:var(--color-brand-accent)] text-[color:var(--color-font-main)] rounded-lg hover:bg-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-light)] transition">Decline</button>
+    </div>
+  </aside>
+
 <!-- Scripts -->
 {% block extra_js %}
 <script src="{% static 'js/app.js' %}"></script>
 <script src="{% static 'js/messages.js' %}"></script>
 <script src="{% static 'js/catergory-filter.js' %}"></script>
 <script src="{% static 'js/accordion.js' %}"></script>
-<script src="{% static 'js/favourite-template.js' %}"></script>
-<script src="{% static 'js/favourite-prompt.js' %}"></script>
 
- <!-- Cookie Consent Script (show once, then never again) -->
 <!-- Cookie Consent Script (works first time, then gone) -->
 <script>
 (function () {

@@ -1,63 +1,59 @@
 {% load static %}
-<footer class="bg-[--color-brand-dark] text-[--color-font-main]">
+<footer class="bg-[color:var(--color-brand-accent)] text-[color:var(--color-font-main)]">
+
   <div class="max-w-7xl mx-auto px-6 py-10 space-y-10">
 
     <!-- Grid Columns -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-sm text-[--color-font-main]">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-sm text-[color:var(--color-font-main)]">
 
       <!-- Logo + Info -->
       <div class="brand-block">
         <div class="flex space-x-3 mb-3 items-center">
           <img src="{% static 'images/dianec-gray.webp' %}" alt="Diane Corriette logo" class="h-8">
-          <span class="text-lg font-semibold text-[--color-brand-light]">Diane Corriette</span>
+          <span class="text-lg font-semibold text-[color:var(--color-font-main)]">Diane Corriette</span>
         </div>
-        <p class="text-sm leading-relaxed text-[--color-brand-light]/80">
+        <p class="text-sm leading-relaxed text-[color:var(--color-brand-light)]/80">
           Digital Marketing Specialist. Making digital marketing simple, practical, and sustainable for small businesses by focusing on the essential systems that create steady sales.
         </p> 
       </div>
 
       <!-- Links -->
       <div>
-        <h3 class="font-semibold mb-3 text-[--color-brand-light]">Pages</h3>
+        <h3 class="font-semibold mb-3 text-[color:var(--color-font-main)]">Pages</h3>
         <ul class="space-y-1">
-          <li><a href="{% url 'core:home' %}" class="hover:text-[--color-brand-secondary] transition">Home</a></li>
-          <li><a href="{% url 'portfolio:list' %}" class="hover:text-[--color-brand-secondary] transition">Porfolio</a></li>
-          <li><a href="{% url 'core:pdf_creation' %}" class="hover:text-[--color-brand-secondary] transition">PDF Creation</a></li>
-          <li><a href="{% url 'core:digital_marketing_specialist' %}" class="hover:text-[--color-brand-secondary] transition">Digital Marketing</a></li>
+          <li><a href="{% url 'core:home' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">Home</a></li>
+          <li><a href="{% url 'portfolio:list' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">Porfolio</a></li>
+          <li><a href="{% url 'core:pdf_creation' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">PDF Creation</a></li>
+          <li><a href="{% url 'core:digital_marketing_specialist' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">Digital Marketing</a></li>
           
-          {% comment %} <li><a href="{% url 'core:about' %}" class="hover:text-[--color-brand-secondary] transition">About</a></li> {% endcomment %}
-          
+          {% comment %} <li><a href="{% url 'core:about' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">About</a></li> {% endcomment %}
         </ul>
       </div>
 
-      <!-- Resources -->
+      <!-- Resources and Tools -->
       <div>
-        <h3 class="font-semibold mb-3 text-[--color-brand-light]">Resources</h3>
+        <h3 class="font-semibold mb-3 text-[color:var(--color-font-main)]">Resources & Tools</h3>
         <ul class="space-y-1">
-          <li><a href="{% url 'prompts:prompt_list' %}" class="hover:text-[--color-brand-secondary] transition">
-          Prompts for AI</a></li>
-          <li><a href="{% url 'prompt_templates:template_list' %}" class="hover:text-[--color-brand-secondary] transition">
+          <li><a href="{% url 'prompt_templates:template_list' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">
           AI Prompt Templates</a></li>
-          
         </ul>
       </div>
 
       <!-- Policies -->
       <div>
-        <h3 class="font-semibold mb-3 text-[--color-brand-light]">Policies</h3>
+        <h3 class="font-semibold mb-3 text-[color:var(--color-font-main)]">Policies</h3>
         <ul class="space-y-1">
-          {% comment %} <li><a href="{% url 'core:affiliate_policy' %}" class="hover:text-[--color-brand-secondary] transition">Affiliate/Ads</a></li> {% endcomment %}
-          <li><a href="{% url 'core:ai_writing_policy' %}" class="hover:text-[--color-brand-secondary] transition">AI Policy</a></li>
-          <li><a href="{% url 'core:cookie_policy' %}" class="hover:text-[--color-brand-secondary] transition">Cookie Policy</a></li>
-          <li><a href="{% url 'core:privacy_policy' %}" class="hover:text-[--color-brand-secondary] transition">Privacy Policy</a></li>
-          <li><a href="{% url 'core:affiliate_policy' %}" class="hover:text-[--color-brand-secondary] transition">Affiliate Policy</a></li>
+          <li><a href="{% url 'core:ai_writing_policy' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">AI Policy</a></li>
+          <li><a href="{% url 'core:cookie_policy' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">Cookie Policy</a></li>
+          <li><a href="{% url 'core:privacy_policy' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">Privacy Policy</a></li>
+          <li><a href="{% url 'core:affiliate_policy' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">Affiliate Policy</a></li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom Copyright -->
-    <div class="border-t border-[--color-brand-accent]/30 text-center pt-6 text-sm text-[--color-brand-light]/60">
-      &copy; 2025 AI Marketing Platform. <a href="/">AI Search Readiness</a>. Be the answer AI chooses.
+    <div class="border-t border-[color:var(--color-brand-primary)]/30 text-center pt-6 text-sm text-[color:var(--color-font-main)]/60">
+      &copy; 2025 AI Marketing Platform. <a href="/" class="hover:text-[color:var(--color-brand-secondary)] transition">AI Search Readiness</a>. Be the answer AI chooses.
     </div>
   </div>
 </footer>
