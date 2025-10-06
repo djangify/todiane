@@ -3,15 +3,16 @@ from django.db import models
 
 class Prompt(models.Model):
     CATEGORY_CHOICES = [
+        ("ads", "Advertising"),
+        ("blog", "Blog & Content"),
+        ("customer", "Customer Engagement"),
+        ("email", "Email Marketing"),
+        ("general", "General"),
+        ("local", "Local Business"),
         ("marketing", "Marketing"),
+        ("sales", "Sales Pages"),
         ("seo", "SEO"),
         ("social", "Social Media"),
-        ("blog", "Blog & Content"),
-        ("email", "Email Marketing"),
-        ("sales", "Sales Pages"),
-        ("local", "Local Business"),
-        ("ads", "Advertising"),
-        ("customer", "Customer Engagement"),
         ("video", "Video Scripts"),
     ]
 

@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ portfolio.meta_title|default:portfolio.title }} - Portfolio{% endblock %}
+
+{% block content %}
+<section class="pageformat portfolio-detail space-y-12">
+  {% include 'portfolio/components/breadcrumb.html' %}
+
+  <!-- Hero Section -->
+  <section class="space-y-6">
+    {% if portfolio.display_image %}
+      <div class="hero-media mb-8">
+        <img src="{{ portfolio.display_image }}"
+             alt="{{ portfolio.title }}"
+             class="w-full h-auto object-cover rounded-lg border border-[color:var(--color-brand-accent)]" />
+      </div>
+    {% endif %}
+
+    <h6 class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-2/4 before:-translate-y-2/4 before:left-0 lg:text-lg mb-4">
+      Project Details
+    </h6>
+
+    <h1 class="leading-normal text-3xl font-bold text-[color:var(--color-font-main)]">
+      {{ portfolio.title }}
+    </h1>
+
+    {% if portfolio.project_timeline %}
+      <p class="text-[color:var(--color-brand-accent)] mt-2">{{ portfolio.project_timeline }}</p>
+    {% endif %}
+
+    <p class="text-lg text-[color:var(--color-font-main)] mt-4">{{ portfolio.short_description|safe }}</p>
+
+    {% if portfolio.introduction %}
+      <div class="mt-6 text-[color:var(--color-font-main)] lg:text-lg">
+        {{ portfolio.introduction|safe }}
+      </div>
+    {% endif %}
+  </section>
+
+  <!-- Article Content -->
+  <article class="container mx-auto max-w-4xl space-y-12">
+
+    <!-- External Links -->
+    <div class="flex flex-wrap gap-5 justify-center mb-12">
+      {% if portfolio.live_site_url %}
+        <a href="{{ portfolio.live_site_url }}"
+           target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center px-6 py-3 border-2 border-[color:var(--color-brand-accent)] text-[color:var(--color-brand-accent)] rounded-md hover:bg-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-light)] transition-colors">
+          <i class="fas fa-external-link-alt mr-2"></i> Live Site
+        </a>
+      {% endif %}
+
+      {% if portfolio.github_url %}
+        <a href="{{ portfolio.github_url }}"
+           target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center px-6 py-3 border-2 border-[color:var(--color-brand-accent)] text-[color:var(--color-brand-accent)] rounded-md hover:bg-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-light)] transition-colors">
+          <i class="fab fa-github mr-2"></i> GitHub Repo
+        </a>
+      {% endif %}
+
+      {% if portfolio.for_sale_url %}
+        <a href="{{ portfolio.for_sale_url }}"
+           target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center px-6 py-3 border-2 border-[color:var(--color-brand-dark)] bg-[color:var(--color-brand-light)] text-[color:var(--color-brand-dark)] rounded-md hover:bg-[color:var(--color-brand-primary)] hover:text-[color:var(--color-brand-light)] transition-colors font-semibold">
+          <i class="fas fa-shopping-cart mr-2"></i> For Sale
+        </a>
+      {% endif %}
+    </div>
+
+    <!-- Technologies -->
+    {% if portfolio.technologies.exists %}
+    <div class="pb-8 border-b border-[color:var(--color-brand-accent)] space-y-4">
+      <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Technologies Used</h2>
+      <div class="flex flex-wrap gap-4">
+        {% for tech in portfolio.technologies.all %}
+          <a href="{% url 'portfolio:portfolio_by_technology' tech.slug %}"
+             class="portfolio-pill hover:bg-[color:var(--color-brand-secondary)] transition-colors">
+            <i class="{{ tech.icon }} mr-3"></i> {{ tech.name }}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Optional Demo Video -->
+    {% if portfolio.demo_video_url %}
+    <div class="space-y-4">
+      <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Project Demo</h2>
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe src="{{ portfolio.demo_video_url|safe }}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                class="w-full h-[400px] rounded-lg border border-[color:var(--color-brand-accent)]">
+        </iframe>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Content Sections -->
+    {% for section, title in [
+      (portfolio.business_logic, "Problem Statement & Business Logic"),
+      (portfolio.target_audience, "Target Audience"),
+      (portfolio.tech_stack_description, "Technical Stack"),
+      (portfolio.architecture_description, "Architecture & Design Patterns"),
+      (portfolio.feature_description, "Key Features"),
+      (portfolio.development_process, "Development Process"),
+      (portfolio.challenges, "Challenges & Solutions"),
+      (portfolio.bugs_and_fixes, "Bugs & Fixes"),
+      (portfolio.outcome, "Project Outcome"),
+      (portfolio.lessons_learned, "Lessons Learned"),
+      (portfolio.future_improvements, "Future Improvements"),
+      (portfolio.conclusion, "Conclusion")
+    ] %}
+      {% if section %}
+        <div class="scroll-mt-24 space-y-4">
+          <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">{{ title }}</h2>
+          <div class="prose prose-invert max-w-none text-[color:var(--color-font-main)]">
+            {{ section|safe }}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </article>
+
+  <!-- Gallery -->
+  {% if portfolio.images.exists %}
+  <section id="gallery" class="space-y-8 mt-16 max-w-screen-2xl">
+    <h2 class="text-2xl font-bold text-[color:var(--color-font-main)] sm:text-3xl xl:text-4xl">Project Gallery</h2>
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {% for image in portfolio.images.all %}
+      <div class="rounded-lg overflow-hidden group relative border border-[color:var(--color-brand-accent)]">
+        <img src="{{ image.display_image }}"
+             alt="{{ image.caption|default:portfolio.title }}"
+             class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105" />
+        {% if image.caption %}
+        <div class="absolute bottom-0 left-0 right-0 bg-[color:var(--color-brand-dark)] bg-opacity-80 p-3 translate-y-full group-hover:translate-y-0 transition-transform">
+          <p class="text-sm text-[color:var(--color-brand-light)]">{{ image.caption }}</p>
+        </div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Back Button -->
+  <div class="mt-16 mb-12 pb-8">
+    <a href="{% url 'portfolio:portfolio_list' %}"
+       class="btn-accent inline-flex items-center gap-2">
+      <i class="fas fa-arrow-left"></i>
+      <span>Back to Portfolio</span>
+    </a>
+  </div>
+</section>
+{% endblock %}

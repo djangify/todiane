@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     "prompt_generator",
     "prompts",
     "prompt_templates",
+    "portfolio",
     "widget_tweaks",
     "tinymce",
 ]

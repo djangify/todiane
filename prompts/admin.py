@@ -8,3 +8,5 @@ class PromptAdmin(admin.ModelAdmin):
     list_filter = ("category", "created_at")
     search_fields = ("title", "content", "tags")
     ordering = ("-created_at",)
+    fields = ("title", "content", "category", "tags")
+    readonly_fields = ("created_at",)
