@@ -74,7 +74,7 @@
       <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Technologies Used</h2>
       <div class="flex flex-wrap gap-4">
         {% for tech in portfolio.technologies.all %}
-          <a href="{% url 'portfolio:portfolio_by_technology' tech.slug %}"
+          <a href="{% url 'portfolio:by_technology' tech.slug %}"
              class="portfolio-pill hover:bg-[color:var(--color-brand-secondary)] transition-colors">
             <i class="{{ tech.icon }} mr-3"></i> {{ tech.name }}
           </a>
@@ -99,29 +99,113 @@
     {% endif %}
 
     <!-- Content Sections -->
-    {% for section, title in [
-      (portfolio.business_logic, "Problem Statement & Business Logic"),
-      (portfolio.target_audience, "Target Audience"),
-      (portfolio.tech_stack_description, "Technical Stack"),
-      (portfolio.architecture_description, "Architecture & Design Patterns"),
-      (portfolio.feature_description, "Key Features"),
-      (portfolio.development_process, "Development Process"),
-      (portfolio.challenges, "Challenges & Solutions"),
-      (portfolio.bugs_and_fixes, "Bugs & Fixes"),
-      (portfolio.outcome, "Project Outcome"),
-      (portfolio.lessons_learned, "Lessons Learned"),
-      (portfolio.future_improvements, "Future Improvements"),
-      (portfolio.conclusion, "Conclusion")
-    ] %}
-      {% if section %}
-        <div class="scroll-mt-24 space-y-4">
-          <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">{{ title }}</h2>
-          <div class="prose prose-invert max-w-none text-[color:var(--color-font-main)]">
-            {{ section|safe }}
-          </div>
-        </div>
-      {% endif %}
-    {% endfor %}
+    {% if portfolio.business_logic %}
+    <div class="scroll-mt-24 space-y-4">
+      <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Problem Statement & Business Logic</h2>
+      <div class="prose prose-invert max-w-none text-[color:var(--color-font-main)]">
+        {{ portfolio.business_logic|safe }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if portfolio.target_audience %}
+    <div class="scroll-mt-24 space-y-4">
+      <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Target Audience</h2>
+      <div class="prose prose-invert max-w-none text-[color:var(--color-font-main)]">
+        {{ portfolio.target_audience|safe }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if portfolio.tech_stack_description %}
+    <div class="scroll-mt-24 space-y-4">
+      <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Technical Stack</h2>
+      <div class="prose prose-invert max-w-none text-[color:var(--color-font-main)]">
+        {{ portfolio.tech_stack_description|safe }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if portfolio.architecture_description %}
+    <div class="scroll-mt-24 space-y-4">
+      <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Architecture & Design Patterns</h2>
+      <div class="prose prose-invert max-w-none text-[color:var(--color-font-main)]">
+        {{ portfolio.architecture_description|safe }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if portfolio.feature_description %}
+    <div class="scroll-mt-24 space-y-4">
+      <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Key Features</h2>
+      <div class="prose prose-invert max-w-none text-[color:var(--color-font-main)]">
+        {{ portfolio.feature_description|safe }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if portfolio.development_process %}
+    <div class="scroll-mt-24 space-y-4">
+      <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Development Process</h2>
+      <div class="prose prose-invert max-w-none text-[color:var(--color-font-main)]">
+        {{ portfolio.development_process|safe }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if portfolio.challenges %}
+    <div class="scroll-mt-24 space-y-4">
+      <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Challenges & Solutions</h2>
+      <div class="prose prose-invert max-w-none text-[color:var(--color-font-main)]">
+        {{ portfolio.challenges|safe }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if portfolio.bugs_and_fixes %}
+    <div class="scroll-mt-24 space-y-4">
+      <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Bugs & Fixes</h2>
+      <div class="prose prose-invert max-w-none text-[color:var(--color-font-main)]">
+        {{ portfolio.bugs_and_fixes|safe }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if portfolio.outcome %}
+    <div class="scroll-mt-24 space-y-4">
+      <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Project Outcome</h2>
+      <div class="prose prose-invert max-w-none text-[color:var(--color-font-main)]">
+        {{ portfolio.outcome|safe }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if portfolio.lessons_learned %}
+    <div class="scroll-mt-24 space-y-4">
+      <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Lessons Learned</h2>
+      <div class="prose prose-invert max-w-none text-[color:var(--color-font-main)]">
+        {{ portfolio.lessons_learned|safe }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if portfolio.future_improvements %}
+    <div class="scroll-mt-24 space-y-4">
+      <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Future Improvements</h2>
+      <div class="prose prose-invert max-w-none text-[color:var(--color-font-main)]">
+        {{ portfolio.future_improvements|safe }}
+      </div>
+    </div>
+    {% endif %}
+
+    {% if portfolio.conclusion %}
+    <div class="scroll-mt-24 space-y-4">
+      <h2 class="text-2xl font-bold text-[color:var(--color-font-main)]">Conclusion</h2>
+      <div class="prose prose-invert max-w-none text-[color:var(--color-font-main)]">
+        {{ portfolio.conclusion|safe }}
+      </div>
+    </div>
+    {% endif %}
   </article>
 
   <!-- Gallery -->
@@ -147,7 +231,7 @@
 
   <!-- Back Button -->
   <div class="mt-16 mb-12 pb-8">
-    <a href="{% url 'portfolio:portfolio_list' %}"
+    <a href="{% url 'portfolio:list' %}"
        class="btn-accent inline-flex items-center gap-2">
       <i class="fas fa-arrow-left"></i>
       <span>Back to Portfolio</span>

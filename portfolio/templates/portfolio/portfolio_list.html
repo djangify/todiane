@@ -19,7 +19,7 @@
   <!-- Technology Filter -->
   <div class="flex flex-wrap gap-3 mb-12">
     {% for tech in technologies %}
-      <a href="{% url 'portfolio:portfolio_by_technology' tech.slug %}"
+      <a href="<a href="{% url 'portfolio:by_technology' tech.slug %}""
          class="portfolio-pill hover:bg-[color:var(--color-brand-secondary)] transition-colors">
         {{ tech.name }}
       </a>
@@ -52,7 +52,7 @@
             </p>
 
             <div class="pt-6 mt-auto border-t border-[color:var(--color-brand-accent)]">
-              <a href="{% url 'portfolio:portfolio_detail' portfolio.slug %}"
+              <a href="{% url 'portfolio:detail' portfolio.slug %}"
                  class="btn-accent inline-flex items-center gap-2">
                 View Details
                 <i class="fas fa-arrow-right"></i>

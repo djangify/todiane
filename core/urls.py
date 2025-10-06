@@ -14,9 +14,9 @@ urlpatterns = [
     ),
     # Project pages
     path(
-        "portfolio",
-        TemplateView.as_view(template_name="core/projects/portfolio.html"),
-        name="portfolio",
+        "projects_index",
+        TemplateView.as_view(template_name="core/projects/projects_index.html"),
+        name="projects_index",
     ),
     path(
         "tracker",

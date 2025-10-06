@@ -90,10 +90,15 @@ class Portfolio(models.Model):
 
     @property
     def display_image(self):
-        """Return either the uploaded image or the external URL."""
-        return self.featured_image_url or (
-            self.featured_image.url if self.featured_image else None
-        )
+        """Return either the uploaded image or the external URL safely."""
+        if self.featured_image_url:
+            return self.featured_image_url
+        if self.featured_image and hasattr(self.featured_image, "url"):
+            try:
+                return self.featured_image.url
+            except ValueError:
+                return None
+        return None
 
     def get_absolute_url(self):
         return reverse("portfolio:detail", kwargs={"slug": self.slug})
@@ -123,4 +128,11 @@ class PortfolioImage(models.Model):
 
     @property
     def display_image(self):
-        return self.image_url or (self.image.url if self.image else None)
+        if self.image_url:
+            return self.image_url
+        if self.image and hasattr(self.image, "url"):
+            try:
+                return self.image.url
+            except ValueError:
+                return None
+        return None
