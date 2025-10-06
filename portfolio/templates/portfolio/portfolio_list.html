@@ -4,11 +4,11 @@
 {% block title %}Portfolio – Django and TailwindCSS Projects{% endblock %}
 
 {% block content %}
-<section class="pageformat space-y-12">
+<section class=" mb-16 space-y-12 px-4 sm:px-6 md:px-8 lg:px-12">
 
   <!-- Section Header -->
   <div class="space-y-4">
-    <h1 class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-2/4 before:-translate-y-2/4 before:left-0 lg:text-lg mb-4 text-[color:var(--color-font-main)]">
+    <h1 class="text-3xl md:text-4xl font-semibold text-[color:var(--color-brand-primary)] leading-normal mt-16">
       My Projects
     </h1>
     <p class="leading-normal text-[color:var(--color-font-main)]">
@@ -17,24 +17,24 @@
   </div>
 
   <!-- Technology Filter -->
-  <div class="flex flex-wrap gap-3 mb-12">
-    {% for tech in technologies %}
-      <a href="<a href="{% url 'portfolio:by_technology' tech.slug %}""
-         class="portfolio-pill hover:bg-[color:var(--color-brand-secondary)] transition-colors">
-        {{ tech.name }}
-      </a>
-    {% endfor %}
-  </div>
+    <div class="flex flex-wrap gap-3 mt-8 mb-12">
+      {% for tech in technologies %}
+        <a href="{% url 'portfolio:by_technology' tech.slug %}"
+          class="inline-flex items-center px-4 py-2 border border-[color:var(--color-brand-secondary)] text-[color:var(--color-brand-secondary)] rounded-md font-medium text-sm hover:bg-[color:var(--color-brand-accent)] hover:text-[color:var(--color-font-main)] transition-colors">
+          {{ tech.name }}
+        </a>
+      {% endfor %}
+    </div>
 
   <!-- Project Grid -->
   {% if not portfolios %}
-    <div class="text-center p-8 bg-[color:var(--color-brand-light)] rounded-lg">
+    <div class="text-center p-8  rounded-lg">
       <p class="text-[color:var(--color-font-main)]">No portfolio items available yet.</p>
     </div>
   {% else %}
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       {% for portfolio in portfolios %}
-        <article class="flex flex-col rounded-lg overflow-hidden border border-[color:var(--color-brand-accent)] bg-[color:var(--color-brand-light)] hover:shadow-lg transition-shadow">
+        <article class="flex flex-col rounded-lg overflow-hidden border border-[color:var(--color-brand-accent)] hover:shadow-lg transition-shadow">
           {% if portfolio.display_image %}
             <div class="h-48 w-full overflow-hidden">
               <img src="{{ portfolio.display_image }}"
