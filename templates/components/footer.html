@@ -21,6 +21,9 @@
         <h3 class="font-semibold mb-3 text-[--color-brand-light]">Pages</h3>
         <ul class="space-y-1">
           <li><a href="{% url 'core:home' %}" class="hover:text-[--color-brand-secondary] transition">Home</a></li>
+          <li><a href="{% url 'portfolio:list' %}" class="hover:text-[--color-brand-secondary] transition">Porfolio</a></li>
+          <li><a href="{% url 'core:pdf_creation' %}" class="hover:text-[--color-brand-secondary] transition">PDF Creation</a></li>
+          <li><a href="{% url 'core:digital_marketing_specialist' %}" class="hover:text-[--color-brand-secondary] transition">Digital Marketing</a></li>
           
           {% comment %} <li><a href="{% url 'core:about' %}" class="hover:text-[--color-brand-secondary] transition">About</a></li> {% endcomment %}
           
@@ -31,10 +34,10 @@
       <div>
         <h3 class="font-semibold mb-3 text-[--color-brand-light]">Resources</h3>
         <ul class="space-y-1">
-          
-          <li><a href="{% url 'blog:list' %}" class="hover:text-[--color-brand-secondary] transition">Blog</a></li>
-          <li><a href="{% url 'core:pdf_creation' %}" class="hover:text-[--color-brand-secondary] transition">PDF Creation</a></li>
-          <li><a href="{% url 'core:digital_marketing_specialist' %}" class="hover:text-[--color-brand-secondary] transition">Digital Marketing</a></li>
+          <li><a href="{% url 'prompts:prompt_list' %}" class="hover:text-[--color-brand-secondary] transition">
+          Prompts for AI</a></li>
+          <li><a href="{% url 'prompt_templates:template_list' %}" class="hover:text-[--color-brand-secondary] transition">
+          AI Prompt Templates</a></li>
           
         </ul>
       </div>

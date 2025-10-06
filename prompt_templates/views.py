@@ -14,12 +14,33 @@ def template_list_view(request):
 
 def prompt_fill_view(request, slug):
     template = get_object_or_404(PromptTemplate, slug=slug)
-    form = PromptFillForm(request.POST or None)
-    generated = None
     base_text = template.template_text
 
+    # Define all possible placeholders
+    placeholders = [
+        "business_name",
+        "business_type",
+        "business_location",
+        "target_audience",
+        "product_or_service",
+        "service_name",
+        "topic",
+        "industry_topic",
+        "additional_info",
+    ]
+
+    # Only show fields that appear in the current template
+    used_fields = [field for field in placeholders if f"[{field}]" in base_text]
+
+    form = PromptFillForm(request.POST or None)
+    for field in list(form.fields.keys()):
+        if field not in used_fields:
+            form.fields.pop(field)
+
+    generated = None
+
     if request.method == "POST" and form.is_valid():
-        generated = generate_prompt(base_text, None, form.cleaned_data)
+        generated = generate_prompt(base_text, request.user, form.cleaned_data)
         if "download" in request.POST:
             response = HttpResponse(generated, content_type="text/plain")
             filename = f"{template.slug}.txt"
