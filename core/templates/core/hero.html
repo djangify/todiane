@@ -7,14 +7,14 @@
     <div class="flex flex-col gap-y-6 lg:gap-y-10 xl:self-center">
       <div class="space-y-3 lg:space-y-4">
         <h6 class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg">
-          Personal Portfolio
+          Django Backend Developer
         </h6>
         <h1 class="text-5xl font-semibold lg:text-6xl text-[color:var(--color-brand-primary)]">
           Diane Corriette
         </h1>
       </div>
 
-      <!-- Updated accent sidebar (wider + rounded) -->
+      <!-- Updated accent sidebar -->
       <div class="flex flex-col bg-[color:var(--color-brand-light)] gap-y-4 lg:gap-y-5 xl:pl-16 xl:relative xl:before:content-[''] xl:before:absolute xl:before:top-0 xl:before:left-0 xl:before:h-full xl:before:w-[8px] xl:before:rounded-full xl:before:bg-[color:var(--color-brand-accent)]">
         
         <ul class="flex gap-x-5 mb-4 text-[color:var(--color-brand-primary)]">
@@ -36,21 +36,25 @@
         </ul>
 
         <p class="lg:text-lg text-[color:var(--color-font-main)] leading-relaxed space-y-4">
-          I am a Digital Marketing specialist with a full-stack software developer qualification. I like to build stuff.
-          <strong>This is my personal portfolio</strong>.
-          I am always happy to consider freelance work and collaborations so get in touch via social media. LinkedIn is best.
-          
+          I’m a <strong>Full-Stack Software Developer (eCommerce)</strong> and <strong>Django Backend Developer</strong> who enjoys building clean, structured web applications.  
+          <strong>This is my personal portfolio</strong> — a collection of the projects I’ve built while refining my backend development skills and exploring practical uses of AI.
+        </p>
+
+        <p class="lg:text-lg text-[color:var(--color-font-main)] leading-relaxed">
+          My work focuses on <strong>Django</strong>, <strong>Python</strong>, and <strong>TailwindCSS</strong>, with a growing interest in Astro and AI-powered tools.  
+          I share my development process, experiments, and continuous learning journey here.  
+          You can connect with me on <a href="https://www.linkedin.com/in/todianedev" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-accent)] underline transition">LinkedIn</a>.
         </p>
 
         <div class="flex flex-wrap gap-5 mt-8">
           <a class="uppercase bg-[color:var(--color-brand-primary)] text-[color:var(--color-brand-light)] border border-[color:var(--color-brand-primary)] px-6 py-3 rounded-md hover:bg-[color:var(--color-brand-accent)] transition-colors" href="{% url 'portfolio:list' %}">Visit Portfolio</a>
-          <a class="uppercase bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand-light)] border border-[color:var(--color-brand-accent)] px-6 py-3 rounded-md hover:bg-[color:var(--color-brand-secondary)] transition-colors" href="/#contact">Work With Me</a>
+          <a class="uppercase bg-[color:var(--color-brand-accent)] text-[color:var(--color-brand-light)] border border-[color:var(--color-brand-accent)] px-6 py-3 rounded-md hover:bg-[color:var(--color-brand-secondary)] transition-colors" href="/#blog">Read Blog</a>
         </div>
       </div>
     </div>
 
     <figure class="lg:max-w-[550px] mt-10 lg:mt-0">
-      <img src="{% static 'images/djangify-digital-marketing-specialist.webp' %}" alt="Digital marketing and ecommerce systems for small businesses" class="rounded-lg border border-[color:var(--color-brand-accent)] shadow-sm" />
+      <img src="{% static 'images/djangify-digital-marketing-specialist.webp' %}" alt="Django backend developer portfolio" class="rounded-lg border border-[color:var(--color-brand-accent)] shadow-sm" />
     </figure>
   </section>
 </div>

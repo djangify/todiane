@@ -45,7 +45,7 @@ def handler403(request, exception):
 
 def handler404(request, exception):
     # Define which category to show (by slug)
-    category_slug = "tech-va"  # Change this to your desired category slug
+    category_slug = "projects"  # Change this to your desired category slug
 
     try:
         # Try to get the category
@@ -54,13 +54,13 @@ def handler404(request, exception):
         # Get posts from the category
         category_posts = Post.objects.filter(
             category=category, status="published", publish_date__lte=timezone.now()
-        ).order_by("-publish_date")[:4]
+        ).order_by("-publish_date")[:8]
 
     except Http404:
         # Fallback to recent posts if category doesn't exist
         category_posts = Post.objects.filter(
             status="published", publish_date__lte=timezone.now()
-        ).order_by("-publish_date")[:3]
+        ).order_by("-publish_date")[:6]
         category = None
 
     context = {"category_posts": category_posts, "selected_category": category}

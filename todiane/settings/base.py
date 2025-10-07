@@ -11,7 +11,6 @@ env.read_env(os.path.join(BASE_DIR, ".env"))
 SITE_URL = env("SITE_URL", default="http://localhost:8000")
 SECRET_KEY = env("SECRET_KEY", default="unsafe-secret-key")
 
-# Default debug value (overridden in local/production)
 DEBUG = False
 
 ALLOWED_HOSTS = ["*"]

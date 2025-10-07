@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Digital Marketing & eCommerce Specialist – Djangify{% endblock %}
+{% block title %}Django Backend Developer & Full-Stack Software Developer (eCommerce) – Diane Corriette{% endblock %}
 
 {% block content %}
 <header class="bg-[--color-brand-primary] text-[--color-brand-light] relative flex flex-col gap-y-5 lg:gap-y-20">
@@ -20,28 +20,28 @@
           About
         </h6>
         <h2 class="text-2xl capitalize font-bold lg:text-3xl text-[--color-brand-light]">
-          Your Digital Marketing Specialist
+          Django Backend Developer & Full-Stack Software Developer (eCommerce)
         </h2>
       </div>
 
       <div class="space-y-5 *:space-y-2 text-[--color-brand-light]/90">
         <p>
-          I’m <strong>Diane Corriette</strong>, a Digital Marketing Specialist and full-stack developer.
-          My work focuses on helping small and local businesses build simple, sustainable online systems.
-          I help you avoid unnecessary subscriptions, connect your tools properly, and make sure your website
-          is ready for AI search visibility.
+          I’m <strong>Diane Corriette</strong>, a Django backend developer and full-stack software developer specialising in eCommerce systems.  
+          My work blends <strong>Python, Django, and TailwindCSS</strong> to build structured, scalable applications for small businesses and personal projects.
         </p>
 
         <p>
-          I’ve been in online marketing and community building since 2007 — running membership sites, SEO services,
-          and training in digital marketing before moving into development. Today, I combine those skills to create
-          practical websites, eCommerce systems, and marketing frameworks that actually work.
+          After years in digital marketing, I transitioned into software development to create the tools I once relied on.  
+          I focus on clean, maintainable code and backend systems that keep businesses running efficiently — from content management to custom eCommerce builds.
+        </p>
+
+        <p>
+          This portfolio highlights the projects I’ve completed, the frameworks I’m exploring, and my ongoing learning journey — including deeper work with Astro for frontend development and experiments in AI tool creation.
         </p>
 
         <p class="mb-8">
-          Whether you want to learn the setup process through DIY PDFs and guides, or prefer a done-for-you service,
-          I’ll make sure your systems are connected, automated, and ready for growth. Your website will be structured,
-          search-ready, and simple to manage.
+          I’m not taking on client work, but I enjoy sharing what I build and learn.  
+          If you’d like to connect or discuss development ideas, you can reach me directly on <a href="https://www.linkedin.com/in/todianedev" class="text-[--color-brand-light] underline hover:text-[--color-brand-accent] transition">LinkedIn</a>.
         </p>
 
         <p>
@@ -55,49 +55,45 @@
       </div>
     </div>
 
-    <!-- Services Grid -->
+    <!-- Skills / Frameworks Grid -->
     <div class="grid gap-5 sm:grid-cols-1 md:grid-cols-2 *:gap-y-5 *:items-center *:border-2 *:border-[--color-brand-accent] *:rounded-lg *:p-8 bg-[--color-brand-light] text-[--color-font-main]">
       <div>
         <figure class="h-12 flex items-center justify-center">
-          <img src="{% static 'images/service-1.webp' %}" alt="eCommerce" class="h-full w-auto object-contain" />
+          <img src="{% static 'images/service-1.webp' %}" alt="Django Framework" class="h-full w-auto object-contain" />
         </figure>
-        <h5 class="text-xl text-[--color-brand-primary] text-center">eCommerce</h5>
+        <h5 class="text-xl text-[--color-brand-primary] text-center">Django & Python</h5>
         <p class="text-center">
-          I build eCommerce sites that are easy to update, manage VAT correctly, and connect with Stripe or ShopWired
-          for secure, scalable online sales.
+          Backend logic, data models, and RESTful API development — built using Django and Python to ensure reliability and scalability.
         </p>
       </div>
 
       <div>
         <figure class="h-12 flex items-center justify-center">
-          <img src="{% static 'images/service-2.webp' %}" alt="Lifestyle Business" class="h-full w-auto object-contain" />
+          <img src="{% static 'images/service-2.webp' %}" alt="eCommerce Development" class="h-full w-auto object-contain" />
         </figure>
-        <h5 class="text-xl text-[--color-brand-primary] text-center">Lifestyle Business</h5>
+        <h5 class="text-xl text-[--color-brand-primary] text-center">eCommerce Development</h5>
         <p class="text-center">
-          I run a lifestyle business myself — building online systems that support flexibility, time freedom,
-          and steady, sustainable income.
+          End-to-end setup for small and medium businesses — product systems, checkout integration, and secure payment workflows.
         </p>
       </div>
 
       <div>
         <figure class="h-12 flex items-center justify-center">
-          <img src="{% static 'images/service-3.webp' %}" alt="Who I Am" class="h-full w-auto object-contain" />
+          <img src="{% static 'images/service-3.webp' %}" alt="Learning and Growth" class="h-full w-auto object-contain" />
         </figure>
-        <h5 class="text-xl text-[--color-brand-primary] text-center">Who I Am</h5>
+        <h5 class="text-xl text-[--color-brand-primary] text-center">Continuous Development</h5>
         <p class="text-center">
-          Over 50, long-time digital creator, and proud member of the “We Do Not Care Club.” I believe in keeping things
-          straightforward and focusing on what works — not trends.
+          Expanding into Astro, AI-based tools, and workflow automation — documenting progress through blog posts and dev notes.
         </p>
       </div>
 
       <div>
         <figure class="h-12 flex items-center justify-center">
-          <img src="{% static 'images/service-4.webp' %}" alt="Guides and Workbooks" class="h-full w-auto object-contain" />
+          <img src="{% static 'images/service-4.webp' %}" alt="Portfolio Projects" class="h-full w-auto object-contain" />
         </figure>
-        <h5 class="text-xl text-[--color-brand-primary] text-center">Guides & Workbooks</h5>
+        <h5 class="text-xl text-[--color-brand-primary] text-center">Portfolio Projects</h5>
         <p class="text-center">
-          I create step-by-step digital marketing PDFs and AI-search setup guides that make complex systems simple.
-          You can buy them or use the free versions to get started.
+          Real-world examples of apps, tools, and systems I’ve built using Django, TailwindCSS, and clean backend architecture.
         </p>
       </div>
     </div>
@@ -107,6 +103,5 @@
   <section id="blog" class="scroll-mt-16">
     {% include "blog/components/blog.html" %}
   </section>
-
 </main>
 {% endblock %}
