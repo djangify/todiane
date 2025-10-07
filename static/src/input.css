@@ -19,6 +19,32 @@
   }
 }
 
+@layer utilities {
+  @keyframes fadeRotate {
+
+    0%,
+    33% {
+      opacity: 1;
+    }
+
+    40%,
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .animate-fade-rotate {
+    animation: fadeRotate 15s infinite;
+  }
+}
+
+@layer utilities {
+  .fade-transition {
+    @apply transition-opacity duration-[2000ms] ease-in-out;
+  }
+}
+
+
 /* Tailwind v4 theme color variables */
 @theme {
   /* Core brand palette */

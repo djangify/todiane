@@ -36,14 +36,10 @@
         </ul>
 
         <p class="lg:text-lg text-[color:var(--color-font-main)] leading-relaxed space-y-4">
-          I’m a <strong>Full-Stack Software Developer (eCommerce)</strong> and <strong>Django Backend Developer</strong> who enjoys building clean, structured web applications.  
-          <strong>This is my personal portfolio</strong> — a collection of the projects I’ve built while refining my backend development skills and exploring practical uses of AI.
-        </p>
-
-        <p class="lg:text-lg text-[color:var(--color-font-main)] leading-relaxed">
-          My work focuses on <strong>Django</strong>, <strong>Python</strong>, and <strong>TailwindCSS</strong>, with a growing interest in Astro and AI-powered tools.  
-          I share my development process, experiments, and continuous learning journey here.  
-          You can connect with me on <a href="https://www.linkedin.com/in/todianedev" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-accent)] underline transition">LinkedIn</a>.
+          I am a <strong>Full-Stack Software Developer (eCommerce)</strong> and <strong>Django Backend Developer</strong> who enjoys building structured web applications.  
+          This portfolio includes a collection of the projects I have built while refining my backend development skills.
+        
+          I specialise in <strong>Django</strong>, <strong>Python</strong>, and <strong>TailwindCSS</strong>, with a growing interest in Astro and AI-powered tools. Always happy to connect on LinkedIn.
         </p>
 
         <div class="flex flex-wrap gap-5 mt-8">
@@ -53,8 +49,35 @@
       </div>
     </div>
 
-    <figure class="lg:max-w-[550px] mt-10 lg:mt-0">
-      <img src="{% static 'images/djangify-digital-marketing-specialist.webp' %}" alt="Django backend developer portfolio" class="rounded-lg border border-[color:var(--color-brand-accent)] shadow-sm" />
+    <!-- Rotating image area -->
+    <figure id="rotating-figure" class="lg:max-w-[550px] mt-10 lg:mt-0 relative overflow-hidden rounded-lg border border-[color:var(--color-brand-accent)] shadow-sm">
+      <img src="{% static 'images/todiane-noir.webp' %}" alt="Django backend developer portfolio" class="absolute inset-0 w-full h-auto opacity-100 transition-opacity duration-[2000ms] ease-in-out">
+      <img src="{% static 'images/todiane-purp.webp' %}" alt="Full stack developer project" class="absolute inset-0 w-full h-auto opacity-0 transition-opacity duration-[2000ms] ease-in-out">
+      <img src="{% static 'images/todiane-abstract.webp' %}" alt="AI tools and Django integrations" class="absolute inset-0 w-full h-auto opacity-0 transition-opacity duration-[2000ms] ease-in-out">
     </figure>
   </section>
 </div>
+
+<!-- Working JS for rotation -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("rotating-figure");
+    if (!container) return;
+
+    const images = container.querySelectorAll("img");
+    let index = 0;
+
+    function showNextImage() {
+      images[index].classList.remove("opacity-100");
+      images[index].classList.add("opacity-0");
+
+      index = (index + 1) % images.length;
+
+      images[index].classList.remove("opacity-0");
+      images[index].classList.add("opacity-100");
+    }
+
+    // Start rotation
+    setInterval(showNextImage, 5000);
+  });
+</script>
