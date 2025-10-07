@@ -14,6 +14,7 @@
     <ul class="hidden sm:flex items-center gap-6 text-sm font-medium uppercase ">
       <li><a href="/" class="text-[color:var(--color-font-main)] hover:text-[color:var(--color-brand-primary)] transition">Home</a></li>
       <li><a href="/#about" class="text-[color:var(--color-font-main)] hover:text-[color:var(--color-brand-primary)] transition">About</a></li>
+    
       <li><a href="{% url 'blog:list' %}" class="text-[color:var(--color-font-main)] hover:text-[color:var(--color-brand-primary)] transition">Blog</a></li>
       
     </ul>
@@ -21,9 +22,9 @@
     <!-- Right Section -->
     <div class="flex items-center gap-4">
       <!-- Projects Button -->
-      <a href="{% url 'core:projects_index' %}"
+      <a href="{% url 'portfolio:list' %}"
          class="uppercase border-2 border-[color:var(--color-brand-primary)] text-[color:var(--color-brand-primary)] text-xs sm:text-sm px-3 py-1.5 rounded font-semibold hover:bg-[color:var(--color-brand-primary)] hover:text-white transition">
-        Projects
+        Portfolio
         <i class="fa-solid fa-angles-right ml-2"></i>
       </a>
 
