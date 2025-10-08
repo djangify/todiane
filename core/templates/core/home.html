@@ -8,7 +8,7 @@
   {% include 'core/hero.html' %}
 </header>
 
-<main>
+<main class="2xl:max-w-screen-2xl 2xl:mx-auto" >
   <!-- About Section -->
   <section
     id="about"
@@ -16,7 +16,7 @@
   >
     <div class="space-y-5 *:space-y-2 lg:self-center xl:space-y-10">
       <div>
-        <h6 class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg">
+        <h6 class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg mt-6 sm:mt-8">
           About
         </h6>
         <h2 class="text-2xl capitalize font-bold lg:text-3xl text-[--color-brand-light]">
@@ -98,10 +98,9 @@
       </div>
     </div>
   </section>
-
-  <!-- Blog Section -->
+</main>
+<!-- Blog Section -->
   <section id="blog" class="scroll-mt-16">
     {% include "blog/components/blog.html" %}
   </section>
-</main>
 {% endblock %}

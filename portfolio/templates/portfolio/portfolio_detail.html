@@ -5,7 +5,7 @@
 {% block meta_description %}{{ portfolio.meta_description|default:portfolio.short_description|striptags|truncatechars:160 }}{% endblock %}
 
 {% block content %}
-<section class="mb-16 space-y-12 px-4 sm:px-6 md:px-8 lg:px-12">
+<section class="2xl:max-w-screen-2xl 2xl:mx-auto mb-16 space-y-12 px-4 sm:px-6 md:px-8 lg:px-12">
 
 
   {% include 'portfolio/components/breadcrumb.html' %}
