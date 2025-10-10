@@ -132,7 +132,26 @@
     <span>Back to Portfolio</span>
   </a>
 </div>
-
-
 </section>
+<!-- JSON-LD Schema for Portfolio Project -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "{{ portfolio.title|escapejs }}",
+  "description": "{{ portfolio.short_description|striptags|truncatechars:160|escapejs }}",
+  "image": "{{ portfolio.display_image }}",
+  "url": "{{ request.build_absolute_uri }}",
+  "author": {
+    "@type": "Person",
+    "name": "Diane Corriette"
+  },
+  "datePublished": "{{ portfolio.created_at|date:'c' }}",
+  "sameAs": [
+    {% if portfolio.live_site_url %}"{{ portfolio.live_site_url }}"{% if portfolio.github_url or portfolio.for_sale_url %},{% endif %}{% endif %}
+    {% if portfolio.github_url %}"{{ portfolio.github_url }}"{% if portfolio.for_sale_url %},{% endif %}{% endif %}
+    {% if portfolio.for_sale_url %}"{{ portfolio.for_sale_url }}"{% endif %}
+  ]
+}
+</script>
 {% endblock %}
