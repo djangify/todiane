@@ -6,6 +6,17 @@ app_name = "core"
 
 urlpatterns = [
     path("", views.home, name="home"),
+    # cluster pages
+    path(
+        "ai-search-readiness/",
+        TemplateView.as_view(template_name="core/ai-search-readiness.html"),
+        name="ai_search",
+    ),
+    path(
+        "local-business-ai-search/",
+        TemplateView.as_view(template_name="core/local-business-ai-search.html"),
+        name="local_ai_search",
+    ),
     # policies
     path("policy/privacy/", views.privacy_view, name="privacy_policy"),
     path("policy/cookies/", views.cookie_view, name="cookie_policy"),

@@ -12,7 +12,7 @@
           <img src="{% static 'images/dianec-gray.webp' %}" alt="Diane Corriette logo" class="h-8">
           <span class="text-lg font-semibold text-[color:var(--color-font-main)]">Diane Corriette</span>
         </div>
-        <p class="text-sm leading-relaxed text-[color:var(--color-brand-light)]/80">
+        <p class="text-sm leading-relaxed ">
           Django Backend Developer and Full-Stack Developer. My personal portfolio that outlines the projects I have built, with help from AI. 
         </p> 
       </div>
@@ -21,9 +21,9 @@
       <div>
         <h3 class="font-semibold mb-3 text-[color:var(--color-font-main)]">Pages</h3>
         <ul class="space-y-1">
-          <li><a href="{% url 'core:home' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">Home</a></li>
-          <li><a href="{% url 'portfolio:list' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">Porfolio</a></li>
-          <li><a href="{% url 'core:ai_writing_policy' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">AI Disclaimer</a></li>
+          <li><a href="{% url 'core:home' %}" class="hover:text-[color:var(--color-brand-primary)] transition">Home</a></li>
+          <li><a href="{% url 'portfolio:list' %}" class="hover:text-[color:var(--color-brand-primary)] transition">Porfolio</a></li>
+          <li><a href="{% url 'core:ai_writing_policy' %}" class="hover:text-[color:var(--color-brand-primary)] transition">AI Disclaimer</a></li>
         </ul>
       </div>
 
@@ -32,12 +32,17 @@
         <h3 class="font-semibold mb-3 text-[color:var(--color-font-main)]">Resources & Tools</h3>
         <ul class="space-y-1">
           <li>
-            <a href="{% url 'prompt_templates:template_list' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">
+            <a href="{% url 'core:ai_search' %}" class="hover:text-[color:var(--color-brand-primary)] transition">
+              AI Search Readiness
+            </a>
+          </li>
+          <li>
+            <a href="{% url 'prompt_templates:template_list' %}" class="hover:text-[color:var(--color-brand-primary)] transition">
               AI Prompt Templates
             </a>
           </li>
           <li>
-            <a href="{% url 'blog:list' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">
+            <a href="{% url 'blog:list' %}" class="hover:text-[color:var(--color-brand-primary)] transition">
               Blog
             </a>
           </li>
@@ -50,16 +55,16 @@
         <h3 class="font-semibold mb-3 text-[color:var(--color-font-main)]">Policies</h3>
         <ul class="space-y-1">
           
-          <li><a href="{% url 'core:cookie_policy' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">Cookie Policy</a></li>
-          <li><a href="{% url 'core:privacy_policy' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">Privacy Policy</a></li>
-          <li><a href="{% url 'core:affiliate_policy' %}" class="hover:text-[color:var(--color-brand-secondary)] transition">Affiliate Policy</a></li>
+          <li><a href="{% url 'core:cookie_policy' %}" class="hover:text-[color:var(--color-brand-primary)] transition">Cookie Policy</a></li>
+          <li><a href="{% url 'core:privacy_policy' %}" class="hover:text-[color:var(--color-brand-primary)] transition">Privacy Policy</a></li>
+          <li><a href="{% url 'core:affiliate_policy' %}" class="hover:text-[color:var(--color-brand-primary)] transition">Affiliate Policy</a></li>
         </ul>
       </div>
     </div>
 
     <!-- Bottom Copyright -->
     <div class="border-t border-[color:var(--color-brand-primary)]/30 text-center pt-6 text-sm text-[color:var(--color-font-main)]/60">
-      &copy; 2025 Diane Corriette. <a href="/" class="hover:text-[color:var(--color-brand-secondary)] transition">Django Backend Developer</a>. 
+      &copy; 2025 Diane Corriette. <a href="/" class="hover:text-[color:var(--color-brand-primary)] transition">Django Backend Developer</a>. 
     </div>
   </div>
 </footer>
