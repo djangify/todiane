@@ -4,127 +4,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Meta Description -->
+
+    <!-- SEO Meta -->
     <meta name="description" content="{% block meta_description %}Diane Corriette - Django Backend Developer{% endblock %}">
-  <link rel="preconnect" href="https://www.todiane.com" crossorigin>
+    <meta name="keywords" content="{% block meta_keywords %}Django, full-stack developer, Django developer UK, Diane Corriette, Digital marketing PDFs for small business{% endblock %}">
 
-    <meta name="keywords" content="{% block meta_keywords %}Django, full-stack developer, Django developer UK, Diane Corriette,  Digital marketing PDFs for small business{% endblock %}">
-
+    <!-- Open Graph -->
     {% block open_graph_tags %}
     <meta property="fb:app_id" content="2433552923679047" />
-    <meta property="og:title" content="Diane Corriette - Django Backend Developer"
-      property="og:description"
-      content="Diane Corriette - Django Backend Developer and Full-Stack Software Developer UK"
-    />
+    <meta property="og:title" content="Diane Corriette - Django Backend Developer" />
+    <meta property="og:description" content="Diane Corriette - Django Backend Developer and Full-Stack Software Developer UK" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ request.build_absolute_uri }}" />
     <meta property="og:image" content="{% static 'images/todiane-purp.webp' %}" />
     {% endblock %}
-    <!-- CRITICAL CSS -->
-    <link rel="stylesheet" href="{% static 'dist/output.css' %}">
 
-    <!-- PRELOAD Font Awesome then load async -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://www.todiane.com" crossorigin>
+  
+  
+    <!-- 🔹 Preload + async load main stylesheet -->
+    <link rel="preload" href="{% static 'dist/output.css' %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{% static 'dist/output.css' %}"></noscript>
 
-    <!-- OPTIONAL tiny overrides -->
+    
+    <!-- 🔹 Custom overrides -->
     <link rel="preload" href="{% static 'css/custom.css' %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="{% static 'css/custom.css' %}"></noscript>
 
+    <!-- Favicon -->
     <link rel="icon" type="image/ico" href="{% static 'images/favicon.ico' %}">
+
     <title>{% block title %}Diane Corriette{% endblock %}</title>
     {% block extra_meta %}{% endblock %}
   </head>
+
   <body>
-     {% if messages %}
+    {% if messages %}
       <section aria-label="Notifications" role="alert">
-          {% include 'partials/_messages.html' %}
+        {% include 'partials/_messages.html' %}
       </section>
     {% endif %}
-   
-  
-      {% include 'components/navbar.html' %}
 
-    {% block content %}
-    {% endblock %}
+    {% include 'components/navbar.html' %}
+
+    {% block content %}{% endblock %}
 
     {% include 'components/footer.html' %}
 
-    
-    <!-- Cookie Consent -->
-    <div id="cookie-banner" class="cookie-banner hidden fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] md:w-auto z-50 bg-[color:var(--color-brand-light)] text-[color:var(--color-font-main)] border border-[color:var(--color-brand-accent)] rounded-2xl shadow-lg px-6 py-4  flex-col md:flex-row items-center justify-between gap-3 md:gap-6" role="dialog" aria-labelledby="cookie-title">
-    <div class="cookie-text text-sm md:text-base">
-      <h2 id="cookie-title" class="sr-only">Cookie Consent</h2>
-      We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. 
-      <a href="{% url 'core:cookie_policy' %}" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-dark)] underline ml-1">Cookie Policy</a>
+    <!-- 🔹 Cookie Consent -->
+    <div id="cookie-banner" class="cookie-banner hidden fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] md:w-auto z-50 bg-[color:var(--color-brand-light)] text-[color:var(--color-font-main)] border border-[color:var(--color-brand-accent)] rounded-2xl shadow-lg px-6 py-4 flex-col md:flex-row items-center justify-between gap-3 md:gap-6" role="dialog" aria-labelledby="cookie-title">
+      <div class="cookie-text text-sm md:text-base">
+        <h2 id="cookie-title" class="sr-only">Cookie Consent</h2>
+        We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+        <a href="{% url 'core:cookie_policy' %}" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-dark)] underline ml-1">Cookie Policy</a>
+      </div>
+      <div class="cookie-actions mt-4 mb-4 flex gap-3">
+        <button id="accept-cookies" class="cookie-btn mt-2 px-4 py-2 bg-[color:var(--color-brand-primary)] text-[color:var(--color-brand-light)] rounded-lg hover:bg-[color:var(--color-brand-secondary)] transition">Accept</button>
+        <button id="decline-cookies" class="cookie-btn px-4 mt-2 py-2 border border-[color:var(--color-brand-secondary)] text-[color:var(--color-font-main)] rounded-lg hover:bg-[color:var(--color-brand-primary)] hover:text-[color:var(--color-brand-light)] transition">Decline</button>
+      </div>
     </div>
-    <div class="cookie-actions mt-4 mb-4 flex gap-3">
-      <button id="accept-cookies" class="cookie-btn mt-2 px-4 py-2 bg-[color:var(--color-brand-primary)] text-[color:var(--color-brand-light)] rounded-lg hover:bg-[color:var(--color-brand-secondary)] transition">Accept</button>
-      <button id="decline-cookies" class="cookie-btn px-4 mt-2 py-2 border border-[color:var(--color-brand-secondary)] text-[color:var(--color-font-main)] rounded-lg hover:bg-[color:var(--color-brand-primary)] hover:text-[color:var(--color-brand-light)] transition">Decline</button>
-    </div>
-  </div>
 
-<!-- Scripts -->
-{% block extra_js %}
-
-
-<!-- Cookie Consent Script (works first time, then gone) -->
-<script>
-(function () {
-  function ready(fn) {
-    if (document.readyState !== 'loading') { fn(); }
-    else { document.addEventListener('DOMContentLoaded', fn); }
-  }
-
-  ready(function () {
-    try {
-      var banner = document.getElementById('cookie-banner');
-      if (!banner) return;
-
-      var accept = document.getElementById('accept-cookies');
-      var decline = document.getElementById('decline-cookies');
-
-      // If already decided, remove banner entirely and bail
-      var decision = null;
-      try { decision = localStorage.getItem('cookieConsent'); } catch (e) {}
-      if (decision === 'accepted' || decision === 'declined') {
-        if (banner.parentNode) banner.parentNode.removeChild(banner);
-        return;
-      }
-
-      // Show the banner (ignore classes; force visible)
-      banner.style.display = 'block';
-      banner.setAttribute('aria-hidden', 'false');
-
-      function hideAndRemember(value) {
-        try { localStorage.setItem('cookieConsent', value); } catch (e) {}
-        // Remove from DOM so it *cannot* linger due to CSS
-        if (banner && banner.parentNode) {
-          banner.parentNode.removeChild(banner);
+    {% block extra_js %}
+    <!-- 🔹 Cookie Consent Script -->
+    <script>
+      (function () {
+        function ready(fn) {
+          if (document.readyState !== 'loading') fn();
+          else document.addEventListener('DOMContentLoaded', fn);
         }
-      }
+        ready(() => {
+          try {
+            const banner = document.getElementById('cookie-banner');
+            if (!banner) return;
+            const accept = document.getElementById('accept-cookies');
+            const decline = document.getElementById('decline-cookies');
+            let decision = null;
+            try { decision = localStorage.getItem('cookieConsent'); } catch (e) {}
+            if (decision === 'accepted' || decision === 'declined') {
+              banner.remove();
+              return;
+            }
+            banner.style.display = 'block';
+            banner.setAttribute('aria-hidden', 'false');
 
-      if (accept) accept.addEventListener('click', function (e) {
-        e.preventDefault();
-        hideAndRemember('accepted');
-      });
+            const hideAndRemember = (value) => {
+              try { localStorage.setItem('cookieConsent', value); } catch (e) {}
+              banner.remove();
+            };
 
-      if (decline) decline.addEventListener('click', function (e) {
-        e.preventDefault();
-        hideAndRemember('declined');
-      });
-    } catch (err) {
-      // Fail-closed: if something unexpected happens, don't block the page
-      console.error('Cookie banner error:', err);
-    }
-  });
-})();
-</script>
+            accept?.addEventListener('click', e => { e.preventDefault(); hideAndRemember('accepted'); });
+            decline?.addEventListener('click', e => { e.preventDefault(); hideAndRemember('declined'); });
+          } catch (err) {
+            console.error('Cookie banner error:', err);
+          }
+        });
+      })();
+    </script>
+    {% endblock %}
 
-{% endblock %}
-<script src="{% static 'js/app.js' %}" defer></script>
-<script src="{% static 'js/messages.js' %}" defer></script>
-<script src="{% static 'js/catergory-filter.js' %}" defer></script>
-<script src="{% static 'js/accordion.js' %}" defer></script>
+    <!-- 🔹 Scripts (deferred, in correct order) -->
+    <script src="{% static 'js/app.js' %}" defer></script>
+    <script src="{% static 'js/messages.js' %}" defer></script>
+    <script src="{% static 'js/category-filter.js' %}" defer></script>
+    <script src="{% static 'js/accordion.js' %}" defer></script>
   </body>
 </html>

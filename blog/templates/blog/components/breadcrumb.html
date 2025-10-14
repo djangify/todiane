@@ -6,7 +6,7 @@
       <a href="{% url 'blog:list' %}" class="text-[--color-brand-secondary] hover:text-[--color-brand-accent] transition">
         Blogs
       </a>
-      <i class="fa-solid fa-angle-right mx-2 text-[--color-brand-accent]/60"></i>
+      <span class="mx-2 text-[--color-brand-accent]/60">›</span>
     </li>
 
     <!-- Dynamic Breadcrumbs -->
@@ -17,7 +17,7 @@
           <a href="{{ breadcrumb.url }}" class="text-[--color-brand-secondary] hover:text-[--color-brand-accent] transition">
             {{ breadcrumb.title }}
           </a>
-          <i class="fa-solid fa-angle-right mx-2 text-[--color-brand-accent]/60"></i>
+          <span class="mx-2 text-[--color-brand-accent]/60">›</span>
         </li>
         {% else %}
         <li class="text-[--color-brand-primary] font-medium">{{ breadcrumb.title }}</li>
@@ -33,7 +33,7 @@
            class="text-[--color-brand-secondary] hover:text-[--color-brand-accent] transition">
           {{ post.category.name }}
         </a>
-        <i class="fa-solid fa-angle-right mx-2 text-[--color-brand-accent]/60"></i>
+        <span class="mx-2 text-[--color-brand-accent]/60">›</span>
       </li>
       {% endif %}
       <li class="text-[--color-brand-primary] font-semibold">{{ post.title|truncatechars:40 }}</li>

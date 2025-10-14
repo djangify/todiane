@@ -4,7 +4,7 @@
         <!-- Home -->
         <li class="flex items-center">
             <a href="{% url 'core:home' %}" class="text-text hover:text-accent transition-colors">Home</a>
-            <i class="fa-solid fa-angle-right mx-2 text-gray-400"></i>
+            <span class="mx-2 text-[--color-brand-accent]/60">›</span>
         </li>
 
         <!-- Generic breadcrumbs (if provided in context) -->
@@ -13,7 +13,7 @@
                 {% if not forloop.last %}
                     <li class="flex items-center">
                         <a href="{{ breadcrumb.url }}" class="text-text hover:text-accent transition-colors">{{ breadcrumb.title }}</a>
-                        <i class="fa-solid fa-angle-right mx-2 text-gray-400"></i>
+                        <span class="mx-2 text-[--color-brand-accent]/60">›</span>
                     </li>
                 {% else %}
                     <li class="text-gray-700 font-medium">{{ breadcrumb.title }}</li>
@@ -26,7 +26,7 @@
             {% if post.category %}
                 <li class="flex items-center">
                     <a href="{% url 'news:category' post.category.slug %}" class="text-text hover:text-accent transition-colors">{{ post.category.name }}</a>
-                    <i class="fa-solid fa-angle-right mx-2 text-gray-400"></i>
+                    <span class="mx-2 text-[--color-brand-accent]/60">›</span>
                 </li>
             {% endif %}
             <li class="text-accent font-medium">{{ post.title|truncatechars:40 }}</li>
