@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Meta Description -->
     <meta name="description" content="{% block meta_description %}Diane Corriette - Django Backend Developer{% endblock %}">
+  <link rel="preconnect" href="https://www.todiane.com" crossorigin>
 
     <meta name="keywords" content="{% block meta_keywords %}Django, full-stack developer, Django developer UK, Diane Corriette,  Digital marketing PDFs for small business{% endblock %}">
 
@@ -121,9 +122,9 @@
 </script>
 
 {% endblock %}
-<script src="{% static 'js/app.js' %}"></script>
-<script src="{% static 'js/messages.js' %}"></script>
-<script src="{% static 'js/catergory-filter.js' %}"></script>
-<script src="{% static 'js/accordion.js' %}"></script>
+<script src="{% static 'js/app.js' %}" defer></script>
+<script src="{% static 'js/messages.js' %}" defer></script>
+<script src="{% static 'js/catergory-filter.js' %}" defer></script>
+<script src="{% static 'js/accordion.js' %}" defer></script>
   </body>
 </html>
