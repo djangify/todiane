@@ -1,68 +1,70 @@
 {% load static %}
 <!-- Full-width Blog Section -->
-<div class="relative left-1/2 right-1/2 -mx-[50vw] w-screen bg-[color:var(--color-brand-light)]">
-  <section class="2xl:max-w-screen-2xl 2xl:mx-auto p-6 flex flex-col gap-y-10 text-[color:var(--color-font-main)] md:p-16 lg:gap-x-10 lg:flex-row-reverse *:basis-full">
+<div class="relative left-1/2 right-1/2 -mx-[50vw] w-screen ">
+  <section class="2xl:max-w-screen-2xl 2xl:mx-auto p-6 flex flex-col gap-y-10 text-[color:var(--color-font-main)] md:p-16 lg:gap-x-10 lg:flex-row-reverse *:basis-full"
+           aria-labelledby="portfolio-blog-heading" role="region">
     
     <!-- Text Content -->
     <div class="flex flex-col gap-y-5 lg:self-center xl:gap-y-10 *:space-y-2">
-      <div>
-        <p class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg">
+      <header>
+        <p class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4  before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg">
           insights
         </p>
-        <h2 class="text-2xl capitalize text-[color:var(--color-brand-primary)] lg:text-3xl">
+        <h2 id="portfolio-blog-heading" class="text-2xl capitalize text-[color:var(--color-brand-primary)] lg:text-3xl">
           My Personal Portfolio Blog
         </h2>
-      </div>
+      </header>
 
-      <p class="text-[color:var(--color-font-main)]">
-        Behind every line of code is a story. I use this space to write mine — what I am building, breaking and debugging, plus what I am figuring out along the way. I learn and document as I go, so I share my builds, experiments, and reflections. Some posts are technical, some are personal — all part of growing as a developer who loves the backend side of things.
+      <p>
+        Behind every line of code is a story. I use this space to write mine - what I am building, breaking and debugging, plus what I am figuring out along the way. I learn and document as I go, so I share my builds, experiments, and reflections. Some posts are technical, some are personal, and all are part of growing as a developer who loves the backend side of things.
       </p>
 
       <a href="{% url 'blog:list' %}"
+         aria-label="View all blog articles on the portfolio blog"
          class="uppercase p-2 border-2 border-[color:var(--color-brand-primary)] font-semibold self-start text-xs rounded inline-block hover:text-[color:var(--color-brand-primary)] transition-colors sm:text-lg sm:px-4 text-[color:var(--color-font-main)]">
          View All Blog Articles
       </a>
     </div>
 
     <!-- Blog Cards -->
-    <div class="grid gap-y-5 md:grid-cols-2">
-      <div class="grid sm:grid-rows-subgrid sm:row-span-5 gap-y-4 p-6 px-4 rounded  shadow-md  border-t-2 border-[color:var(--color-brand-primary)]">
-        <figure>
-          <img class="object-[65%]" src="{% static 'images/todiane-purp.webp' %}" alt="Building a Django Backend Project" />
+    <div class="grid gap-y-5 md:grid-cols-2" role="list">
+      
+      <!-- Article 1 -->
+      <article class="grid sm:grid-rows-subgrid sm:row-span-5 gap-y-4 p-6 px-4 rounded shadow-md border-t-2 border-[color:var(--color-brand-primary)]"
+               role="listitem">
+        <figure class="rounded overflow-hidden">
+          <img class="object-[65%]" src="{% static 'images/todiane-purp.webp' %}" alt="Screenshot showing Django backend folder structure and code layout" loading="lazy" />
         </figure>
         <h3 class="text-xl text-[color:var(--color-font-main)]">Behind the Build: My Django Backend Setup</h3>
-        
-        <p class="text-[color:var(--color-font-main)]">
-          How I structure Django projects. From setting up models and templates to organising reusable apps. My workflow to create scalable backend systems.
+        <p>
+          How I structure Django projects from setting up models and templates to organising reusable apps. My workflow to create scalable backend systems designed for long-term maintainability.
         </p>
-        <a
-          href="/behind-the-build-django-backend/"
-          aria-label="Read full article: Behind the Build Django Backend"
-          class="uppercase justify-self-start px-6 py-2 border-2 border-[color:var(--color-brand-primary)] font-semibold self-start rounded flex items-center group lg:text-sm text-[color:var(--color-font-main)] hover:text-[color:var(--color-brand-accent)] transition-colors"
-        >
+        <a href="/behind-the-build-django-backend/"
+           aria-label="Read full article: Behind the Build Django Backend Setup"
+           class="uppercase justify-self-start px-6 py-2 border-2 border-[color:var(--color-brand-primary)] font-semibold rounded flex items-center group lg:text-sm text-[color:var(--color-font-main)] hover:text-[color:var(--color-brand-accent)] transition-colors">
           <span>Keep Reading</span>
-          <i class="fa-solid fa-angles-right text-[color:var(--color-font-main)] ml-2 group-hover:translate-x-2 transition-transform"></i>
+          <i class="fa-solid fa-angles-right text-[color:var(--color-font-main)] ml-2 group-hover:translate-x-2 transition-transform" aria-hidden="true"></i>
         </a>
-      </div>
+      </article>
 
-      <div class="grid sm:grid-rows-subgrid sm:row-span-5 gap-y-4 p-6 rounded  shadow-md px-4 border-t-2 border-[color:var(--color-brand-primary)]">
-        <figure>
-          <img class="object-[65%]" src="{% static 'images/todiane-noir.webp' %}" alt="Continuous Learning and AI Tools" />
+      <!-- Article 2 (replaced Astro article) -->
+      <article class="grid sm:grid-rows-subgrid sm:row-span-5 gap-y-4 p-6 rounded shadow-md px-4 border-t-2 border-[color:var(--color-brand-primary)]"
+               role="listitem">
+        <figure class="rounded overflow-hidden">
+          <img class="object-[65%]" src="{% static 'images/todiane-noir.webp' %}" alt="Preview of a mini ecommerce builder dashboard interface" loading="lazy" />
         </figure>
-        <h3 class="text-xl text-[color:var(--color-font-main)]">What I’m Learning: From Astro to AI Tools</h3>
-        
-        <p class="text-[color:var(--color-font-main)]">
-          Documenting my continuous development journey, exploring Astro for frontends and experimenting with AI-assisted tools.
+        <h3 class="text-xl text-[color:var(--color-font-main)]">Building the Mini eCommerce Builder System</h3>
+        <p>
+          A behind-the-scenes look at how I created a streamlined, Django-powered system for building mini ecommerce stores using modular templates, reusable components, and Stripe checkout.
         </p>
-        <a
-          href="/continuous-learning-astro-ai-tools/"
-          aria-label="Read full article: Continuous Learning from Astro to AI Tools"
-          class="uppercase justify-self-start px-6 py-2 border-2 border-[color:var(--color-brand-primary)] font-semibold self-start rounded flex items-center group lg:text-sm text-[color:var(--color-font-main)] hover:text-[color:var(--color-brand-accent)] transition-colors"
-        >
+        <a href="/mini-ecommerce-builder-system/"
+           aria-label="Read full article: Building the Mini eCommerce Builder System"
+           class="uppercase justify-self-start px-6 py-2 border-2 border-[color:var(--color-brand-primary)] font-semibold rounded flex items-center group lg:text-sm text-[color:var(--color-font-main)] hover:text-[color:var(--color-brand-accent)] transition-colors">
           <span>Keep Reading</span>
-          <i class="fa-solid fa-angles-right text-[color:var(--color-font-main)] ml-2 group-hover:translate-x-2 transition-transform"></i>
+          <i class="fa-solid fa-angles-right text-[color:var(--color-font-main)] ml-2 group-hover:translate-x-2 transition-transform" aria-hidden="true"></i>
         </a>
-      </div>
+      </article>
+
     </div>
   </section>
 </div>
