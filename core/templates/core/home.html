@@ -8,15 +8,14 @@
   {% include 'core/hero.html' %}
 </header>
 
-<main class="2xl:max-w-screen-2xl 2xl:mx-auto" >
+<main class="2xl:max-w-screen-2xl 2xl:mx-auto">
   <!-- About Section -->
-  <section
-    id="about"
-    class="scroll-mt-8 p-6 flex flex-col gap-y-10 bg-[--color-brand-secondary] text-[--color-font-main] lg:gap-x-10 lg:flex-row-reverse *:basis-full md:p-16 2xl:rounded"
-  >
+  <section id="about"
+    class="scroll-mt-8 p-6 flex flex-col gap-y-10 bg-[--color-brand-secondary] text-[--color-font-main] lg:gap-x-10 lg:flex-row-reverse *:basis-full md:p-16 2xl:rounded">
+
     <div class="space-y-5 *:space-y-2 lg:self-center xl:space-y-10">
       <div>
-        <p class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg  sm:mt-6">
+        <p class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg sm:mt-6">
           About Diane Corriette
         </p>
         <h2 class="text-2xl capitalize font-bold lg:text-3xl text-[--color-brand-light]">
@@ -26,7 +25,7 @@
 
       <div class="space-y-5 *:space-y-2 text-[--color-brand-light]/90">
         <p>
-          I am <strong>Diane Corriette</strong>, a Django  developer who specialises in eCommerce systems.  
+          I am <strong>Diane Corriette</strong>, a Django developer who specialises in eCommerce systems.  
           My work blends <strong>Python, Django, and TailwindCSS</strong> to build structured, scalable applications for small businesses and personal projects.
         </p>
 
@@ -39,15 +38,12 @@
         </p>
 
         <p class="mb-8">
-           
-          If you would like to connect or discuss development ideas, you can reach me directly on <a href="https://www.linkedin.com/in/todianedev" class="text-[--color-brand-light] underline hover:text-[--color-brand-accent] transition">LinkedIn</a>.
+          If you would like to connect or discuss development ideas, you can reach me directly on 
+          <a href="https://www.linkedin.com/in/todianedev" class="text-[--color-brand-light] underline hover:text-[--color-brand-accent] transition">LinkedIn</a>.
         </p>
 
         <p>
-          <a
-            class="uppercase p-2 border-2 border-[--color-brand-accent] self-start hover:text-[--color-brand-accent] transition cursor-pointer text-xs rounded sm:text-lg mt-8 sm:px-4 text-[--color-brand-light]"
-            href="{% url 'portfolio:list' %}"
-          >
+          <a class="uppercase p-2 border-2 border-[--color-brand-accent] self-start hover:text-[--color-brand-accent] transition cursor-pointer text-xs rounded sm:text-lg mt-8 sm:px-4 text-[--color-brand-light]" href="{% url 'portfolio:list' %}">
             Visit My Portfolio
           </a>
         </p>
@@ -57,9 +53,8 @@
     <!-- Skills / Frameworks Grid -->
     <div class="grid gap-5 sm:grid-cols-1 md:grid-cols-2 *:gap-y-5 *:items-center *:border-2 *:border-[--color-brand-accent] *:rounded-lg *:p-8 bg-[--color-brand-light] text-[--color-font-main]">
       <div>
-        <figure class=" flex items-center justify-center">
-          <img src="{% static 'images/service-1.webp' %}" alt="Django Framework" width="64"
-          height="64" class="h-12 w-12 object-contain"/>
+        <figure class="flex items-center justify-center">
+          <img src="{% static 'images/service-1.webp' %}" alt="Django Framework" width="64" height="64" loading="lazy" decoding="async" class="h-12 w-12 object-contain" />
         </figure>
         <p class="text-xl text-[--color-brand-primary] text-center font-semibold">Django & Python</p>
         <p class="text-center">
@@ -69,8 +64,7 @@
 
       <div>
         <figure class="flex items-center justify-center">
-          <img src="{% static 'images/service-2.webp' %}" alt="eCommerce Development" width="64"
-          height="64" class="h-12 w-12 object-contain" />
+          <img src="{% static 'images/service-2.webp' %}" alt="eCommerce Development" width="64" height="64" loading="lazy" decoding="async" class="h-12 w-12 object-contain" />
         </figure>
         <p class="text-xl text-[--color-brand-primary] text-center font-semibold">eCommerce Development</p>
         <p class="text-center">
@@ -80,8 +74,7 @@
 
       <div>
         <figure class="flex items-center justify-center">
-          <img src="{% static 'images/service-3.webp' %}" alt="Learning and Growth" width="64"
-          height="64" class="h-12 w-12 object-contain" />
+          <img src="{% static 'images/service-3.webp' %}" alt="Learning and Growth" width="64" height="64" loading="lazy" decoding="async" class="h-12 w-12 object-contain" />
         </figure>
         <p class="text-xl font-semibold text text-center">Workbooks and Guides</p>
         <p class="text-center">
@@ -91,8 +84,7 @@
 
       <div>
         <figure class="flex items-center justify-center">
-          <img src="{% static 'images/service-4.webp' %}" alt="Portfolio Projects" width="64"
-          height="64" class="h-12 w-12 object-contain" />
+          <img src="{% static 'images/service-4.webp' %}" alt="Portfolio Projects" width="64" height="64" loading="lazy" decoding="async" class="h-12 w-12 object-contain" />
         </figure>
         <p class="text-xl font-semibold text-center">Portfolio Projects</p>
         <p class="text-center">
@@ -102,8 +94,9 @@
     </div>
   </section>
 </main>
+
 <!-- Blog Section -->
-  <section id="blog" class="scroll-mt-16">
-    {% include "blog/components/blog.html" %}
-  </section>
+<section id="blog" class="scroll-mt-16">
+  {% include "blog/components/blog.html" %}
+</section>
 {% endblock %}

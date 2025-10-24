@@ -1,10 +1,10 @@
 {% load static %}
-<nav class="border-b border-[color:var(--color-brand-accent)] bg-white shadow-sm sticky top-0 z-50">
+<nav class="border-b border-[color:var(--color-brand-accent)] bg-white shadow-sm" role="navigation" aria-label="Main navigation">
   <div class="2xl:max-w-screen-2xl 2xl:mx-auto mx-auto px-4 lg:px-10 flex justify-between items-center h-16">
     <!-- Logo -->
     <a href="/" class="flex items-center">
       <img src="{% static 'images/dianec-gray.png' %}" alt="Diane Corriette logo"  width="64"
-          height="64"class="h-8 w-8 object-contain">
+          height="64" loading="lazy" class="h-8 w-8 object-contain">
        <span class="pl-2 hidden sm:inline-block text-[color:var(--color-font-main)] font-medium uppercase">To Diane</span>
     </a>
 
@@ -29,7 +29,9 @@
       
       <!-- Hamburger (visible on mobile) -->
       <button id="menu-toggle" aria-label="Toggle menu"
-              class="sm:hidden flex flex-col justify-between w-8 h-6 focus:outline-none">
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              class="sm:hidden flex flex-col justify-between w-8 h-6 focus:outline-none" >
         <span class="block h-0.5 w-full bg-[color:var(--color-brand-accent)] rounded"></span>
         <span class="block h-0.5 w-full bg-[color:var(--color-brand-accent)] rounded"></span>
         <span class="block h-0.5 w-full bg-[color:var(--color-brand-accent)] rounded"></span>
@@ -47,17 +49,28 @@
     
   </div>
 
-  <!-- Toggle Script -->
- 
+  <!-- Accessibility Toggle Script -->
   <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("mobile-menu");
-    const links = menu.querySelectorAll("a");
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
 
-    toggle.addEventListener("click", () => menu.classList.toggle("hidden"));
-    links.forEach(link => link.addEventListener("click", () => menu.classList.add("hidden")));
-  });
-</script>
+      if (toggle && menu) {
+        toggle.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+          const expanded = toggle.getAttribute("aria-expanded") === "true";
+          toggle.setAttribute("aria-expanded", !expanded);
+        });
+
+        // Close when link clicked
+        menu.querySelectorAll("a").forEach(link => {
+          link.addEventListener("click", () => {
+            menu.classList.add("hidden");
+            toggle.setAttribute("aria-expanded", "false");
+          });
+        });
+      }
+    });
+  </script>
 
 </nav>

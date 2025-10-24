@@ -4,42 +4,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#011852" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="canonical" href="{{ request.build_absolute_uri }}" />
 
-    <!-- SEO Meta -->
-    <meta name="description" content="{% block meta_description %}Diane Corriette - Django Developer. Creator of Mini eCommerce Builder{% endblock %}">
-    <meta name="keywords" content="{% block meta_keywords %}Django, full-stack developer, eCommerce builder site, mini-ecommerce store, ecommerce store, Django developer UK, Diane Corriette, Digital marketing PDFs for small business{% endblock %}">
+    <!-- 🔹 SEO -->
+    <meta
+      name="description"
+      content="{% block meta_description %}Diane Corriette – Django Developer & Creator of the Mini eCommerce Site Builder.{% endblock %}"
+    />
+    <meta
+      name="keywords"
+      content="{% block meta_keywords %}Django, Python, TailwindCSS, eCommerce, Mini eCommerce Builder, Full-Stack Developer UK, AI Search Readiness, Diane Corriette{% endblock %}"
+    />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <meta name="author" content="Diane Corriette" />
 
-    <!-- Open Graph -->
+    <!-- 🔹 Open Graph / Twitter -->
     {% block open_graph_tags %}
-    <meta property="fb:app_id" content="2433552923679047" />
-    <meta property="og:title" content="Diane Corriette - full-stack Django developer and creator of the Mini eCommerce Builder System" />
-    <meta property="og:description" content="Diane Corriette - Full-stack Django developer and creator of the Mini eCommerce Builder System UK" />
+    <meta property="og:site_name" content="ToDiane" />
     <meta property="og:type" content="website" />
+    <meta property="og:title" content="Diane Corriette – Django Backend Developer" />
+    <meta property="og:description" content="Full-stack Django developer & creator of the Mini eCommerce Builder system." />
     <meta property="og:url" content="{{ request.build_absolute_uri }}" />
-    <meta property="og:image" content="{% static 'images/todiane-purp.webp' %}" />
+    <meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}/static/images/todiane-purp.webp" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ToDiane – Django Developer & AI-Ready Web Systems" />
+    <meta name="twitter:description" content="Django backend developer building AI-search-ready eCommerce systems." />
+    <meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}/static/images/todiane-purp.webp" />
     {% endblock %}
 
-    <!-- Preconnects -->
-    <link rel="preconnect" href="https://www.todiane.com" crossorigin>
-  
-  
-    <!-- 🔹 Preload + async load main stylesheet -->
-    <link rel="preload" href="{% static 'css/output.css' %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{% static 'css/output.css' %}"></noscript>
+    <!-- 🔹 Preload & optimise styles -->
+    <link
+      rel="preload"
+      href="{% static 'css/output.css' %}"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="{% static 'css/output.css' %}" /></noscript>
 
-    
-    <!-- 🔹 Custom overrides -->
-    <link rel="preload" href="{% static 'css/custom.css' %}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="{% static 'css/custom.css' %}"></noscript>
+    <link
+      rel="preload"
+      href="{% static 'css/custom.css' %}"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="{% static 'css/custom.css' %}" /></noscript>
+
+    <!-- 🔹 Fonts & connections -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.todiane.com" crossorigin />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/ico" href="{% static 'images/favicon.ico' %}">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon" />
 
-    <title>{% block title %}Diane Corriette{% endblock %}</title>
+    <title>{% block title %}Diane Corriette – Django Backend Developer{% endblock %}</title>
     {% block extra_meta %}{% endblock %}
+
+    <!-- 🔹 JSON-LD Website Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ToDiane",
+      "url": "{{ request.scheme }}://{{ request.get_host }}/",
+      "author": {
+        "@type": "Person",
+        "name": "Diane Corriette"
+      },
+      "description": "Django backend developer specialising in mini eCommerce sites, AI-search readiness, and Python web systems.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ToDiane"
+      }
+    }
+    </script>
   </head>
 
-  <body>
+  <body class="antialiased bg-[color:var(--color-surface-light)] text-[color:var(--color-font-main)]">
     {% if messages %}
       <section aria-label="Notifications" role="alert">
         {% include 'partials/_messages.html' %}
@@ -48,65 +93,86 @@
 
     {% include 'components/navbar.html' %}
 
-    {% block content %}{% endblock %}
+    <main id="main-content" tabindex="-1">
+      {% block content %}{% endblock %}
+    </main>
 
     {% include 'components/footer.html' %}
 
     <!-- 🔹 Cookie Consent -->
-    <div id="cookie-banner" class="cookie-banner hidden fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] md:w-auto z-50 bg-[color:var(--color-brand-light)] text-[color:var(--color-font-main)] border border-[color:var(--color-brand-accent)] rounded-2xl shadow-lg px-6 py-4 flex-col md:flex-row items-center justify-between gap-3 md:gap-6" role="dialog" aria-labelledby="cookie-title">
+    <div
+      id="cookie-banner"
+      class="cookie-banner hidden fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] md:w-auto z-50 bg-[color:var(--color-brand-light)] text-[color:var(--color-font-main)] border border-[color:var(--color-brand-accent)] rounded-2xl shadow-lg px-6 py-4 flex-col md:flex-row items-center justify-between gap-3 md:gap-6"
+      role="dialog"
+      aria-labelledby="cookie-title"
+    >
       <div class="cookie-text text-sm md:text-base">
         <h2 id="cookie-title" class="sr-only">Cookie Consent</h2>
         We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
-        <a href="{% url 'core:cookie_policy' %}" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-dark)] underline ml-1">Cookie Policy</a>
+        <a
+          href="{% url 'core:cookie_policy' %}"
+          class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-dark)] underline ml-1"
+          >Cookie Policy</a
+        >
       </div>
       <div class="cookie-actions mt-4 mb-4 flex gap-3">
-        <button id="accept-cookies" class="cookie-btn mt-2 px-4 py-2 bg-[color:var(--color-brand-primary)] text-[color:var(--color-brand-light)] rounded-lg hover:bg-[color:var(--color-brand-secondary)] transition">Accept</button>
-        <button id="decline-cookies" class="cookie-btn px-4 mt-2 py-2 border border-[color:var(--color-brand-secondary)] text-[color:var(--color-font-main)] rounded-lg hover:bg-[color:var(--color-brand-primary)] hover:text-[color:var(--color-brand-light)] transition">Decline</button>
+        <button
+          id="accept-cookies"
+          class="cookie-btn mt-2 px-4 py-2 bg-[color:var(--color-brand-primary)] text-[color:var(--color-brand-light)] rounded-lg hover:bg-[color:var(--color-brand-secondary)] transition"
+        >
+          Accept
+        </button>
+        <button
+          id="decline-cookies"
+          class="cookie-btn px-4 mt-2 py-2 border border-[color:var(--color-brand-secondary)] text-[color:var(--color-font-main)] rounded-lg hover:bg-[color:var(--color-brand-primary)] hover:text-[color:var(--color-brand-light)] transition"
+        >
+          Decline
+        </button>
       </div>
     </div>
 
-    {% block extra_js %}
-    <!-- 🔹 Cookie Consent Script -->
-    <script>
-      (function () {
-        function ready(fn) {
-          if (document.readyState !== 'loading') fn();
-          else document.addEventListener('DOMContentLoaded', fn);
-        }
-        ready(() => {
-          try {
-            const banner = document.getElementById('cookie-banner');
-            if (!banner) return;
-            const accept = document.getElementById('accept-cookies');
-            const decline = document.getElementById('decline-cookies');
-            let decision = null;
-            try { decision = localStorage.getItem('cookieConsent'); } catch (e) {}
-            if (decision === 'accepted' || decision === 'declined') {
-              banner.remove();
-              return;
-            }
-            banner.style.display = 'block';
-            banner.setAttribute('aria-hidden', 'false');
-
-            const hideAndRemember = (value) => {
-              try { localStorage.setItem('cookieConsent', value); } catch (e) {}
-              banner.remove();
-            };
-
-            accept?.addEventListener('click', e => { e.preventDefault(); hideAndRemember('accepted'); });
-            decline?.addEventListener('click', e => { e.preventDefault(); hideAndRemember('declined'); });
-          } catch (err) {
-            console.error('Cookie banner error:', err);
-          }
-        });
-      })();
-    </script>
-    {% endblock %}
-
-    <!-- 🔹 Scripts (deferred, in correct order) -->
+    <!-- 🔹 Deferred JS -->
     <script src="{% static 'js/app.js' %}" defer></script>
     <script src="{% static 'js/messages.js' %}" defer></script>
     <script src="{% static 'js/category-filter.js' %}" defer></script>
     <script src="{% static 'js/accordion.js' %}" defer></script>
+
+    <!-- 🔹 Cookie Logic -->
+    <script>
+      (function () {
+        function ready(fn) {
+          if (document.readyState !== "loading") fn();
+          else document.addEventListener("DOMContentLoaded", fn);
+        }
+        ready(() => {
+          const banner = document.getElementById("cookie-banner");
+          if (!banner) return;
+          const accept = document.getElementById("accept-cookies");
+          const decline = document.getElementById("decline-cookies");
+          let decision = localStorage.getItem("cookieConsent");
+          if (decision === "accepted" || decision === "declined") {
+            banner.remove();
+            return;
+          }
+          banner.style.display = "block";
+          banner.setAttribute("aria-hidden", "false");
+
+          const setConsent = (val) => {
+            localStorage.setItem("cookieConsent", val);
+            banner.remove();
+          };
+          accept?.addEventListener("click", (e) => {
+            e.preventDefault();
+            setConsent("accepted");
+          });
+          decline?.addEventListener("click", (e) => {
+            e.preventDefault();
+            setConsent("declined");
+          });
+        });
+      })();
+    </script>
+
+    {% block extra_js %}{% endblock %}
   </body>
 </html>

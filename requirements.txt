@@ -5,6 +5,7 @@ whitenoise>=6.6
 django-environ>=0.11
 django-widget-tweaks
 django-tinymce
+django-csp
 gunicorn
 Pillow
 psycopg2-binary

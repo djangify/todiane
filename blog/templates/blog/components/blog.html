@@ -1,14 +1,13 @@
 {% load static %}
-<!-- Full-width Blog Section -->
-<div class="relative left-1/2 right-1/2 -mx-[50vw] w-screen ">
+<div class="relative left-1/2 right-1/2 -mx-[50vw] w-screen">
   <section class="2xl:max-w-screen-2xl 2xl:mx-auto p-6 flex flex-col gap-y-10 text-[color:var(--color-font-main)] md:p-16 lg:gap-x-10 lg:flex-row-reverse *:basis-full"
            aria-labelledby="portfolio-blog-heading" role="region">
     
     <!-- Text Content -->
     <div class="flex flex-col gap-y-5 lg:self-center xl:gap-y-10 *:space-y-2">
       <header>
-        <p class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4  before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg">
-          insights
+         <p class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg sm:mt-6">
+          content creation
         </p>
         <h2 id="portfolio-blog-heading" class="text-2xl capitalize text-[color:var(--color-brand-primary)] lg:text-3xl">
           My Personal Portfolio Blog
@@ -28,12 +27,10 @@
 
     <!-- Blog Cards -->
     <div class="grid gap-y-5 md:grid-cols-2" role="list">
-      
-      <!-- Article 1 -->
       <article class="grid sm:grid-rows-subgrid sm:row-span-5 gap-y-4 p-6 px-4 rounded shadow-md border-t-2 border-[color:var(--color-brand-primary)]"
                role="listitem">
         <figure class="rounded overflow-hidden">
-          <img class="object-[65%]" src="{% static 'images/todiane-purp.webp' %}" alt="Screenshot showing Django backend folder structure and code layout" loading="lazy" />
+          <img class="object-[65%]" src="{% static 'images/todiane-purp.webp' %}" alt="Screenshot showing Django backend folder structure and code layout" width="600" height="400" loading="lazy" decoding="async" />
         </figure>
         <h3 class="text-xl text-[color:var(--color-font-main)]">Behind the Build: My Django Backend Setup</h3>
         <p>
@@ -47,11 +44,10 @@
         </a>
       </article>
 
-      <!-- Article 2 (replaced Astro article) -->
       <article class="grid sm:grid-rows-subgrid sm:row-span-5 gap-y-4 p-6 rounded shadow-md px-4 border-t-2 border-[color:var(--color-brand-primary)]"
                role="listitem">
         <figure class="rounded overflow-hidden">
-          <img class="object-[65%]" src="{% static 'images/todiane-noir.webp' %}" alt="Preview of a mini ecommerce builder dashboard interface" loading="lazy" />
+          <img class="object-[65%]" src="{% static 'images/todiane-noir.webp' %}" alt="Preview of a mini ecommerce builder dashboard interface" width="600" height="400" loading="lazy" decoding="async" />
         </figure>
         <h3 class="text-xl text-[color:var(--color-font-main)]">Building the Mini eCommerce Builder System</h3>
         <p>
@@ -64,7 +60,6 @@
           <i class="fa-solid fa-angles-right text-[color:var(--color-font-main)] ml-2 group-hover:translate-x-2 transition-transform" aria-hidden="true"></i>
         </a>
       </article>
-
     </div>
   </section>
 </div>

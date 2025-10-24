@@ -34,10 +34,13 @@ INSTALLED_APPS = [
     "portfolio",
     "widget_tweaks",
     "tinymce",
+    "csp",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "csp.middleware.CSPMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.contrib.redirects.middleware.RedirectFallbackMiddleware",
@@ -125,4 +128,35 @@ TINYMCE_DEFAULT_CONFIG = {
         {"title": "Responsive (50%)", "value": "img-half"},
         {"title": "Full width", "value": "img-full"},
     ],
+}
+
+# ----------------------------------
+# Content Security Policy (CSP) v4+
+# ----------------------------------
+CONTENT_SECURITY_POLICY = {
+    "DIRECTIVES": {
+        "default-src": ("'self'",),
+        "script-src": (
+            "'self'",
+            "'unsafe-inline'",
+            "'strict-dynamic'",
+            "https://cdn.jsdelivr.net",
+            "https://cdnjs.cloudflare.com",
+        ),
+        "style-src": (
+            "'self'",
+            "'unsafe-inline'",
+            "https://fonts.googleapis.com",
+            "https://cdn.jsdelivr.net",
+        ),
+        "font-src": ("'self'", "https://fonts.gstatic.com"),
+        "img-src": ("'self'", "data:", "https://*"),
+        "connect-src": ("'self'",),
+        "frame-src": ("'self'",),
+        "object-src": ("'none'",),
+        "base-uri": ("'self'",),
+        "form-action": ("'self'",),
+        "frame-ancestors": ("'none'",),
+        "require-trusted-types-for": ("'script'",),
+    },
 }
