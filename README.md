@@ -1,6 +1,6 @@
 # todiane.com – AI-Search-Ready Django Portfolio & eCommerce Builder
 
-![todiane.com header](https://github.com/todiane/todiane-site/blob/main/static/images/todiane-header.png)
+![todiane.com header](https://github.com/djangify/todiane/blob/4616c26c7d9867b0ee031f251d1548edead7bfc2/todiane-header.png)
 
 <p align="center">
   <a href="https://www.djangoproject.com/">
