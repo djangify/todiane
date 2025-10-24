@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.decorators.http import require_GET
-from django.urls import reverse
 from blog.models import Post, Category
 from django.utils import timezone
 from django.shortcuts import get_object_or_404
@@ -79,17 +78,36 @@ def support(request):
 
 @require_GET
 def robots_txt(request):
+    """Robots.txt for search + AI visibility."""
     site_url = request.build_absolute_uri("/").rstrip("/")
     sitemap_url = f"{site_url}/sitemap.xml"
 
     lines = [
+        "# robots.txt for todiane.com",
+        "# Enables modern search and AI engines to crawl public sections.",
+        "",
         "User-agent: *",
         "Allow: /",
         "Disallow: /admin/",
         "Disallow: /accounts/",
-        "Disallow: /static/",
+        "Disallow: /media/private/",
+        "Disallow: /checkout/",
+        "",
+        "# AI & Answer Engine Bots",
+        "User-agent: GPTBot",
+        "User-agent: ChatGPT-User",
+        "User-agent: Google-Extended",
+        "User-agent: ClaudeBot",
+        "User-agent: PerplexityBot",
+        "User-agent: anthropic-ai",
+        "User-agent: Bingbot",
+        "Allow: /",
         "",
         f"Sitemap: {sitemap_url}",
+        "",
+        "# --- Brand Context ---",
+        "# Todiane.com - portfolio projects by Django developer and creator of mini-ecommerce site builder - Diane Corriette.",
+        "# It demonstrates best practices in ecommerce,AI-search-ready design and ethical tech visibility.",
     ]
 
     return HttpResponse("\n".join(lines), content_type="text/plain")

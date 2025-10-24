@@ -3,6 +3,15 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
+from django.contrib.sitemaps.views import sitemap
+from todiane.sitemap import StaticViewSitemap, BlogPostSitemap, PortfolioSitemap
+
+
+sitemaps = {
+    "static": StaticViewSitemap,
+    "blog": BlogPostSitemap,
+    "portfolio": PortfolioSitemap,
+}
 
 
 urlpatterns = [
@@ -17,6 +26,12 @@ urlpatterns = [
     path(
         "", include("blog.urls", namespace="blog")
     ),  # must stay at the bottom to avoid url conflicts
+    path(
+        "sitemap.xml",
+        sitemap,
+        {"sitemaps": sitemaps},
+        name="django.contrib.sitemaps.views.sitemap",
+    ),
 ]
 
 if settings.DEBUG:
