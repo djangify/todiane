@@ -99,37 +99,54 @@
 
     {% include 'components/footer.html' %}
 
-    <!-- 🔹 Cookie Consent -->
+    <!-- 🔹 Cookie Consent (modern square version) -->
     <div
       id="cookie-banner"
-      class="cookie-banner hidden fixed bottom-4 left-1/2 -translate-x-1/2 w-[95%] md:w-auto z-50 bg-[color:var(--color-brand-light)] text-[color:var(--color-font-main)] border border-[color:var(--color-brand-accent)] rounded-2xl shadow-lg px-6 py-4 flex-col md:flex-row items-center justify-between gap-3 md:gap-6"
+      class="cookie-banner hidden fixed bottom-6 right-6 w-[320px] max-w-[90%] z-50 
+            bg-[color:var(--color-brand-light)] text-[color:var(--color-font-main)] 
+            border border-[color:var(--color-brand-accent)] rounded-2xl  
+            p-6  flex-col gap-4"
       role="dialog"
       aria-labelledby="cookie-title"
+      aria-modal="true"
+      aria-hidden="true"
     >
-      <div class="cookie-text text-sm md:text-base">
-        <h2 id="cookie-title" class="sr-only">Cookie Consent</h2>
-        We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
-        <a
-          href="{% url 'core:cookie_policy' %}"
-          class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-dark)] underline ml-1"
-          >Cookie Policy</a
-        >
+      <div class="cookie-text text-sm leading-relaxed">
+        <h2 id="cookie-title" class="font-semibold text-base mb-2">
+          Cookie Consent
+        </h2>
+        <p>
+          This site uses cookies to enhance your experience while you visit. By clicking Accept,  
+          you consent to our use of cookies. 
+          <a
+            href="{% url 'core:cookie_policy' %}"
+            class="text-[color:var(--color-brand-primary)] hover:text-[color:var(--color-brand-accent)] underline"
+          >
+            Cookie Policy
+          </a>
+        </p>
       </div>
-      <div class="cookie-actions mt-4 mb-4 flex gap-3">
+
+      <div class="cookie-actions flex justify-end mt-4 gap-3">
+      
         <button
           id="accept-cookies"
-          class="cookie-btn mt-2 px-4 py-2 bg-[color:var(--color-brand-primary)] text-[color:var(--color-brand-light)] rounded-lg hover:bg-[color:var(--color-brand-secondary)] transition"
+          class="px-4 py-2 bg-[color:var(--color-brand-primary)] text-[color:var(--color-brand-light)] 
+                rounded-lg hover:bg-[color:var(--color-brand-accent)] transition"
         >
           Accept
         </button>
         <button
           id="decline-cookies"
-          class="cookie-btn px-4 mt-2 py-2 border border-[color:var(--color-brand-secondary)] text-[color:var(--color-font-main)] rounded-lg hover:bg-[color:var(--color-brand-primary)] hover:text-[color:var(--color-brand-light)] transition"
+          class="px-4 py-2 border border-[color:var(--color-brand-secondary)] 
+                text-[color:var(--color-font-main)] rounded-lg hover:bg-[color:var(--color-brand-primary)] 
+                hover:text-[color:var(--color-brand-light)] transition"
         >
           Decline
         </button>
       </div>
     </div>
+
 
     <!-- 🔹 Deferred JS -->
     <script src="{% static 'js/app.js' %}" defer></script>
@@ -174,5 +191,6 @@
     </script>
 
     {% block extra_js %}{% endblock %}
+    
   </body>
 </html>
