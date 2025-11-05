@@ -1,7 +1,8 @@
 {% load static %}
-<footer class="bg-[color:var(--color-brand-accent)] text-[color:var(--color-font-main)]">
 
-  <div class="max-w-7xl mx-auto px-6 py-10 space-y-10">
+<footer class="border-t border-[color:var(--color-brand-accent)] bg-[color:var(--color-brand-accent)] text-[color:var(--color-font-main)]">
+
+  <div class="max-w-7xl mx-auto px-6 py-12 space-y-10">
 
     <!-- Grid Columns -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-sm text-[color:var(--color-font-main)]">
@@ -9,13 +10,13 @@
       <!-- Logo + Info -->
       <div class="brand-block">
         <div class="flex space-x-3 mb-3 items-center">
-          <img src="{% static 'images/dianec-gray.png' %}" alt="Diane Corriette logo"  width="64"
-          height="64"class="h-8 w-8 object-contain">
+          <img src="{% static 'images/dianec-gray.png' %}" alt="Diane Corriette logo" width="64" height="64" class="h-8 w-8 object-contain">
           <span class="text-lg font-semibold text-[color:var(--color-font-main)]">Diane Corriette</span>
         </div>
-        <p class="text-sm leading-relaxed ">
-          I’m Diane Corriette, a Django backend developer and creator of the Mini eCommerce Site Builder — helping creators sell digital products online. This is my personal portfolio that outlines the projects I have built, with help from AI. 
-        </p> 
+
+        <p class="text-sm leading-relaxed">
+          Diane Corriette. Full-stack web developer using  Python, Django, and TailwindCSS. Designing systems that simplify selling online.
+        </p>
       </div>
 
       <!-- Links -->
@@ -23,7 +24,7 @@
         <h3 class="font-semibold mb-3 text-[color:var(--color-font-main)]">Pages</h3>
         <ul class="space-y-1">
           <li><a href="{% url 'core:home' %}" class="hover:text-[color:var(--color-brand-primary)] transition">Home</a></li>
-          <li><a href="{% url 'portfolio:list' %}" class="hover:text-[color:var(--color-brand-primary)] transition">Porfolio</a></li>
+          <li><a href="{% url 'portfolio:list' %}" class="hover:text-[color:var(--color-brand-primary)] transition">Portfolio</a></li>
           <li><a href="{% url 'core:ai_writing_policy' %}" class="hover:text-[color:var(--color-brand-primary)] transition">AI Disclaimer</a></li>
         </ul>
       </div>
@@ -32,30 +33,16 @@
       <div>
         <h3 class="font-semibold mb-3 text-[color:var(--color-font-main)]">Resources & Tools</h3>
         <ul class="space-y-1">
-          <li>
-            <a href="{% url 'core:ai_search' %}" class="hover:text-[color:var(--color-brand-primary)] transition">
-              AI Search Readiness
-            </a>
-          </li>
-          <li>
-            <a href="{% url 'prompt_templates:template_list' %}" class="hover:text-[color:var(--color-brand-primary)] transition">
-              AI Prompt Templates
-            </a>
-          </li>
-          <li>
-            <a href="{% url 'blog:list' %}" class="hover:text-[color:var(--color-brand-primary)] transition">
-              Blog
-            </a>
-          </li>
+          <li><a href="{% url 'core:ai_search' %}" class="hover:text-[color:var(--color-brand-primary)] transition">AI Search Readiness</a></li>
+          <li><a href="{% url 'prompt_templates:template_list' %}" class="hover:text-[color:var(--color-brand-primary)] transition">AI Prompt Templates</a></li>
+          <li><a href="{% url 'blog:list' %}" class="hover:text-[color:var(--color-brand-primary)] transition">Blog</a></li>
         </ul>
       </div>
-
 
       <!-- Policies -->
       <div>
         <h3 class="font-semibold mb-3 text-[color:var(--color-font-main)]">Policies</h3>
         <ul class="space-y-1">
-          
           <li><a href="{% url 'core:cookie_policy' %}" class="hover:text-[color:var(--color-brand-primary)] transition">Cookie Policy</a></li>
           <li><a href="{% url 'core:privacy_policy' %}" class="hover:text-[color:var(--color-brand-primary)] transition">Privacy Policy</a></li>
           <li><a href="{% url 'core:affiliate_policy' %}" class="hover:text-[color:var(--color-brand-primary)] transition">Affiliate Policy</a></li>
@@ -64,8 +51,8 @@
     </div>
 
     <!-- Bottom Copyright -->
-    <div class="border-t border-[color:var(--color-brand-primary)]/30 text-center pt-6 text-sm text-[color:var(--color-font-main)]/60">
-      &copy; 2025 Diane Corriette. <a href="/" class="hover:text-[color:var(--color-brand-primary)] transition">Django Backend Developer</a>. 
+    <div class="border-t border-[color:var(--color-brand-primary)]/30 text-center pt-6 text-sm text-[color:var(--color-font-main)]/70">
+      &copy; 2025 Diane Corriette — Creator of <a href="https://www.djangify.com/" target="_blank" rel="noopener" class="underline hover:text-[color:var(--color-brand-primary)]">Mini eCommerce Site Builder</a> 
     </div>
   </div>
 </footer>

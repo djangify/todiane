@@ -11,88 +11,70 @@
 <main class="2xl:max-w-screen-2xl 2xl:mx-auto">
   <!-- About Section -->
   <section id="about"
-    class="scroll-mt-8 p-6 flex flex-col gap-y-10 bg-[--color-brand-secondary] text-[--color-font-main] lg:gap-x-10 lg:flex-row-reverse *:basis-full md:p-16 2xl:rounded">
+  class="scroll-mt-8 p-6 flex flex-col gap-y-10 bg-[--color-brand-secondary] text-[--color-font-main] lg:gap-x-10 lg:flex-row-reverse lg:items-start *:basis-full md:p-16 2xl:rounded">
 
-    <div class="space-y-5 *:space-y-2 lg:self-center xl:space-y-10">
+
+    <div class="space-y-5 lg:self-center xl:space-y-10">
       <div>
-        <p class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg sm:mt-6">
+        <p class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg sm:mt-4">
           About Diane Corriette
         </p>
         <h2 class="text-2xl capitalize font-bold lg:text-3xl text-[--color-brand-light]">
-          Full-Stack Django Developer
+          Supporting Independent Creators
         </h2>
       </div>
 
-      <div class="space-y-5 *:space-y-2 text-[--color-brand-light]/90">
+      <div class="space-y-5 text-[--color-brand-light]/90">
         <p>
-          I am <strong>Diane Corriette</strong>, a Django developer who specialises in eCommerce systems.  
-          My work blends <strong>Python, Django, and TailwindCSS</strong> to build structured, scalable applications for small businesses and personal projects.
-        </p>
+        I’m <strong>Diane Corriette</strong>, a web developer who builds practical eCommerce and personal-growth systems using <strong>Python, Django, and TailwindCSS</strong>.  
+        My focus is helping independent creators and small businesses simplify the tech that powers their ideas, so they can focus on creating and earning, not troubleshooting.
+      </p>
 
+      <p>
+        For more than a decade I built <strong>WordPress websites</strong>, helping businesses share their work and sell their expertise online.  
+        In 2023 I decided to go deeper, learning to code so I could create the tools behind the sites I used to build.  
+        That decision opened a new chapter for me as a full-stack developer.
+      </p>
+
+      <p>
+        I enjoy using Django not just for eCommerce, but to design small, purposeful tools that support growth and learning.  
+       
+        Each project is an opportunity to build something useful and well-structured for others who create online. 
+          Connect with me on <strong><a href="https://www.linkedin.com/in/todianedev" class="underline hover:text-[--color-brand-accent] transition">LinkedIn</a> </strong> if you’d like to discuss ideas or collaborations.
+        </p>
         <p>
-          After years in digital marketing, I transitioned into software development and now focus on creating clean, maintainable code - from content management to custom eCommerce builds. I manage all my projects on a self-managed VPS and enjoy exploring how AI and automation can enhance independent web development.
-        </p>
-
-        <p>
-          This portfolio highlights the projects I have completed, the frameworks I am exploring, and my ongoing learning journey - including deeper work with Astro for frontend development and experiments in AI tool creation.
-        </p>
-
-        <p class="mb-8">
-          If you would like to connect or discuss development ideas, you can reach me directly on 
-          <a href="https://www.linkedin.com/in/todianedev" class="text-[--color-brand-light] underline hover:text-[--color-brand-accent] transition">LinkedIn</a>.
-        </p>
-
-        <p>
-          <a class="uppercase p-2 border-2 border-[--color-brand-accent] self-start hover:text-[--color-brand-accent] transition cursor-pointer text-xs rounded sm:text-lg mt-8 sm:px-4 text-[--color-brand-light]" href="{% url 'portfolio:list' %}">
+          <a class="uppercase p-2 border-2 border-[--color-brand-accent] hover:text-[--color-brand-accent] transition text-xs rounded sm:text-lg mt-8 sm:px-4 text-[--color-brand-light]" href="{% url 'portfolio:list' %}">
             Visit My Portfolio
           </a>
         </p>
       </div>
     </div>
 
-    <!-- Skills / Frameworks Grid -->
+    <!-- Skills / Frameworks -->
     <div class="grid gap-5 sm:grid-cols-1 md:grid-cols-2 *:gap-y-5 *:items-center *:border-2 *:border-[--color-brand-accent] *:rounded-lg *:p-8 bg-[--color-brand-light] text-[--color-font-main]">
       <div>
-        <figure class="flex items-center justify-center">
-          <img src="{% static 'images/service-1.webp' %}" alt="Django Framework" width="64" height="64" loading="lazy" decoding="async" class="h-12 w-12 object-contain" />
-        </figure>
+        <img src="{% static 'images/service-1.webp' %}" alt="Django Framework" class="h-12 w-12 mx-auto mb-3">
         <p class="text-xl text-[--color-brand-primary] text-center font-semibold">Django & Python</p>
-        <p class="text-center">
-          Backend logic, data models, and RESTful API development - built using Django and Python to ensure reliability and scalability.
-        </p>
+        <p class="text-center">Robust backend logic and RESTful APIs built for performance and scalability.</p>
       </div>
-
       <div>
-        <figure class="flex items-center justify-center">
-          <img src="{% static 'images/service-2.webp' %}" alt="eCommerce Development" width="64" height="64" loading="lazy" decoding="async" class="h-12 w-12 object-contain" />
-        </figure>
+        <img src="{% static 'images/service-2.webp' %}" alt="eCommerce Development" class="h-12 w-12 mx-auto mb-3">
         <p class="text-xl text-[--color-brand-primary] text-center font-semibold">eCommerce Development</p>
-        <p class="text-center">
-          End-to-end setup for creators, hobbyists & small businesses. Product systems, checkout integration, and secure payment workflows.
-        </p>
+        <p class="text-center">End-to-end setups for creators and small businesses — from products to payments.</p>
       </div>
-
       <div>
-        <figure class="flex items-center justify-center">
-          <img src="{% static 'images/service-3.webp' %}" alt="Learning and Growth" width="64" height="64" loading="lazy" decoding="async" class="h-12 w-12 object-contain" />
-        </figure>
-        <p class="text-xl font-semibold text text-center">Workbooks and Guides</p>
-        <p class="text-center">
-          Create and sell PDF workbooks and guides through my ecommerce stores as digital downloads. 
-        </p>
+        <img src="{% static 'images/service-3.webp' %}" alt="Workbooks and Guides" class="h-12 w-12 mx-auto mb-3">
+        <p class="text-xl font-semibold text-center">Workbooks & Guides</p>
+        <p class="text-center">Digital products designed to support learning and personal growth.</p>
       </div>
-
       <div>
-        <figure class="flex items-center justify-center">
-          <img src="{% static 'images/service-4.webp' %}" alt="Portfolio Projects" width="64" height="64" loading="lazy" decoding="async" class="h-12 w-12 object-contain" />
-        </figure>
+        <img src="{% static 'images/service-4.webp' %}" alt="Portfolio Projects" class="h-12 w-12 mx-auto mb-3">
         <p class="text-xl font-semibold text-center">Portfolio Projects</p>
-        <p class="text-center">
-          Real-world examples of apps, tools, and systems I have built using Django, TailwindCSS, and clean backend architecture.
-        </p>
+        <p class="text-center">Real examples of clean, structured builds using Django + TailwindCSS.</p>
       </div>
     </div>
   </section>
+
 </main>
 
 <!-- Blog Section -->

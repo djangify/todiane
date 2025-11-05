@@ -5,92 +5,56 @@
   <section 
     class="2xl:max-w-screen-2xl 2xl:mx-auto mx-auto flex flex-col-reverse lg:flex-row lg:*:basis-full lg:gap-x-24 xl:gap-x-12 text-[color:var(--color-font-main)] py-12 lg:py-20 px-6 md:px-16"
   >
-
     <!-- Text content -->
     <div class="flex flex-col gap-y-6 lg:gap-y-10 xl:self-center">
       <header class="space-y-3 lg:space-y-4">
         <p class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg">
-          Full-Stack Django Developer 
+          Full-Stack Django Developer
         </p>
         <h1 id="hero-title" class="text-5xl font-semibold lg:text-6xl text-[color:var(--color-brand-primary)]">
           Diane Corriette
         </h1>
       </header>
 
-      <!-- Content area -->
       <div 
         class="flex flex-col bg-[color:var(--color-brand-light)] gap-y-4 lg:gap-y-5 xl:pl-16 xl:relative xl:before:content-[''] xl:before:absolute xl:before:top-0 xl:before:left-0 xl:before:h-full xl:before:w-[8px] xl:before:rounded-full xl:before:bg-[color:var(--color-brand-accent)]"
         aria-label="Profile and links"
       >
-        
         <!-- Social links -->
         <ul class="flex gap-x-5 mb-4 text-[color:var(--color-brand-primary)]" aria-label="Social media links">
-          <li>
-            <a 
-              href="https://www.linkedin.com/in/todianedev" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              aria-label="Open LinkedIn profile (opens in a new tab)"
-              class="hover:text-[color:var(--color-brand-accent)] transition-colors cursor-pointer lg:text-2xl focus:outline-none focus:ring-2 focus:ring-[color:var(--color-brand-accent)] rounded"
-            >
-             <img src="{% static 'images/social/linkedin.png' %}" alt="LinkedIn" width="25" height="25" loading="lazy" decoding="async">
-            </a>
-          </li>
-          <li>
-            <a 
-              href="https://www.instagram.com/dicorriette" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              aria-label="Open Instagram profile (opens in a new tab)"
-              class="hover:text-[color:var(--color-brand-accent)] transition-colors cursor-pointer lg:text-2xl focus:outline-none focus:ring-2 focus:ring-[color:var(--color-brand-accent)] rounded"
-            >
-              <img src="{% static 'images/social/instagram.png' %}" alt="Instagram" width="25" height="25" loading="lazy" decoding="async">
-            </a>
-          </li>
-          <li>
-            <a 
-              href="https://github.com/todiane" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              aria-label="Open GitHub profile (opens in a new tab)"
-              class="hover:text-[color:var(--color-brand-accent)] transition-colors cursor-pointer lg:text-2xl focus:outline-none focus:ring-2 focus:ring-[color:var(--color-brand-accent)] rounded"
-            >
-              <img src="{% static 'images/social/github.png' %}" alt="GitHub" width="25" height="25" loading="lazy" decoding="async">
-            </a>
-          </li>
+          <li><a href="https://www.linkedin.com/in/todianedev" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="{% static 'images/social/linkedin.png' %}" alt="LinkedIn" width="25" height="25"></a></li>
+          <li><a href="https://www.instagram.com/dicorriette" target="_blank" rel="noopener" aria-label="Instagram"><img src="{% static 'images/social/instagram.png' %}" alt="Instagram" width="25" height="25"></a></li>
+          <li><a href="https://github.com/todiane" target="_blank" rel="noopener" aria-label="GitHub"><img src="{% static 'images/social/github.png' %}" alt="GitHub" width="25" height="25"></a></li>
         </ul>
 
-        <!-- Bio -->
-        <p class="lg:text-lg text-[color:var(--color-font-main)] leading-relaxed space-y-4">
-          I am a <strong>Full-Stack Django Developer</strong> and the creator of the <strong>Mini eCommerce Site Builder</strong> -  
-          a Django-powered system designed for creators and digital entrepreneurs. I specialise in <strong>Django</strong>, <strong>Python</strong>, and <strong>TailwindCSS</strong>, 
-          building practical, easy-to-manage web applications that make running a small digital business simpler.
-        
-          I have a growing interest in Astro and AI-powered tools and I am always happy to connect on LinkedIn.
+        <!-- Story-based bio -->
+        <p class="lg:text-lg text-[color:var(--color-font-main)] leading-relaxed">
+          I am a <strong>Full-Stack Django Developer</strong> who helps content creators and small businesses promote their expertise online.  
+          After years in online marketing, I realised I wanted to build what powered those campaigns - the tools themselves.  
+          Now I design <strong>clean, maintainable Django applications</strong> that make running a small online business simple, scalable, and independent.
+        </p>
+        <p class="lg:text-lg text-[color:var(--color-font-main)] leading-relaxed">
+          I built the <strong>Mini eCommerce Site Builder</strong> for creators who want to sell digital products without huge monthly fees or tech overwhelm.  
+          I am also exploring creative coding and AI-powered tools to keep development both fast and human.
         </p>
 
-        <!-- Buttons -->
+        <!-- CTAs -->
         <div class="flex flex-wrap gap-5 mt-8" role="group" aria-label="Primary actions">
-          <a 
-            href="{% url 'portfolio:list' %}" 
-            class="uppercase bg-[color:var(--color-brand-primary)] text-[color:var(--color-brand-light)] border border-[color:var(--color-brand-primary)] px-6 py-3 rounded-md hover:bg-[color:var(--color-brand-accent)] transition-colors focus:outline-none focus:ring-2 focus:ring-[color:var(--color-brand-accent)]"
-            aria-label="Visit my developer portfolio"
-          >
-            Visit My Portfolio
+          <a href="{% url 'portfolio:list' %}" class="uppercase bg-[color:var(--color-brand-primary)] text-[color:var(--color-brand-light)] border border-[color:var(--color-brand-primary)] px-6 py-3 rounded-md hover:bg-[color:var(--color-brand-accent)] transition-colors">
+            See What I’ve Built
           </a>
-          
-          <a 
-            href="https://djangify.com/shop/product/mini-digital-ecommerce-site/" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="uppercase bg-[color:var(--color-brand-accent)] text-[color:var(--color-font-main)] font-semibold border border-[color:var(--color-brand-accent)] px-6 py-3 rounded-md hover:bg-[color:var(--color-brand-primary)] hover:text-[color:var(--color-brand-light)] transition-colors focus:outline-none focus:ring-2 focus:ring-[color:var(--color-brand-accent)]"
-            aria-label="Open the Mini eCommerce System product page (opens in a new tab)"
-          >
-            Mini eCommerce System
+          <a href="https://djangify.com/shop/product/mini-digital-ecommerce-site/" target="_blank" rel="noopener" class="uppercase bg-[color:var(--color-brand-accent)] text-[color:var(--color-font-main)] font-semibold border border-[color:var(--color-brand-accent)] px-6 py-3 rounded-md hover:bg-[color:var(--color-brand-primary)] hover:text-[color:var(--color-brand-light)] transition-colors">
+            My eCommerce Builder
           </a>
         </div>
       </div>
     </div>
-
   </section>
+
+  <!-- Subtle diagonal divider -->
+  <div class="relative w-full h-16 bg-[color:var(--color-brand-light)] overflow-hidden">
+    <svg class="absolute bottom-0 w-full h-full text-white" preserveAspectRatio="none" viewBox="0 0 100 100" fill="currentColor">
+      <polygon points="0,100 100,0 100,100"></polygon>
+    </svg>
+  </div>
 </div>
