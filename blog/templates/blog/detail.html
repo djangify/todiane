@@ -81,24 +81,20 @@
     </div>
 
     <!-- Resource Download -->
+   <!-- Resource block -->
     {% if post.resource_type != 'none' and post.resource %}
-    <div class="bg-white border border-[--color-brand-primary] p-6 rounded-lg shadow-sm mb-12">
-      <h3 class="text-xl font-semibold text-[--color-brand-primary] mb-3 flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-[--color-brand-accent]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-        </svg>
-        Download Resource
-      </h3>
-      <p class="mb-4">{{ post.resource_title|default:post.title }}</p>
-      <a href="{{ post.resource.url }}" download="{{ post.resource_title|default:post.title }}" class="inline-flex items-center px-4 py-2 bg-[--color-brand-secondary] text-white font-semibold rounded hover:bg-[--color-brand-accent] transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-        </svg>
+    <div class="mt-12 p-6 border border-[color:var(--color-brand-accent)]/30 bg-white rounded-lg shadow-sm">
+      <h3 class="text-xl font-semibold mb-3 text-[color:var(--color-brand-dark)]">Download PDF Here</h3>
+      <p class="text-[color:var(--color-font-main)] mb-4">{{ post.resource_title|default:post.title }}</p>
+      <a href="{{ post.resource.url }}" download="{{ post.resource_title|default:post.title }}"
+         class="inline-flex items-center gap-2 px-5 py-3 border border-[color:var(--color-brand-secondary)] text-[color:var(--color-brand-secondary)] rounded-lg hover:bg-[color:var(--color-brand-secondary)] hover:text-white font-medium transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round"
+             d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
         Download {{ post.get_resource_type_display }}
       </a>
     </div>
     {% endif %}
-
     <!-- Extras -->
     <div class="mb-12">
       {% include "blog/components/extras.html" %}
