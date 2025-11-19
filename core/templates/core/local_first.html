@@ -1,1 +1,303 @@
-local first
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Local-First & Self-Hosted Development – Diane Corriette{% endblock %}
+
+{% block open_graph_tags %}
+<meta property="og:title" content="Local-First & Self-Hosted Development" />
+<meta property="og:description" content="Learn how I blend Django development with self-hosted and local-first systems to create tools that offer ownership, privacy, and long-term stability." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ request.build_absolute_uri }}" />
+<meta property="og:image" content="{{ request.scheme }}://{{ request.get_host }}/static/images/todiane-purp.webp" />
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Local-First & Self-Hosted Development">
+<meta name="twitter:description" content="Explore my approach to building self-hosted and local-first tools that give people more control and independence.">
+<meta name="twitter:image" content="{{ request.scheme }}://{{ request.get_host }}/static/images/todiane-purp.webp">
+{% endblock %}
+
+{% block content %}
+<div class="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-[color:var(--color-text-primary)]">
+
+  <!-- HEADER -->
+  <header class="space-y-4">
+    <h1 class="text-2xl sm:text-3xl font-semibold leading-normal text-[color:var(--color-brand-secondary)]">
+      Local-First & Self-Hosted Development
+    </h1>
+    <p>
+      I build Django applications, self-hosted tools, and offline-friendly systems with a growing focus on 
+      local-first development. This page brings together the articles, explanations, and resources behind 
+      my approach. If you value digital independence, privacy, and control over your software, you’ll find 
+      this direction meaningful.
+    </p>
+  </header>
+
+  <!-- INTRO CONTENT -->
+  <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+
+     <div class="rounded-xl border border-[color:var(--color-brand-secondary)] p-6">
+      <h2 class="text-xl font-semibold mb-3 text-[color:var(--color-brand-secondary)]">
+        What Does Local-First Mean?
+      </h2>
+      <p>
+        Local-first software is designed so that your data lives on your device first, not on a remote server. 
+        Cloud sync becomes optional rather than mandatory. This approach gives people more control, privacy, 
+        and long-term stability. Local-first doesn’t reject modern cloud development — it simply places the 
+        user at the centre, ensuring the software continues to work even if the internet is unavailable or a 
+        service shuts down.
+      </p>
+    </div>
+
+    <div class="bg-[color:var(--color-brand-light)] rounded-xl border border-[color:var(--color-brand-secondary)] p-6">
+      <h3 class="text-lg font-semibold mb-3 text-[color:var(--color-brand-secondary)]">Why This Matters</h3>
+      <p>
+        More tools are becoming subscription-only, platform-dependent, and locked behind accounts. For creators 
+        and small businesses, this creates unnecessary risk. Local-first and self-hosted systems offer an 
+        alternative that prioritises stability, affordability, and ownership — values that are becoming 
+        increasingly important in today’s digital landscape.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- ARTICLES -->
+  <section class="mt-14">
+    <h2 class="text-xl font-semibold mb-6 text-[color:var(--color-brand-secondary)]">
+      Articles & Guides to Read
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+
+      <a href="/why-i-am-adding-local-first-development-to-my-work/" 
+         class="block border border-[color:var(--color-brand-secondary)] rounded-xl p-6 bg-[color:var(--color-brand-light)]">
+        <h3 class="text-lg font-semibold mb-1 text-[color:var(--color-brand-secondary)]">
+          Why I’m Adding Local-First Development to My Work
+        </h3>
+        <p>
+          The story behind why I’m blending Django development with local-first principles — 
+          and how this shift brings more privacy, ownership, and stability to the tools I build.
+        </p>
+      </a>
+
+      <a href="/self-hosted-tools-explained/" 
+         class="block border border-[color:var(--color-brand-secondary)] rounded-xl p-6 bg-[color:var(--color-brand-light)]">
+        <h3 class="text-lg font-semibold mb-1 text-[color:var(--color-brand-secondary)]">
+          What Are Self-Hosted Tools?
+        </h3>
+        <p>
+          A clear explanation of self-hosted systems and why they’re ideal for creators and independent 
+          business owners who prefer stable, low-cost, subscription-free tools they can run themselves.
+        </p>
+      </a>
+
+      <a href="/local-first-vs-cloud/" 
+         class="block border border-[color:var(--color-brand-secondary)] rounded-xl p-6 bg-[color:var(--color-brand-light)]">
+        <h3 class="text-lg font-semibold mb-1 text-[color:var(--color-brand-secondary)]">
+          Local-First vs Cloud-First: Key Differences
+        </h3>
+        <p>
+          A breakdown of how these two approaches differ and why local-first systems are gaining traction 
+          as people seek more control and independence over the technology they use.
+        </p>
+      </a>
+
+      <a href="/tools-you-can-run-yourself/" 
+         class="block border border-[color:var(--color-brand-secondary)] rounded-xl p-6 bg-[color:var(--color-brand-light)]">
+        <h3 class="text-lg font-semibold mb-1 text-[color:var(--color-brand-secondary)]">
+          Tools You Can Run Yourself
+        </h3>
+        <p>
+          Why self-hosted and offline-capable tools are becoming a preferred alternative to subscription-heavy 
+          SaaS — especially for independent creators and those who value privacy and ownership.
+        </p>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="mt-16">
+    <h2 class="text-xl font-semibold mb-6 text-[color:var(--color-brand-secondary)]">
+      Frequently Asked Questions
+    </h2>
+
+    <div class="space-y-10">
+
+      <div>
+        <h3 class="text-lg font-semibold mb-2 text-[color:var(--color-brand-secondary)]">
+          Does local-first mean avoiding the cloud entirely?
+        </h3>
+        <p>
+          Not at all. Local-first does not reject the cloud — it reframes the relationship between the user 
+          and the system. Your data lives on your device first, ensuring the tool works offline and remains 
+          functional regardless of external services. Cloud storage can still be used for syncing or backups, 
+          but it becomes optional rather than required. This gives users more freedom, better privacy, and 
+          resilience, without losing the convenience of cloud-based features when they choose to use them.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-2 text-[color:var(--color-brand-secondary)]">
+          How is local-first different from self-hosted software?
+        </h3>
+        <p>
+          Local-first focuses on storing and processing data directly on your personal device, while 
+          self-hosted software is typically run on your own server or hosting environment. The two overlap, 
+          but they aren’t identical. You can have a self-hosted tool that still relies heavily on cloud 
+          services, and you can have a local-first tool that never touches a server. My work blends both 
+          approaches to prioritise privacy, ownership, and long-term stability for the user.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-2 text-[color:var(--color-brand-secondary)]">
+          Why are local-first and self-hosted systems important for creators?
+        </h3>
+        <p>
+          Creators rely on consistency and control. When a platform changes pricing, removes features, or 
+          shuts down, the consequences are immediate. Local-first and self-hosted systems reduce this risk 
+          by giving creators more independence. Their work, data, and tools remain accessible and stable, 
+          even as the digital landscape evolves. This approach also lowers ongoing costs, making it easier 
+          to run a sustainable creative business without relying on multiple monthly subscriptions.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-2 text-[color:var(--color-brand-secondary)]">
+          Can local-first tools still work across multiple devices?
+        </h3>
+        <p>
+          Yes — local-first doesn’t eliminate multi-device access. It simply means that syncing happens on 
+          your terms. Instead of a platform controlling where your data goes or how it syncs, you can choose 
+          peer-to-peer syncing, your own storage provider, or a simple encrypted cloud folder. This gives you 
+          flexibility without forcing you into a specific ecosystem. The key idea is that your data is always 
+          controlled by you, not locked into a third-party service.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-2 text-[color:var(--color-brand-secondary)]">
+          Are local-first tools harder to maintain or update?
+        </h3>
+        <p>
+          They can be if they’re designed poorly, but modern development patterns make maintenance very 
+          manageable. Local-first tools benefit from simpler dependencies, fewer external integrations, 
+          and far less fragility compared to cloud-heavy SaaS. Because the core functionality runs locally, 
+          updates can be shipped efficiently without risking downtime or breaking critical workflows. In 
+          many cases, local-first systems are more stable because they rely on fewer moving parts.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-lg font-semibold mb-2 text-[color:var(--color-brand-secondary)]">
+          Is local-first suitable for all types of software?
+        </h3>
+        <p>
+          Local-first is powerful, but not universally applicable. Tools requiring large-scale real-time 
+          collaboration or heavy cloud computation may still benefit from cloud-first designs. However, many 
+          everyday tools — journaling systems, productivity apps, financial organisers, small business tools, 
+          writing apps, and personal dashboards — are perfect candidates for local-first development. Most 
+          people simply don’t need a cloud-dependent system for personal work, and benefit from keeping their 
+          data close to home.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="mt-16">
+    <h2 class="text-xl font-semibold mb-6 text-[color:var(--color-brand-secondary)]">
+      Self-Hosted & Local-First Projects
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+
+      <a href="/introducing-djangify-mini-ecommerce-site-builder/" 
+         class="block border border-[color:var(--color-brand-secondary)] rounded-xl p-6 hover:bg-[color:var(--color-surface-hover)] transition">
+        <h3 class="text-lg font-semibold mb-1 text-[color:var(--color-brand-secondary)]">Mini eCommerce Builder</h3>
+        <p>A self-hosted digital shop for creators who value independence and ownership.</p>
+      </a>
+
+      <a href="#" 
+         class="block border border-[color:var(--color-brand-secondary)] rounded-xl p-6 hover:bg-[color:var(--color-surface-hover)] transition">
+        <h3 class="text-lg font-semibold mb-1 text-[color:var(--color-brand-secondary)]">MTDify Lite (Self-Hosted)</h3>
+        <p>A private, lightweight financial organiser built for the UK self-employed.</p>
+      </a>
+
+      <a href="#" 
+         class="block border border-[color:var(--color-brand-secondary)] rounded-xl p-6 hover:bg-[color:var(--color-surface-hover)] transition">
+        <h3 class="text-lg font-semibold mb-1 text-[color:var(--color-brand-secondary)]">Local-First Journaling Tool</h3>
+        <p>A private, device-first journaling system coming in 2026.</p>
+      </a>
+
+      <a href="#" 
+         class="block border border-[color:var(--color-brand-secondary)] rounded-xl p-6 hover:bg-[color:var(--color-surface-hover)] transition">
+        <h3 class="text-lg font-semibold mb-1 text-[color:var(--color-brand-secondary)]">Goal & Habit Tracker</h3>
+        <p>A local-first productivity tool built with privacy and simplicity at its core.</p>
+      </a>
+
+    </div>
+  </section>
+
+</div>
+
+<!-- FAQ SCHEMA (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does local-first mean avoiding the cloud entirely?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Local-first does not avoid the cloud. Instead, it ensures your data lives on your device first, allowing offline use and independence from third-party services. Cloud sync remains optional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is local-first different from self-hosted software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Local-first tools store and process data on your personal device, while self-hosted tools run on servers you control. Both prioritise ownership but operate at different levels."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are these systems important for creators?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Creators depend on stability and control. Local-first and self-hosted tools reduce platform dependency, lower long-term costs, and ensure work remains accessible regardless of external changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can local-first tools still work across multiple devices?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Local-first tools support multi-device access through optional syncing methods like peer-to-peer or user-controlled cloud storage, giving flexibility without platform lock-in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are local-first tools harder to maintain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Local-first tools can be simpler to maintain due to fewer dependencies and reduced cloud integration. Updates are easier to ship and less likely to disrupt user workflows."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is local-first suitable for all types of software?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Local-first is ideal for personal productivity, writing, financial trackers, and small business tools. Some large-scale collaborative applications may still benefit from cloud-first designs."
+      }
+    }
+  ]
+}
+</script>
+
+{% endblock %}

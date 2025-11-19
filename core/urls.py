@@ -13,7 +13,7 @@ urlpatterns = [
         name="ai_search",
     ),
     path(
-        "local_first/",
+        "local-first/",
         TemplateView.as_view(template_name="core/local_first.html"),
         name="local_first",
     ),
