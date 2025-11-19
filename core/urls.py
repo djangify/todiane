@@ -13,9 +13,9 @@ urlpatterns = [
         name="ai_search",
     ),
     path(
-        "local-business-ai-search/",
-        TemplateView.as_view(template_name="core/local-business-ai-search.html"),
-        name="local_ai_search",
+        "local_first/",
+        TemplateView.as_view(template_name="core/local_first.html"),
+        name="local_first",
     ),
     # policies
     path("policy/privacy/", views.privacy_view, name="privacy_policy"),

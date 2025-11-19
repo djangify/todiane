@@ -1,84 +1,100 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Full-Stack Django Developer (eCommerce) – Diane Corriette{% endblock %}
+{% block title %}Django Developer · Self-Hosted Tools · Local-First Advocate — Diane Corriette{% endblock %}
 
 {% block content %}
+
 <header class="bg-[--color-brand-primary] text-[--color-brand-light] relative flex flex-col gap-y-5 lg:gap-y-20">
   {% include 'core/hero.html' %}
 </header>
 
 <main class="2xl:max-w-screen-2xl 2xl:mx-auto">
-  <!-- About Section -->
+
+  <!-- ABOUT / WHAT I BUILD -->
   <section id="about"
-  class="scroll-mt-8 p-6 flex flex-col gap-y-10 bg-[--color-brand-secondary] text-[--color-font-main] lg:gap-x-10 lg:flex-row-reverse lg:items-start *:basis-full md:p-16 2xl:rounded">
+    class="scroll-mt-8 p-6 flex flex-col gap-y-10 bg-[--color-brand-secondary] text-[--color-font-main] 
+           lg:gap-x-10 lg:flex-row-reverse lg:items-start *:basis-full md:p-16 2xl:rounded">
 
+    <!-- Left Column: Text -->
+    <div class="space-y-6 lg:self-center xl:space-y-10">
 
-    <div class="space-y-5 lg:self-center xl:space-y-10">
       <div>
-        <p class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 before:-translate-y-1/2 before:left-0 lg:text-lg sm:mt-4">
-          About Diane Corriette
+        <p class="text-sm pl-6 uppercase relative before:content-[''] before:h-1 before:w-4 
+                  before:bg-[color:var(--color-brand-accent)] before:absolute before:top-1/2 
+                  before:-translate-y-1/2 before:left-0 lg:text-lg sm:mt-4">
+          What I Build
         </p>
+
         <h2 class="text-2xl capitalize font-bold lg:text-3xl text-[--color-brand-light]">
-          Supporting Independent Creators
+          Practical Systems for People Who Want Ownership
         </h2>
       </div>
 
       <div class="space-y-5 text-[--color-brand-light]/90">
+
         <p>
-        I’m <strong>Diane Corriette</strong>, a web developer who builds practical eCommerce and personal-growth systems using <strong>Python, Django, and TailwindCSS</strong>.  
-        My focus is helping independent creators and small businesses simplify the tech that powers their ideas, so they can focus on creating and earning, not troubleshooting.
-      </p>
-
-      <p>
-        For more than a decade I built <strong>WordPress websites</strong>, helping businesses share their work and sell their expertise online.  
-        In 2023 I decided to go deeper, learning to code so I could create the tools behind the sites I used to build.  
-        That decision opened a new chapter for me as a full-stack developer.
-      </p>
-
-      <p>
-        I enjoy using Django not just for eCommerce, but to design small, purposeful tools that support growth and learning.  
-       
-        Each project is an opportunity to build something useful and well-structured for others who create online. 
-          Connect with me on <strong><a href="https://www.linkedin.com/in/todianedev" class="underline hover:text-[--color-brand-accent] transition">LinkedIn</a> </strong> if you’d like to discuss ideas or collaborations.
+          I'm <strong>Diane Corriette</strong>, a Django developer who builds clean, well-structured applications 
+          and <strong>self-hosted tools</strong> for creators and small businesses.  
+          My work blends backend development with a growing interest in <strong>local-first</strong> 
+          systems - tools designed to give people more control, privacy, and long-term stability.
         </p>
+
         <p>
-          <a class="uppercase p-2 border-2 border-[--color-brand-accent] hover:text-[--color-brand-accent] transition text-xs rounded sm:text-lg mt-8 sm:px-4 text-[--color-brand-light]" href="{% url 'portfolio:list' %}">
-            Visit My Portfolio
+          From micro eCommerce sites to personal productivity tools and offline-friendly apps, 
+          I create systems that can run without subscriptions or platform lock-in.  
+          I still develop modern Django web applications, but I also explore ways to help people 
+          <em>own</em> the tools they depend on.
+        </p>
+
+        <p>
+          <a class="uppercase p-2 border-2 border-[--color-brand-accent] hover:text-[--color-brand-accent] 
+                     transition text-xs rounded sm:text-lg mt-8 sm:px-4 text-[--color-brand-light]" 
+             href="{% url 'portfolio:list' %}">
+            See My Projects
           </a>
         </p>
+
       </div>
     </div>
 
-    <!-- Skills / Frameworks -->
-    <div class="grid gap-5 sm:grid-cols-1 md:grid-cols-2 *:gap-y-5 *:items-center *:border-2 *:border-[--color-brand-accent] *:rounded-lg *:p-8 bg-[--color-brand-light] text-[--color-font-main]">
+    <!-- Right Column: Skills / Focus Areas -->
+    <div
+      class="grid gap-5 sm:grid-cols-1 md:grid-cols-2 *:gap-y-5 *:items-center *:border-2 
+             *:border-[--color-brand-accent] *:rounded-lg *:p-8 bg-[--color-brand-light] 
+             text-[--color-font-main]">
+
       <div>
         <img src="{% static 'images/service-1.webp' %}" alt="Django Framework" class="h-12 w-12 mx-auto mb-3">
         <p class="text-xl text-[--color-brand-primary] text-center font-semibold">Django & Python</p>
-        <p class="text-center">Robust backend logic and RESTful APIs built for performance and scalability.</p>
+        <p class="text-center">Backend logic, APIs, and lightweight tools built for long-term maintainability.</p>
       </div>
+
       <div>
-        <img src="{% static 'images/service-2.webp' %}" alt="eCommerce Development" class="h-12 w-12 mx-auto mb-3">
-        <p class="text-xl text-[--color-brand-primary] text-center font-semibold">eCommerce Development</p>
-        <p class="text-center">End-to-end setups for creators and small businesses — from products to payments.</p>
+        <img src="{% static 'images/service-2.webp' %}" alt="Self-hosted Systems" class="h-12 w-12 mx-auto mb-3">
+        <p class="text-xl text-[--color-brand-primary] text-center font-semibold">Self-Hosted Tools</p>
+        <p class="text-center">Systems you can run yourself that are stable, private, and subscription-free.</p>
       </div>
+
       <div>
-        <img src="{% static 'images/service-3.webp' %}" alt="Workbooks and Guides" class="h-12 w-12 mx-auto mb-3">
-        <p class="text-xl font-semibold text-center">Workbooks & Guides</p>
-        <p class="text-center">Digital products designed to support learning and personal growth.</p>
+        <img src="{% static 'images/service-3.webp' %}" alt="Local First" class="h-12 w-12 mx-auto mb-3">
+        <p class="text-xl font-semibold text-center">Local-First Principles</p>
+        <p class="text-center">Tools where your data lives with you first. Offline-friendly and independent.</p>
       </div>
+
       <div>
         <img src="{% static 'images/service-4.webp' %}" alt="Portfolio Projects" class="h-12 w-12 mx-auto mb-3">
-        <p class="text-xl font-semibold text-center">Portfolio Projects</p>
-        <p class="text-center">Real examples of clean, structured builds using Django + TailwindCSS.</p>
+        <p class="text-xl font-semibold text-center">Creator-Focused Builds</p>
+        <p class="text-center">Ecommerce, dashboards, planning tools, and systems built with creators in mind.</p>
       </div>
+
     </div>
   </section>
-
 </main>
 
 <!-- Blog Section -->
 <section id="blog" class="scroll-mt-16">
-  {% include "blog/components/blog.html" %}
+  {% include "core/components/blog.html" %}
 </section>
+
 {% endblock %}
