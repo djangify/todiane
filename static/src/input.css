@@ -16,8 +16,9 @@
 
   ul,
   ol {
-    @apply text-lg text-[--color-font-main] leading-relaxed list-disc list-inside;
+    @apply text-lg text-[--color-font-main] leading-relaxed;
   }
+
 
   li {
     @apply text-lg text-[--color-font-main] leading-relaxed;
