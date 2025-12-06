@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const confirmButton = document.createElement("button");
     confirmButton.className =
-      "px-4 py-2 bg-[color:var(--color-brand-primary)] text-[color:var(--color-brand-light)] rounded hover:bg-[color:var(--color-brand-dark)] transition-colors";
+      "px-4 py-2 bg-[color:var(--color-brand-primary)] text-[color:var(--color-font-main)] rounded hover:bg-[color:var(--color-brand-dark)] transition-colors";
     confirmButton.textContent = "OK";
     confirmButton.onclick = () => {
       container.remove();
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const cancelButton = document.createElement("button");
     cancelButton.className =
-      "px-4 py-2 bg-[color:var(--color-brand-light)] text-[color:var(--color-font-main)] border border-[color:var(--color-brand-accent)] rounded hover:bg-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-light)] transition-colors";
+      "px-4 py-2 bg-[color:var(--color-brand-light)] text-[color:var(--color-font-main)] border border-[color:var(--color-brand-accent)] rounded hover:bg-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-font-main)] transition-colors";
     cancelButton.textContent = "Cancel";
     cancelButton.onclick = () => container.remove();
 

@@ -1,6 +1,6 @@
 {% load static %}
 
-<div class="w-full overflow-hidden">
+<div class="w-full overflow-hidden bg-[color:var(--color-brand-light)]">
   <section 
     class="2xl:max-w-screen-2xl 2xl:mx-auto p-6 flex flex-col gap-y-10 
            text-[color:var(--color-font-main)] md:p-16 lg:gap-x-10 lg:flex-row-reverse *:basis-full"
@@ -18,12 +18,12 @@
         </p>
 
         <h2 id="portfolio-blog-heading" class="text-2xl capitalize text-[color:var(--color-brand-primary)] lg:text-3xl">
-          Development, Tools & Local-First Thinking
+          Development, Tools & Offline-First Thinking
         </h2>
       </header>
 
       <p>
-        I write about Django development, building self-hosted systems, the local-first philosophy, 
+        I write about Django development, building self-hosted systems, the offline-first philosophy, 
         and the tools I’m creating as I explore this direction.  
         Some posts are technical, others reflect on the journey of becoming a developer 
         who values ownership, simplicity, and practical systems.
@@ -31,9 +31,9 @@
 
       <a href="{% url 'blog:list' %}"
          aria-label="View all articles"
-         class="uppercase p-2 border-2 border-[color:var(--color-brand-primary)] font-semibold 
-                self-start text-xs rounded inline-block hover:text-[color:var(--color-brand-primary)] 
-                transition-colors sm:text-lg sm:px-4 text-[color:var(--color-font-main)]">
+         class="inline-block uppercase self-start bg-transparent text-[color:var(--color-brand-primary)] font-bold border-2 border-[color:var(--color-brand-primary)] px-10 py-4 rounded-md hover:bg-[color:var(--color-brand-primary)] hover:text-white transition-all text-base">
+
+                 
          View All Blog Articles
       </a>
 

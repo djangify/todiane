@@ -107,7 +107,75 @@ def robots_txt(request):
         "",
         "# --- Brand Context ---",
         "# Todiane.com - portfolio projects by Django developer and creator of mini-ecommerce site builder - Diane Corriette.",
-        "# It demonstrates best practices in ecommerce,AI-search-ready design and ethical tech visibility.",
+        "# It demonstrates best practices in ecommerce,offline-first,AI-search-ready design and ethical tech visibility.",
     ]
 
     return HttpResponse("\n".join(lines), content_type="text/plain")
+
+
+# ------------------------------
+# STUDIO: MAIN HOMEPAGE
+# ------------------------------
+def studio_home(request):
+    return render(request, "core/studio/index.html")
+
+
+# ------------------------------
+# STUDIO: OFFLINE-FIRST APPS
+# ------------------------------
+def studio_offline_apps(request):
+    context = {
+        # MTDify
+        "mtdify_starter_url": None,  # update when ready
+        "mtdify_local_url": None,
+        # Invoice Generator
+        "invoice_starter_url": None,
+        "invoice_local_url": None,
+        # Prompt Generator
+        "prompt_starter_url": None,
+        "prompt_local_url": None,
+        # Goal Tracker
+        "goal_starter_url": None,
+        "goal_local_url": None,
+        # Journal Writer
+        "journal_local_url": None,
+        # Project Tracker
+        "project_local_url": None,
+    }
+
+    return render(request, "core/studio/offline_apps.html", context)
+
+
+# ------------------------------
+# STUDIO: WEB APPLICATIONS
+# ------------------------------
+def studio_web_apps(request):
+    return render(request, "core/studio/web_apps.html")
+
+
+# ------------------------------
+# STUDIO: PDF PRODUCTS
+# ------------------------------
+def studio_pdfs(request):
+    return render(request, "core/studio/pdfs.html")
+
+
+# ------------------------------
+# STUDIO: CREATIVE CODING
+# ------------------------------
+def studio_creative(request):
+    return render(request, "core/studio/creative.html")
+
+
+# ------------------------------
+# STUDIO: PROJECT CASE STUDIES
+# ------------------------------
+def studio_projects(request):
+    return render(request, "core/studio/projects.html")
+
+
+# ------------------------------
+# STUDIO: ABOUT THE STUDIO
+# ------------------------------
+def studio_about(request):
+    return render(request, "core/studio/about.html")

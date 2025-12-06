@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}PDF Products — Software Studio{% endblock %}
+
+{% block content %}
+
+<div class="w-full max-w-6xl mx-auto px-6 md:px-10 lg:px-16 py-10">
+
+  <!-- BREADCRUMB -->
+  {% include "core/components/breadcrumb.html" with crumbs=crumbs %}
+
+  <!-- OPTION C HEADER -->
+  <p class="uppercase text-sm tracking-wide text-[color:var(--color-brand-accent)] mb-2">
+    Software Studio
+  </p>
+
+  <h1 class="text-4xl mb-4 font-bold text-[color:var(--color-brand-primary)]">
+    PDF Products & Digital Guides
+  </h1>
+
+  <p class="text-lg mt-3 text-[color:var(--color-font-main)] max-w-5xl leading-relaxed">
+    A growing collection of workbooks, writing tools, revision guides, and 
+    personal development resources. These digital products support confident, 
+    purposeful living — whether through journaling, goal-setting, GCSE study, 
+    or reflective personal growth.
+  </p>
+
+
+  <!-- GRID OF PDF PRODUCTS -->
+  <section class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+
+    <!-- Writing to Come Home to Yourself -->
+    <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">
+        Writing to Come Home to Yourself
+      </h2>
+      <p class="text-[color:var(--color-font-main)] leading-relaxed mb-4">
+        A reflective writing workbook helping women reconnect with clarity, 
+        identity, and self-authorship through gentle, structured exercises.
+      </p>
+      <a href="https://inspirationalguidance.com/products/writing-to-come-home"
+         class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">
+        View Product →
+      </a>
+    </div>
+
+    <!-- Confidence Bundle -->
+    <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">
+        Feel & Rebuild Confidence Bundle
+      </h2>
+      <p class="text-[color:var(--color-font-main)] leading-relaxed mb-4">
+        A guided multi-part workbook for women rebuilding confidence through 
+        small steps, repetition, and practical mindset tools grounded in 
+        behavioural change.
+      </p>
+      <a href="https://inspirationalguidance.com/products/confidence-bundle"
+         class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">
+        View Product →
+      </a>
+    </div>
+
+    <!-- GCSE Wide-Margin Books -->
+    <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">
+        GCSE English Wide-Margin Study Books
+      </h2>
+      <p class="text-[color:var(--color-font-main)] leading-relaxed mb-4">
+        Classroom-tested wide-margin workbooks for Macbeth, A Christmas Carol, 
+        Romeo & Juliet and more — ideal for annotation, quotes, and revision.
+      </p>
+      <a href="https://penandipublishing.co.uk/"
+         class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">
+        View Range →
+      </a>
+    </div>
+
+    <!-- Self-Authored Life Guide -->
+    <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">
+        The Self-Authored Life (Guide)
+      </h2>
+      <p class="text-[color:var(--color-font-main)] leading-relaxed mb-4">
+        A structured guide exploring purpose, decision-making, emotional awareness, 
+        and reclaiming authorship over your life. Ideal for reflective journaling.
+      </p>
+      <span class="text-[color:var(--color-brand-secondary)]">Coming soon</span>
+    </div>
+
+    <!-- Shadow Work Questions (without the term) -->
+    <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">
+        Emotional Pattern Reflection Workbook
+      </h2>
+      <p class="text-[color:var(--color-font-main)] leading-relaxed mb-4">
+        A practical collection of questions for understanding hidden patterns, 
+        self-beliefs, and emotional responses — grounded in psychology, not jargon.
+      </p>
+      <span class="text-[color:var(--color-brand-secondary)]">Coming soon</span>
+    </div>
+
+    <!-- Pen & I Notebooks -->
+    <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">
+        Pen & I Publishing — Notebooks
+      </h2>
+      <p class="text-[color:var(--color-font-main)] leading-relaxed mb-4">
+        A range of creative notebooks, each designed with clarity and focus for 
+        journaling, reflection, and everyday writing.
+      </p>
+      <a href="https://penandipublishing.co.uk/"
+         class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">
+        Visit Site →
+      </a>
+    </div>
+
+  </section>
+
+</div>
+
+{% endblock %}

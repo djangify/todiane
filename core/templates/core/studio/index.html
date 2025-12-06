@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Software Studio — Tools, Apps & Systems by Diane Corriette{% endblock %}
+
+{% block content %}
+
+<div class="w-full max-w-6xl mx-auto px-6 md:px-10 lg:px-16 py-12">
+
+  <!-- SIMPLE STUDIO HEADER (Option C) -->
+  <div class="mb-10">
+    <p class="uppercase text-sm tracking-wide text-[color:var(--color-brand-accent)] mb-2">
+      Software Studio
+    </p>
+
+    <h1 class="text-4xl mb-4 mt-2 font-bold text-[color:var(--color-brand-primary)]">
+      The Studio
+    </h1>
+
+    <p class="text-lg text-[color:var(--color-font-main)] mt-3 leading-relaxed max-w-5xl">
+      A collection of tools, apps, and digital systems built from scratch and 
+      with ownership in mind. From offline-first software to Django-powered web apps, this Studio 
+      is where all my projects live.
+    </p>
+  </div>
+
+
+  <!-- CATEGORY GRID -->
+  <section class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+    <!-- OFFLINE FIRST -->
+    <a href="/studio/offline-apps/"
+       class="block border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">Offline-First Apps</h2>
+      <p class="text-[color:var(--color-font-main)] text-base leading-relaxed">
+        Tools that run on your device — practical, private, subscription-free.
+      </p>
+    </a>
+
+    <!-- WEB APPS -->
+    <a href="/studio/web-apps/"
+       class="block border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">Web Applications</h2>
+      <p class="text-[color:var(--color-font-main)] leading-relaxed">
+        Django-powered platforms, micro-SaaS tools, dashboards, and creator systems.
+      </p>
+    </a>
+
+    <!-- PDF PRODUCTS -->
+    <a href="/studio/pdfs/"
+       class="block border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">PDFs & Digital Products</h2>
+      <p class="text-[color:var(--color-font-main)] leading-relaxed">
+        Workbooks, planners, writing tools, and digital guides sold through my storefronts.
+      </p>
+    </a>
+
+    <!-- CREATIVE CODING -->
+    <a href="/studio/creative/"
+       class="block border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">Creative Coding</h2>
+      <p class="text-[color:var(--color-font-main)] leading-relaxed">
+        Experimental tools, visual play, and interactive pieces like Circles and Tap to Calm.
+      </p>
+    </a>
+
+    <!-- PROJECTS (CASE STUDIES) -->
+    <a href="/studio/projects/"
+       class="block border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">Projects</h2>
+      <p class="text-[color:var(--color-font-main)] leading-relaxed">
+        Larger systems, micro-SaaS products, ecommerce builds, and long-term experiments.
+      </p>
+    </a>
+
+    <!-- ABOUT THE DEVELOPER -->
+    <a href="/studio/about/"
+       class="block border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">About the Studio</h2>
+      <p class="text-[color:var(--color-font-main)] leading-relaxed">
+        My philosophy, workflows, indie journey, and what I'm building toward next.
+      </p>
+    </a>
+
+  </section>
+
+</div>
+
+{% endblock %}

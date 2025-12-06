@@ -39,21 +39,21 @@
     <div class="flex flex-wrap gap-4 mt-6 mb-10">
       {% if portfolio.live_site_url %}
       <a href="{{ portfolio.live_site_url }}" target="_blank" rel="noopener noreferrer"
-         class="inline-flex items-center px-6 py-3 border-2 border-[color:var(--color-brand-accent)] text-[color:var(--color-brand-accent)] rounded-md hover:bg-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-light)] transition-colors">
+         class="inline-flex items-center px-6 py-3 border-2 border-[color:var(--color-brand-accent)] text-[color:var(--color-brand-accent)] rounded-md hover:bg-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-font-main)] transition-colors">
         <i class="fas fa-external-link-alt mr-2"></i> Live Site
       </a>
       {% endif %}
 
       {% if portfolio.github_url %}
       <a href="{{ portfolio.github_url }}" target="_blank" rel="noopener noreferrer"
-         class="inline-flex items-center px-6 py-3 border-2 border-[color:var(--color-brand-accent)] text-[color:var(--color-brand-accent)] rounded-md hover:bg-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-light)] transition-colors">
+         class="inline-flex items-center px-6 py-3 border-2 border-[color:var(--color-brand-accent)] text-[color:var(--color-brand-accent)] rounded-md hover:bg-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-font-main)] transition-colors">
         <i class="fab fa-github mr-2"></i> GitHub Repo
       </a>
       {% endif %}
 
       {% if portfolio.for_sale_url %}
       <a href="{{ portfolio.for_sale_url }}" target="_blank" rel="noopener noreferrer"
-         class="inline-flex items-center px-6 py-3 border-2 border-[color:var(--color-brand-dark)] bg-[color:var(--color-brand-light)] text-[color:var(--color-brand-dark)] rounded-md hover:bg-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-light)] transition-colors font-semibold">
+         class="inline-flex items-center px-6 py-3 border-2 border-[color:var(--color-brand-dark)] bg-[color:var(--color-brand-light)] text-[color:var(--color-brand-dark)] rounded-md hover:bg-[color:var(--color-brand-accent)] hover:text-[color:var(--color-font-main)] transition-colors font-semibold">
         <i class="fas fa-shopping-cart mr-2"></i> For Sale
       </a>
       {% endif %}
@@ -150,7 +150,7 @@
 
         {% if image.caption %}
         <div class="absolute bottom-0 left-0 right-0 bg-[color:var(--color-brand-dark)] bg-opacity-70 p-3 translate-y-full group-hover:translate-y-0 transition-transform">
-          <p class="text-sm text-[color:var(--color-brand-light)]">{{ image.caption }}</p>
+          <p class="text-sm text-[color:var(--color-font-main)]">{{ image.caption }}</p>
         </div>
         {% endif %}
       </div>

@@ -13,10 +13,18 @@ urlpatterns = [
         name="ai_search",
     ),
     path(
-        "local-first/",
-        TemplateView.as_view(template_name="core/local_first.html"),
-        name="local_first",
+        "independent-software/",
+        TemplateView.as_view(template_name="core/independent-software.html"),
+        name="independent_software",
     ),
+    # STUDIO PAGES
+    path("studio/", views.studio_home, name="studio_home"),
+    path("studio/offline-apps/", views.studio_offline_apps, name="studio_offline_apps"),
+    path("studio/web-apps/", views.studio_web_apps, name="studio_web_apps"),
+    path("studio/pdfs/", views.studio_pdfs, name="studio_pdfs"),
+    path("studio/creative/", views.studio_creative, name="studio_creative"),
+    path("studio/projects/", views.studio_projects, name="studio_projects"),
+    path("studio/about/", views.studio_about, name="studio_about"),
     # policies
     path("policy/privacy/", views.privacy_view, name="privacy_policy"),
     path("policy/cookies/", views.cookie_view, name="cookie_policy"),

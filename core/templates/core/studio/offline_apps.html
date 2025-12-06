@@ -1,0 +1,254 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Offline-First Software — Tools You Can Own{% endblock %}
+
+{% block content %}
+
+<!-- PAGE WRAPPER -->
+<div class="w-full max-w-6xl mx-auto px-6 md:px-10 lg:px-16 py-12">
+
+  <!-- SIMPLE HERO HEADER (Option C) -->
+  <div class="mb-10">
+    <p class="uppercase text-sm tracking-wide text-[color:var(--color-brand-accent)] mb-2">
+      Software
+    </p>
+
+    <h1 class="text-4xl mb-4 font-bold text-[color:var(--color-brand-primary)]">
+      Offline-First Apps
+    </h1>
+
+    <p class="text-lg text-[color:var(--color-font-main)] mt-3 leading-relaxed max-w-5xl">
+      These tools run fully on your device — not in the cloud — giving you more privacy, ownership, 
+      and long-term stability. No subscriptions. No lock-ins. Just software you can run and rely on.
+    </p>
+  </div>
+
+  <!-- SHORT EXPLANATION SECTION -->
+  <section class="mb-12 bg-[color:var(--color-brand-light)] border border-[color:var(--color-brand-accent)]
+                  p-6 rounded-xl">
+    <h2 class="text-2xl font-semibold text-[color:var(--color-brand-primary)] mb-3">
+      What “Offline-First” Means
+    </h2>
+
+    <p class="text-[color:var(--color-font-main)]">
+      Offline-first software works without internet access. Your data lives on your device first, 
+      and nothing depends on a server staying online. It's ideal for creators, self-employed professionals, 
+      and anyone who wants tools they can fully own. Cloud syncing is optional — not required.
+    </p>
+  </section>
+
+  <!-- GRID OF TOOLS -->
+  <section class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+    <!-- ===== MTDIFY ===== -->
+    <div class="border border-[color:var(--color-brand-accent)] p-6 rounded-xl bg-white transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
+      <h3 class="text-2xl font-semibold text-[color:var(--color-brand-primary)] mb-2">MTDify</h3>
+      <p class="mb-4">Bookkeeping & financial organising for UK self-employed creators.</p>
+
+      <ul class="list-disc ml-5 mb-4">
+        <li>Runs fully offline</li>
+        <li>Stores data in SQLite</li>
+        <li>Starter (free) & Local (paid)</li>
+        <li>Ideal for micro-businesses</li>
+      </ul>
+
+      <div class="flex flex-col gap-3">
+
+        {% if mtdify_starter_url %}
+        <a href="{{ mtdify_starter_url }}"
+           class="px-4 py-2 text-center bg-[color:var(--color-brand-primary)] 
+                  text-[color:var(--color-brand-light)] rounded-md font-semibold">
+          Download Starter
+        </a>
+        {% endif %}
+
+        {% if mtdify_local_url %}
+        <a href="{{ mtdify_local_url }}"
+           class="px-4 py-2 text-center bg-[color:var(--color-brand-accent)] 
+                  text-[color:var(--color-font-main)] rounded-md font-semibold">
+          Download Local Edition
+        </a>
+        {% endif %}
+
+        <a href="https://mtdify.uk" target="_blank"
+           class="px-4 py-2 text-center border border-[color:var(--color-brand-accent)] 
+                  rounded-md font-medium">
+          Visit Website
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== INVOICE GENERATOR ===== -->
+    <div class="border border-[color:var(--color-brand-accent)] p-6 rounded-xl bg-white transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
+      <h3 class="text-2xl font-semibold text-[color:var(--color-brand-primary)] mb-2">Invoice Generator</h3>
+      <p class="mb-4">Simple PDF invoicing for freelancers and creators.</p>
+
+      <ul class="list-disc ml-5 mb-4">
+        <li>Offline PDF creation</li>
+        <li>Fast & lightweight</li>
+        <li>Starter + Local Editions</li>
+        <li>Django-powered backend</li>
+      </ul>
+
+      <div class="flex flex-col gap-3">
+
+        {% if invoice_starter_url %}
+        <a href="{{ invoice_starter_url }}"
+           class="px-4 py-2 text-center bg-[color:var(--color-brand-primary)] 
+                  text-[color:var(--color-brand-light)] rounded-md font-semibold">
+          Download Starter
+        </a>
+        {% endif %}
+
+        {% if invoice_local_url %}
+        <a href="{{ invoice_local_url }}"
+           class="px-4 py-2 text-center bg-[color:var(--color-brand-accent)] 
+                  text-[color:var(--color-font-main)] rounded-md font-semibold">
+          Download Local Edition
+        </a>
+        {% endif %}
+
+        <a href="https://github.com/djangify/invoice-generator"
+           class="px-4 py-2 text-center border border-[color:var(--color-brand-accent)] 
+                  rounded-md font-medium">
+          GitHub Repo
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== PROMPT GENERATOR ===== -->
+    <div class="border border-[color:var(--color-brand-accent)] p-6 rounded-xl bg- transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
+      <h3 class="text-2xl font-semibold text-[color:var(--color-brand-primary)] mb-2">Prompt Generator</h3>
+      <p class="mb-4">Creative writing prompts to help you get the most from AI.</p>
+
+      <ul class="list-disc ml-5 mb-4">
+        <li>Works fully offline</li>
+        <li>Business & personal prompts</li>
+        <li>Save prompts locally</li>
+        <li>Starter (free)</li>
+      </ul>
+
+      <div class="flex flex-col gap-3">
+
+        {% if prompt_starter_url %}
+        <a href="{{ prompt_starter_url }}"
+           class="px-4 py-2 text-center bg-[color:var(--color-brand-primary)] 
+                  text-[color:var(--color-brand-light)] rounded-md font-semibold">
+          Download Starter
+        </a>
+        {% endif %}
+
+        {% if prompt_local_url %}
+        <a href="{{ prompt_local_url }}"
+           class="px-4 py-2 text-center bg-[color:var(--color-brand-accent)] 
+                  text-[color:var(--color-font-main)] rounded-md font-semibold">
+          Download Local Edition
+        </a>
+        {% endif %}
+
+        <a href="https://inspirationalguidance.com/tools/"
+           class="px-4 py-2 text-center border border-[color:var(--color-brand-accent)] 
+                  rounded-md font-medium">
+          View Online Version
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== GOAL TRACKER ===== -->
+    <div class="border border-[color:var(--color-brand-accent)] p-6 rounded-xl bg-white transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
+      <h3 class="text-2xl font-semibold text-[color:var(--color-brand-primary)] mb-2">Goal Tracker</h3>
+      <p class="mb-4">A simple, private way to set and track goals offline.</p>
+
+      <ul class="list-disc ml-5 mb-4">
+        <li>Runs offline</li>
+        <li>No login needed</li>
+        <li>Starter + Local Editions</li>
+      </ul>
+
+      <div class="flex flex-col gap-3">
+
+        {% if goal_starter_url %}
+        <a href="{{ goal_starter_url }}"
+           class="px-4 py-2 bg-[color:var(--color-brand-primary)] text-[color:var(--color-brand-light)] 
+                  rounded-md font-semibold text-center">
+          Download Starter
+        </a>
+        {% endif %}
+
+        {% if goal_local_url %}
+        <a href="{{ goal_local_url }}"
+           class="px-4 py-2 bg-[color:var(--color-brand-accent)] text-[color:var(--color-font-main)] 
+                  rounded-md font-semibold text-center">
+          Download Local Edition
+        </a>
+        {% endif %}
+
+        <a href="https://inspirationalguidance.com/tools/" 
+           class="px-4 py-2 border border-[color:var(--color-brand-accent)] text-center rounded-md font-medium">
+          View Online Version
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== JOURNAL WRITER ===== -->
+    <div class="border border-[color:var(--color-brand-accent)] p-6 rounded-xl bg-white transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
+      <h3 class="text-2xl font-semibold text-[color:var(--color-brand-primary)] mb-2">Journal Writer</h3>
+      <p class="mb-4">A private journaling tool built for reflection and clarity.</p>
+
+      <ul class="list-disc ml-5 mb-4">
+        <li>Offline writing</li>
+        <li>Exports to PDF</li>
+        <li>Local Edition</li>
+      </ul>
+
+      <div class="flex flex-col gap-3">
+
+        {% if journal_local_url %}
+        <a href="{{ journal_local_url }}"
+           class="px-4 py-2 bg-[color:var(--color-brand-accent)] text-[color:var(--color-font-main)] 
+                  rounded-md font-semibold text-center">
+          Download Local Edition
+        </a>
+        {% endif %}
+
+        <a href="https://penandipublishing.com" 
+           class="px-4 py-2 border border-[color:var(--color-brand-accent)] text-center rounded-md font-medium">
+          View Writing Tools
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== PROJECT TRACKER ===== -->
+    <div class="border border-[color:var(--color-brand-accent)] p-6 rounded-xl bg-white transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
+      <h3 class="text-2xl font-semibold text-[color:var(--color-brand-primary)] mb-2">Project Tracker</h3>
+      <p class="mb-4">A handy tool to organise your ideas and ongoing work.</p>
+
+      <ul class="list-disc mb-4">
+        <li>Runs offline</li>
+        <li>Keeps tasks local</li>
+        <li>Optional future sync</li>
+      </ul>
+
+      <div class="flex flex-col gap-3">
+
+        {% if project_local_url %}
+        <a href="{{ project_local_url }}"
+           class="px-4 py-2 bg-[color:var(--color-brand-accent)] text-[color:var(--color-font-main)] 
+                  rounded-md font-semibold text-center">
+          Download Local Edition
+        </a>
+        {% endif %}
+
+        <a href="https://tracker.djangify.com" 
+           class="px-4 py-2 border border-[color:var(--color-brand-accent)] text-center rounded-md font-medium">
+          View Online Version
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+
+{% endblock %}
