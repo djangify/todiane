@@ -8,7 +8,8 @@
 <div class="w-full max-w-6xl mx-auto px-6 md:px-10 lg:px-16 py-10">
 
   <!-- BREADCRUMB -->
-  {% include "core/components/breadcrumb.html" with crumbs=crumbs %}
+  {% include "core/components/breadcrumb.html"  %}
+  
 
   <!-- OPTION C HEADER -->
   <p class="uppercase text-sm tracking-wide text-[color:var(--color-brand-accent)] mb-2">
@@ -27,6 +28,48 @@
 
   <!-- GRID OF WEB-APPS -->
   <section class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+    
+    <!-- Adminita -->
+    <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9" stroke-width="2"/>
+          <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                d="M9 15l3-6l3 6m-4.5-3h3"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">
+        Adminita Django Dashboard
+      </h2>
+      <p class="text-[color:var(--color-font-main)] leading-relaxed mb-4">
+        Django admin theme built with Tailwind CSS v4. Transforms the Django admin interface into a responsive dashboard.
+      </p>
+      <div class="flex flex-col gap-2">
+        <a href="https://adminita.djangify.com/"  class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Site →</a>
+        <a href="https://github.com/djangify/adminita" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub Repo →</a>
+      </div>
+    </div>
+    <!-- Djangify Ecommerce Builder -->
+    <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
+      <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
+        </svg>
+      </div>
+      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">
+        Djangify Ecommerce Builder
+      </h2>
+      <p class="text-[color:var(--color-font-main)] leading-relaxed mb-4">
+        A streamlined starter ecommerce framework built with Django. Used as the 
+        foundation for multiple live client projects.
+      </p>
+      <div class="flex flex-col gap-2">
+        <a href="https://www.djangify.com/"  class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Site →</a>
+        <a href="https://ecommerce.djangify.com" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Documentation Site →</a>
+      </div>
+    </div>
 
     <!-- Inspirational Guidance -->
     <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
@@ -40,11 +83,13 @@
       </h2>
       <p class="text-[color:var(--color-font-main)] leading-relaxed mb-4">
         A full Django-driven ecosystem including a goal tracker, prompt generator, 
-        dashboards, wishlists, and an integrated ecommerce store for digital products.
+        dashboards, wishlists, and digital ecommerce store.
       </p>
       <div class="flex flex-col gap-2">
-        <a href="https://inspirationalguidance.com/" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Site →</a>
-        <a href="https://github.com/djangify/inspirational" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub Repo →</a>
+        <a href="https://inspirationalguidance.com/" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Site →</a>
+        <a href="https://github.com/djangify/inspirational" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub Repo →</a>
       </div>
     </div>
 
@@ -63,10 +108,13 @@
         protected course areas, resources, and teacher-driven content.
       </p>
       <div class="flex flex-col gap-2">
-        <a href="https://www.streamenglish.co.uk/" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Site →</a>
-      </div>
+        <a href="https://www.streamenglish.co.uk/" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Site →</a>
+      
+      <a href="https://github.com/djangify/stream" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub Repo →</a>
     </div>
-
+  </div>
     <!-- Zestizm -->
     <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
       <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
@@ -78,34 +126,18 @@
         Zestizm
       </h2>
       <p class="text-[color:var(--color-font-main)] leading-relaxed mb-4">
-        A minimal ecommerce + content site built to sell a single product with a 
+        A minimal ecommerce and content site (currently for sale) built to sell a single product with a 
         simplified buying experience and clear messaging.
       </p>
       <div class="flex flex-col gap-2">
-        <a href="https://www.zestizm.com/" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Site →</a>
+        <a href="https://www.zestizm.com/" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Site →</a>
+        <a href="https://github.com/djangify/zestizm" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub Repo →</a>
       </div>
     </div>
 
-    <!-- Djangify Ecommerce Builder -->
-    <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
-      <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
-        <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/>
-        </svg>
-      </div>
-      <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">
-        Djangify Ecommerce Builder
-      </h2>
-      <p class="text-[color:var(--color-font-main)] leading-relaxed mb-4">
-        A streamlined starter ecommerce framework built with Django. Used as the 
-        foundation for multiple live client projects.
-      </p>
-      <div class="flex flex-col gap-2">
-        <a href="https://www.djangify.com/" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Site →</a>
-        <a href="https://github.com/djangify/ecommerce-docs" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Documentation Repo →</a>
-      </div>
-    </div>
-
+ 
     <!-- Promptsite -->
     <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:bg-[color:var(--color-brand-light)] hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
       <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4">

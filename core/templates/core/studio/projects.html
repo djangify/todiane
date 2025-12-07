@@ -8,7 +8,7 @@
 <div class="w-full max-w-6xl mx-auto px-6 md:px-10 lg:px-16 py-10">
 
   <!-- Breadcrumb -->
-  {% include "core/components/breadcrumb.html" with crumbs=crumbs %}
+  {% include "core/components/breadcrumb.html" %}
 
   <!-- Option C header -->
   <p class="uppercase text-sm tracking-wide text-[color:var(--color-brand-accent)] mb-2">
@@ -20,7 +20,7 @@
   </h1>
 
   <p class="text-lg mt-4 mb-4 text-[color:var(--color-font-main)] max-w-5xl leading-relaxed">
-    These are the larger, more complex systems I've built — micro-SaaS tools, 
+    These are the larger, more complex systems I've built - micro-SaaS tools, 
     offline-first applications, teaching platforms, and experimental frameworks. 
     Some are complete, some evolving, and some are long-term research and development.
   </p>
@@ -42,9 +42,12 @@
         privacy, independence, and ease of use.
       </p>
       <div class="flex flex-col gap-2">
-        <a href="https://mtdify.uk" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Site →</a>
-        <a href="https://github.com/djangify/mtdify" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub (self-hosted) →</a>
-        <a href="https://github.com/djangify/mtdify-local" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub (Local Edition) →</a>
+        <a href="https://mtdify.uk" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Site →</a>
+        <a href="https://github.com/djangify/mtdify" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub (self-hosted) →</a>
+        <a href="https://github.com/djangify/mtdify-local" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub (Local Edition) →</a>
       </div>
     </div>
 
@@ -61,7 +64,8 @@
         supports custom branding, and has both Starter and Local Editions in development.
       </p>
       <div class="flex flex-col gap-2">
-        <a href="https://github.com/djangify/invoice-generator" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub Repo →</a>
+        <a href="https://github.com/djangify/invoice-generator" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub Repo →</a>
       </div>
     </div>
 
@@ -78,7 +82,8 @@
         course building, link hubs, and ecommerce under one roof. Currently paused, 
         but ongoing R&D continues as time allows.
       </p>
-      <a href="https://github.com/djangify/corrison" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub Repo →</a>
+      <a href="https://github.com/djangify/corrison" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub Repo →</a>
     </div>
 
     <!-- Project Tracker -->
@@ -94,8 +99,9 @@
         load. Used daily in my workflow with plans for an offline-first version.
       </p>
       <div class="flex flex-col gap-2">
-        <a href="https://tracker.djangify.com" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Site →</a>
-        <a href="https://github.com/djangify/project_tracker" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub Repo →</a>
+        <a href="https://tracker.djangify.com" target="_blank" 
+          rel="noopener noreferrer"  class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Site →</a>
+        <a href="https://github.com/djangify/project_tracker" target="_blank" rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">GitHub Repo →</a>
       </div>
     </div>
 
@@ -112,8 +118,10 @@
         Includes product pages, carts, Stripe integration, and dashboard tools.
       </p>
       <div class="flex flex-col gap-2">
-        <a href="https://www.djangify.com" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Demo →</a>
-        <a href="https://github.com/djangify/ecommerce-docs" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Documentation →</a>
+        <a href="https://www.djangify.com" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Demo →</a>
+        <a href="https://ecommerce.djangify.com/" target="_blank" 
+          rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Documentation →</a>
       </div>
     </div>
 

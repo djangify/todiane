@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Terms & Conditions - Diane Corriette{% endblock %}
+
+{% block content %}
+<div class="px-6 md:px-16 py-16 text-[color:var(--color-font-main)] space-y-24">
+
+  {% include "core/components/breadcrumb.html" %}
+
+  <!-- Header -->
+  <header class="max-w-3xl mx-auto text-center space-y-6">
+    <h1 class="text-3xl md:text-4xl font-semibold text-[color:var(--color-brand-primary)] leading-snug">
+      Terms & Conditions
+    </h1>
+    <p class="text-sm text-[color:var(--color-brand-accent)]">Last updated: January 2025</p>
+  </header>
+
+  <!-- Contents -->
+  <section class="max-w-3xl mx-auto bg-[color:var(--color-brand-light)] rounded-xl p-8 shadow-sm space-y-4">
+    <h2 class="text-lg font-semibold text-[color:var(--color-brand-primary)]">Contents</h2>
+    <ol class="list-decimal list-inside space-y-2 text-[color:var(--color-font-main)]">
+      <li><a href="#introduction" class="text-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-dark)] transition">Introduction</a></li>
+      <li><a href="#use" class="text-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-dark)] transition">Use of This Website</a></li>
+      <li><a href="#intellectual" class="text-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-dark)] transition">Intellectual Property</a></li>
+      <li><a href="#external-links" class="text-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-dark)] transition">External Links & Third-Party Sites</a></li>
+      <li><a href="#studio" class="text-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-dark)] transition">Studio & Project Information</a></li>
+      <li><a href="#liability" class="text-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-dark)] transition">Limitation of Liability</a></li>
+      <li><a href="#changes" class="text-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-dark)] transition">Changes to These Terms</a></li>
+      <li><a href="#contact" class="text-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-dark)] transition">Contact Information</a></li>
+    </ol>
+  </section>
+
+  <!-- Sections -->
+  <section class="max-w-3xl mx-auto space-y-16">
+
+    <!-- 1 -->
+    <div id="introduction" class="space-y-4 rounded-xl p-6">
+      <h2 class="text-2xl font-semibold text-[color:var(--color-brand-primary)]">1. Introduction</h2>
+      <p class="leading-relaxed">
+        These Terms & Conditions govern your use of todiane.com. By continuing to browse or use the site,
+        you agree to be bound by these terms. If you do not agree, you should stop using the website.
+      </p>
+    </div>
+
+    <!-- 2 -->
+    <div id="use" class="space-y-4 bg-[color:var(--color-brand-light)] rounded-xl p-6">
+      <h2 class="text-2xl font-semibold text-[color:var(--color-brand-primary)]">2. Use of This Website</h2>
+      <p class="leading-relaxed">
+        todiane.com is a personal website used to share professional work, portfolio projects, personal writing,
+        and information about offline-first tools and creative projects. You may browse the website for
+        personal and non-commercial use only.
+      </p>
+      <p class="leading-relaxed">
+        You agree not to use this website in any way that:
+      </p>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>violates applicable laws or regulations</li>
+        <li>attempts to gain unauthorised access to the website or its servers</li>
+        <li>interferes with the proper functioning of the website</li>
+        <li>copies, redistributes, or modifies content without permission</li>
+      </ul>
+    </div>
+
+    <!-- 3 -->
+    <div id="intellectual" class="space-y-4 rounded-xl p-6">
+      <h2 class="text-2xl font-semibold text-[color:var(--color-brand-primary)]">3. Intellectual Property</h2>
+      <p class="leading-relaxed">
+        All content on todiane.com — including text, images, graphics, design, and branding — is owned by
+        Diane Corriette unless otherwise stated. Content may not be reproduced, copied, or redistributed
+        without prior written consent.
+      </p>
+      <p class="leading-relaxed">
+        You may link to any public page on this site, but you may not frame or replicate the website’s content elsewhere.
+      </p>
+    </div>
+
+    <!-- 4 -->
+    <div id="external-links" class="space-y-4 bg-[color:var(--color-brand-light)] rounded-xl p-6">
+      <h2 class="text-2xl font-semibold text-[color:var(--color-brand-primary)]">4. External Links & Third-Party Sites</h2>
+      <p class="leading-relaxed">
+        This website includes links to external sites, including products, tools, and creative projects hosted
+        on other platforms. These links are provided for information only.
+      </p>
+      <p class="leading-relaxed">
+        todiane.com is not responsible for:
+      </p>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>the content or policies of external websites</li>
+        <li>the accuracy or availability of third-party information</li>
+        <li>any loss or damage resulting from visiting external sites</li>
+      </ul>
+      <p class="leading-relaxed">
+        You should always review the terms and privacy policies of any third-party websites you visit.
+      </p>
+    </div>
+
+    <!-- 5 -->
+    <div id="studio" class="space-y-4 rounded-xl p-6">
+      <h2 class="text-2xl font-semibold text-[color:var(--color-brand-primary)]">5. Studio & Project Information</h2>
+      <p class="leading-relaxed">
+        The Studio section showcases projects, tools, offline-first applications, and personal experiments.
+        These are provided for demonstration purposes only.
+      </p>
+      <p class="leading-relaxed">
+        Any software, tools, or downloads introduced in the Studio area are explained conceptually on this site
+        but may be hosted or distributed elsewhere. Their use is governed by the terms provided on the
+        respective platform where they are accessed.
+      </p>
+    </div>
+
+    <!-- 6 -->
+    <div id="liability" class="space-y-4 bg-[color:var(--color-brand-light)] rounded-xl p-6">
+      <h2 class="text-2xl font-semibold text-[color:var(--color-brand-primary)]">6. Limitation of Liability</h2>
+      <p class="leading-relaxed">
+        The information provided on todiane.com is for general informational purposes only. While every effort
+        is made to ensure accuracy, no guarantee is given regarding completeness or reliability.
+      </p>
+      <p class="leading-relaxed">
+        To the fullest extent permitted by law, todiane.com and its owner are not liable for:
+      </p>
+      <ul class="list-disc pl-6 space-y-1">
+        <li>errors, omissions, or outdated content</li>
+        <li>losses arising from the use of this website</li>
+        <li>decisions made based on information provided here</li>
+      </ul>
+    </div>
+
+    <!-- 7 -->
+    <div id="changes" class="space-y-4 rounded-xl p-6">
+      <h2 class="text-2xl font-semibold text-[color:var(--color-brand-primary)]">7. Changes to These Terms</h2>
+      <p class="leading-relaxed">
+        These Terms & Conditions may be updated occasionally to reflect changes in website content or
+        legal requirements. Updated versions will be posted on this page with the revision date above.
+      </p>
+    </div>
+
+    <!-- 8 -->
+    <div id="contact" class="space-y-4 bg-[color:var(--color-brand-light)] rounded-xl p-6">
+      <h2 class="text-2xl font-semibold text-[color:var(--color-brand-primary)]">8. Contact Information</h2>
+      <p class="leading-relaxed">
+        If you have any questions about these Terms & Conditions, please contact:
+      </p>
+      <p class="leading-relaxed">
+        corriettediane @gmail.com
+      </p>
+    </div>
+
+  </section>
+
+</div>
+{% endblock %}

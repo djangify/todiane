@@ -1,4 +1,4 @@
-# todiane.com – AI-Search-Ready Django Portfolio & eCommerce Builder
+# todiane.com – Portfolio of Indie Developer Diane Corriette
 
 ![todiane.com header](https://github.com/djangify/todiane/blob/4616c26c7d9867b0ee031f251d1548edead7bfc2/todiane-header.png)
 
@@ -27,7 +27,7 @@
 
 ## 💻 Project Overview
 
-**todiane.com** is the professional portfolio and AI-search-ready site of **Diane Corriette**, a Django Backend Developer & creator of the **Mini eCommerce Site Builder**.
+**todiane.com** is the professional portfolio and AI-search-ready site of **Diane Corriette**, a Django Indie Software Developer & creator of the **Mini eCommerce Site Builder**.
 
 This project demonstrates:
 - A **clean Django + Tailwind CSS** architecture  

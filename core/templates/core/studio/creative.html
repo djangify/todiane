@@ -8,7 +8,7 @@
 <div class="w-full max-w-6xl mx-auto px-6 md:px-10 lg:px-16 py-10">
 
   <!-- BREADCRUMB -->
-  {% include "core/components/breadcrumb.html" with crumbs=crumbs %}
+  {% include "core/components/breadcrumb.html" %}
 
   <!-- OPTION C HEADER -->
   <p class="uppercase text-sm tracking-wide text-[color:var(--color-brand-accent)] mb-2">
@@ -20,9 +20,9 @@
   </h1>
 
   <p class="text-lg mt-3 text-[color:var(--color-font-main)] mb-4 max-w-5xl leading-relaxed">
-    Experimental, visual, playful — these creative coding projects explore animation, 
+    Experimental, visual, playful - these creative coding projects explore animation, 
     interaction, and simple generative design. They began as personal experiments and 
-    turned into tools enjoyed by children, students, and creative learners.
+    turned into tools enjoyed by children and adults.
   </p>
 
 
@@ -44,7 +44,7 @@
         Loved by children for its simplicity and hypnotic visuals.
       </p>
       <div class="flex flex-col gap-2">
-        <a href="https://circles.todiane.com" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Demo →</a>
+        <a href="https://circles.todiane.com" target="_blank" rel="noopener noreferrer" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Live Demo of Circles <span aria-hidden="true">→</span></a>
        
       </div>
     </div>
@@ -60,11 +60,10 @@
         Animals Tapping Game
       </h2>
       <p class="text-[color:var(--color-font-main)] leading-relaxed mb-4">
-        A fun, fast reaction game built for children using simple animations and sound. 
-        Originally created for your granddaughters — now enjoyed widely.
+        A fun, fast reaction game built for children using simple animations on a loop that keep appearing as you tap to remove them. Equally enjoyed by adults.
       </p>
       <div class="flex flex-col gap-2">
-        <a href="https://animals.todiane.com" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Play →</a>
+        <a href="https://animals.todiane.com" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Play Animals Game <span aria-hidden="true">→</span></a>
       </div>
     </div>
 
@@ -80,10 +79,19 @@
       </h2>
       <p class="text-[color:var(--color-font-main)] leading-relaxed mb-4">
         A soothing, therapeutic version of the tapping game using soft colours, fading 
-        animations, and ambient transitions. Designed as a calming tool for adults and teens.
+        animations & ambient transitions. Designed as a calming tool for adults.
       </p>
       <div class="flex flex-col gap-2">
-        <a href="https://tap.inspirationalguidance.com" class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium">Try It →</a>
+        <a 
+          href="https://tap.inspirationalguidance.com" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-[color:var(--color-brand-secondary)] hover:text-[color:var(--color-brand-primary)] font-medium"
+        >
+          Try Tap To Calm 
+          <span aria-hidden="true">→</span>
+          <span class="sr-only">(opens in a new tab)</span>
+        </a>
       </div>
     </div>
 

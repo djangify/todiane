@@ -24,8 +24,8 @@
         <ul class="space-y-1">
           <li><a href="/" class="hover:text-[color:var(--color-brand-primary)] transition text-sm">Home</a></li>
           <li><a href="{% url 'core:studio_home' %}" class="hover:text-[color:var(--color-brand-primary)] transition text-sm">Studio</a></li>
-          <li><a href="{% url 'core:studio_about' %}" class="hover:text-[color:var(--color-brand-primary)] transition text-sm">About</a></li>
           <li><a href="{% url 'portfolio:list' %}" class="hover:text-[color:var(--color-brand-primary)] transition text-sm">Portfolio</a></li>
+          <li><a href="{% url 'blog:list' %}" class="hover:text-[color:var(--color-brand-primary)] transition text-sm">ToDiane Blog</a></li>
         </ul>
       </div>
 
@@ -36,7 +36,13 @@
           <li><a href="{% url 'core:ai_search' %}" class="hover:text-[color:var(--color-brand-primary)] transition text-sm">AI Search Readiness</a></li>
           <li><a href="{% url 'core:independent_software' %}" class="hover:text-[color:var(--color-brand-primary)] transition text-sm">Independent Software</a></li>
           <li><a href="{% url 'prompt_templates:template_list' %}" class="hover:text-[color:var(--color-brand-primary)] transition text-sm">Prompt Templates</a></li>
-          <li><a href="{% url 'blog:list' %}" class="hover:text-[color:var(--color-brand-primary)] transition text-sm">ToDiane Blog</a></li>
+          
+          <li>
+            <a href="https://djangify.com" class="hover:text-[color:var(--color-brand-primary)] transition text-sm">
+              Djangify — Offline Tools
+            </a>
+          </li>
+
         </ul>
       </div>
 

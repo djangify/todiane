@@ -6,6 +6,7 @@ from django.utils import timezone
 from django.shortcuts import get_object_or_404
 from django.http import Http404
 from django.contrib import messages
+from django.urls import reverse
 from .forms import SupportForm
 
 
@@ -14,24 +15,59 @@ def home(request):
     return render(request, "core/home.html")
 
 
+# -----------------------------------
+# POLICY PAGES (breadcrumbs added)
+# -----------------------------------
+def policies_index_view(request):
+    """View function for the policies index page."""
+    breadcrumbs = [
+        {"title": "Policies", "url": ""},
+    ]
+    return render(
+        request, "core/policy/policies_index.html", {"breadcrumbs": breadcrumbs}
+    )
+
+
 def privacy_view(request):
-    """Display the Privacy Policy page."""
-    return render(request, "core/policy/privacy.html")
+    breadcrumbs = [
+        {"title": "Policies", "url": reverse("core:policies_index")},
+        {"title": "Privacy Policy", "url": ""},
+    ]
+    return render(request, "core/policy/privacy.html", {"breadcrumbs": breadcrumbs})
 
 
 def cookie_view(request):
-    """Display the Cookie Policy page."""
-    return render(request, "core/policy/cookies.html")
+    breadcrumbs = [
+        {"title": "Policies", "url": reverse("core:policies_index")},
+        {"title": "Cookie Policy", "url": ""},
+    ]
+    return render(request, "core/policy/cookies.html", {"breadcrumbs": breadcrumbs})
 
 
 def affiliate_view(request):
-    """Display the Affiliate Policy page."""
-    return render(request, "core/policy/affiliate.html")
+    breadcrumbs = [
+        {"title": "Policies", "url": reverse("core:policies_index")},
+        {"title": "Affiliate Policy", "url": ""},
+    ]
+    return render(request, "core/policy/affiliate.html", {"breadcrumbs": breadcrumbs})
 
 
 def ai_writing_view(request):
-    """Display the AI Writing Policy page."""
-    return render(request, "core/policy/ai-writing-policy.html")
+    breadcrumbs = [
+        {"title": "Policies", "url": reverse("core:policies_index")},
+        {"title": "AI Writing Policy", "url": ""},
+    ]
+    return render(
+        request, "core/policy/ai-writing-policy.html", {"breadcrumbs": breadcrumbs}
+    )
+
+
+def terms_view(request):
+    breadcrumbs = [
+        {"title": "Policies", "url": reverse("core:policies_index")},
+        {"title": "Terms & Conditions", "url": ""},
+    ]
+    return render(request, "core/policy/terms.html", {"breadcrumbs": breadcrumbs})
 
 
 def handler500(request):
@@ -70,7 +106,7 @@ def handler404(request, exception):
 def support(request):
     form = SupportForm(request.POST or None)
     if request.method == "POST" and form.is_valid():
-        form.save()  # saves to DB + emails + auto-ack
+        form.save()
         messages.success(request, "Thank you! Your message has been sent.")
         return redirect("core:support")
     return render(request, "core/support.html", {"form": form})
@@ -117,31 +153,23 @@ def robots_txt(request):
 # STUDIO: MAIN HOMEPAGE
 # ------------------------------
 def studio_home(request):
-    return render(request, "core/studio/index.html")
+    breadcrumbs = [
+        {"title": "Studio", "url": ""},
+    ]
+    return render(request, "core/studio/index.html", {"breadcrumbs": breadcrumbs})
 
 
 # ------------------------------
 # STUDIO: OFFLINE-FIRST APPS
+# (all download links removed)
 # ------------------------------
 def studio_offline_apps(request):
-    context = {
-        # MTDify
-        "mtdify_starter_url": None,  # update when ready
-        "mtdify_local_url": None,
-        # Invoice Generator
-        "invoice_starter_url": None,
-        "invoice_local_url": None,
-        # Prompt Generator
-        "prompt_starter_url": None,
-        "prompt_local_url": None,
-        # Goal Tracker
-        "goal_starter_url": None,
-        "goal_local_url": None,
-        # Journal Writer
-        "journal_local_url": None,
-        # Project Tracker
-        "project_local_url": None,
-    }
+    breadcrumbs = [
+        {"title": "Studio", "url": reverse("core:studio_home")},
+        {"title": "Offline Apps", "url": ""},
+    ]
+
+    context = {"breadcrumbs": breadcrumbs}
 
     return render(request, "core/studio/offline_apps.html", context)
 
@@ -150,32 +178,52 @@ def studio_offline_apps(request):
 # STUDIO: WEB APPLICATIONS
 # ------------------------------
 def studio_web_apps(request):
-    return render(request, "core/studio/web_apps.html")
+    breadcrumbs = [
+        {"title": "Studio", "url": reverse("core:studio_home")},
+        {"title": "Web Apps", "url": ""},
+    ]
+    return render(request, "core/studio/web_apps.html", {"breadcrumbs": breadcrumbs})
 
 
 # ------------------------------
 # STUDIO: PDF PRODUCTS
 # ------------------------------
 def studio_pdfs(request):
-    return render(request, "core/studio/pdfs.html")
+    breadcrumbs = [
+        {"title": "Studio", "url": reverse("core:studio_home")},
+        {"title": "PDFs", "url": ""},
+    ]
+    return render(request, "core/studio/pdfs.html", {"breadcrumbs": breadcrumbs})
 
 
 # ------------------------------
 # STUDIO: CREATIVE CODING
 # ------------------------------
 def studio_creative(request):
-    return render(request, "core/studio/creative.html")
+    breadcrumbs = [
+        {"title": "Studio", "url": reverse("core:studio_home")},
+        {"title": "Creative Coding", "url": ""},
+    ]
+    return render(request, "core/studio/creative.html", {"breadcrumbs": breadcrumbs})
 
 
 # ------------------------------
 # STUDIO: PROJECT CASE STUDIES
 # ------------------------------
 def studio_projects(request):
-    return render(request, "core/studio/projects.html")
+    breadcrumbs = [
+        {"title": "Studio", "url": reverse("core:studio_home")},
+        {"title": "Projects", "url": ""},
+    ]
+    return render(request, "core/studio/projects.html", {"breadcrumbs": breadcrumbs})
 
 
 # ------------------------------
 # STUDIO: ABOUT THE STUDIO
 # ------------------------------
 def studio_about(request):
-    return render(request, "core/studio/about.html")
+    breadcrumbs = [
+        {"title": "Studio", "url": reverse("core:studio_home")},
+        {"title": "About", "url": ""},
+    ]
+    return render(request, "core/studio/about.html", {"breadcrumbs": breadcrumbs})

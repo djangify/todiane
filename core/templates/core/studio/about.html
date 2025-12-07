@@ -8,7 +8,7 @@
 <div class="w-full max-w-6xl mx-auto px-6 md:px-10 lg:px-16 py-12">
 
   <!-- BREADCRUMB -->
-  {% include "core/components/breadcrumb.html" with crumbs=crumbs %}
+  {% include "core/components/breadcrumb.html" %}
 
   <!-- OPTION C HEADER (section tag) -->
   <p class="uppercase text-sm tracking-wide text-[color:var(--color-brand-accent)] mt-4 mb-2">
@@ -73,7 +73,7 @@
         </div>
         <h3 class="font-semibold text-xl text-[color:var(--color-brand-primary)] mb-2">Offline-First Apps</h3>
         <p class="text-[color:var(--color-font-main)] leading-relaxed">
-          Tools that run entirely on the user's device — no accounts, no subscriptions,  
+          Tools that run entirely on the user's device. No subscriptions &   
           complete ownership of data.
         </p>
       </div>
@@ -99,7 +99,7 @@
         </div>
         <h3 class="font-semibold text-xl text-[color:var(--color-brand-primary)] mb-2">Digital Workbooks</h3>
         <p class="text-[color:var(--color-font-main)] leading-relaxed">
-          Journaling tools, personal development guides, writing prompts, and  
+          Personal development guides, journal prompts, and  
           practical frameworks for everyday growth.
         </p>
       </div>
@@ -112,8 +112,8 @@
         </div>
         <h3 class="font-semibold text-xl text-[color:var(--color-brand-primary)] mb-2">Ecommerce & Learning Platforms</h3>
         <p class="text-[color:var(--color-font-main)] leading-relaxed">
-          Django frameworks used to build real stores, membership sites, and  
-          video-based learning systems.
+          Django frameworks used to build real stores and  
+          learning systems.
         </p>
       </div>
 
@@ -162,7 +162,7 @@
           </svg>
         </div>
         <h3 class="font-semibold text-lg text-[color:var(--color-brand-primary)] mb-2">Simplicity First</h3>
-        <p class="text-[color:var(--color-font-main)] leading-relaxed">I avoid unnecessary complexity and build systems people actually enjoy using.</p>
+        <p class="text-[color:var(--color-font-main)] leading-relaxed">I avoid unnecessary complexity and build systems people find easy to use.</p>
       </div>
 
       <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
@@ -172,7 +172,9 @@
           </svg>
         </div>
         <h3 class="font-semibold text-lg text-[color:var(--color-brand-primary)] mb-2">Privacy & Ownership</h3>
-        <p class="text-[color:var(--color-font-main)] leading-relaxed">Offline-first tools give people control over their data — no servers required.</p>
+        <p class="text-[color:var(--color-font-main)] leading-relaxed"><a 
+            href="{% url 'core:independent_software' %}">
+          Offline-first tools </a>give people control over their data. No servers required.</p>
       </div>
 
       <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
@@ -182,7 +184,7 @@
           </svg>
         </div>
         <h3 class="font-semibold text-lg text-[color:var(--color-brand-primary)] mb-2">Indie & Independent</h3>
-        <p class="text-[color:var(--color-font-main)] leading-relaxed">No investors, no deadlines — just focused, intentional product development.</p>
+        <p class="text-[color:var(--color-font-main)] leading-relaxed">No investors, no deadlines - just focused, intentional product development.</p>
       </div>
 
       <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
@@ -192,7 +194,7 @@
           </svg>
         </div>
         <h3 class="font-semibold text-lg text-[color:var(--color-brand-primary)] mb-2">Long-Term Thinking</h3>
-        <p class="text-[color:var(--color-font-main)] leading-relaxed">I build products meant to last — not trends, not hype, but durable tools.</p>
+        <p class="text-[color:var(--color-font-main)] leading-relaxed">I build with sustainable development in mind - tools that start focused and have room to grow.</p>
       </div>
 
       <div class="border border-[color:var(--color-brand-accent)] rounded-xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-200">
@@ -212,7 +214,7 @@
           </svg>
         </div>
         <h3 class="font-semibold text-lg text-[color:var(--color-brand-primary)] mb-2">Experimentation</h3>
-        <p class="text-[color:var(--color-font-main)] leading-relaxed">The Studio is also a playground — ideas start here before becoming products.</p>
+        <p class="text-[color:var(--color-font-main)] leading-relaxed">The Studio is also a playground. Ideas start here before becoming products.</p>
       </div>
 
     </div>
@@ -227,13 +229,12 @@
 
     <p class="text-lg text-[color:var(--color-font-main)] leading-relaxed mb-4">
       After years of creating quietly and independently, I chose to build a space  
-      where all the tools, experiments, and meaningful projects could live together.  
-      This Studio is that place — a home for practical software, thoughtful design,  
+      where all the tools, experiments, and meaningful projects could live together. A home for practical software, thoughtful design,  
       and creative curiosity.
     </p>
 
     <p class="text-lg text-[color:var(--color-font-main)] leading-relaxed font-medium">
-      I build to support purpose, clarity, and independence — in myself and in the
+      I build to support purpose, clarity, and independence in myself and in the
       people who use my tools.
     </p>
 

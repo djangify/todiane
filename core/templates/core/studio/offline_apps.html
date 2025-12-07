@@ -7,6 +7,8 @@
 
 <!-- PAGE WRAPPER -->
 <div class="w-full max-w-6xl mx-auto px-6 md:px-10 lg:px-16 py-12">
+  <!-- BREADCRUMB -->
+  {% include "core/components/breadcrumb.html" %}
 
   <!-- SIMPLE HERO HEADER (Option C) -->
   <div class="mb-10">
@@ -19,8 +21,9 @@
     </h1>
 
     <p class="text-lg text-[color:var(--color-font-main)] mt-3 leading-relaxed max-w-5xl">
-      These tools run fully on your device — not in the cloud — giving you more privacy, ownership, 
-      and long-term stability. No subscriptions. No lock-ins. Just software you can run and rely on.
+      Offline-first software works without internet access. Your data lives on your device first, 
+      and nothing depends on a server staying online. It's ideal for creators, self-employed professionals, 
+      and anyone who wants tools they can fully own. Cloud syncing is optional but not required.
     </p>
   </div>
 
@@ -28,13 +31,11 @@
   <section class="mb-12 bg-[color:var(--color-brand-light)] border border-[color:var(--color-brand-accent)]
                   p-6 rounded-xl">
     <h2 class="text-2xl font-semibold text-[color:var(--color-brand-primary)] mb-3">
-      What “Offline-First” Means
+      Creating “Offline-First” Versions
     </h2>
 
     <p class="text-[color:var(--color-font-main)]">
-      Offline-first software works without internet access. Your data lives on your device first, 
-      and nothing depends on a server staying online. It's ideal for creators, self-employed professionals, 
-      and anyone who wants tools they can fully own. Cloud syncing is optional — not required.
+      All of these tools are available online (with free registration), and some already have offline versions. I am now working on bringing the rest offline so you can use them entirely on your own device.
     </p>
   </section>
 
@@ -44,7 +45,7 @@
     <!-- ===== MTDIFY ===== -->
     <div class="border border-[color:var(--color-brand-accent)] p-6 rounded-xl bg-white transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
       <h3 class="text-2xl font-semibold text-[color:var(--color-brand-primary)] mb-2">MTDify</h3>
-      <p class="mb-4">Bookkeeping & financial organising for UK self-employed creators.</p>
+      <p class="mb-4">Bookkeeping software for self-employed creators.</p>
 
       <ul class="list-disc ml-5 mb-4">
         <li>Runs fully offline</li>
@@ -71,10 +72,10 @@
         </a>
         {% endif %}
 
-        <a href="https://mtdify.uk" target="_blank"
+        <a href="https://mtdify.uk" target="_blank" rel="noopener noreferrer" 
            class="px-4 py-2 text-center border border-[color:var(--color-brand-accent)] 
                   rounded-md font-medium">
-          Visit Website
+          Visit MTDify Website
         </a>
       </div>
     </div>
@@ -94,7 +95,7 @@
       <div class="flex flex-col gap-3">
 
         {% if invoice_starter_url %}
-        <a href="{{ invoice_starter_url }}"
+        <a href="{{ invoice_starter_url }}" 
            class="px-4 py-2 text-center bg-[color:var(--color-brand-primary)] 
                   text-[color:var(--color-brand-light)] rounded-md font-semibold">
           Download Starter
@@ -110,7 +111,7 @@
         {% endif %}
 
         <a href="https://github.com/djangify/invoice-generator"
-           class="px-4 py-2 text-center border border-[color:var(--color-brand-accent)] 
+           target="_blank" rel="noopener noreferrer"  class="px-4 py-2 text-center border border-[color:var(--color-brand-accent)] 
                   rounded-md font-medium">
           GitHub Repo
         </a>
@@ -120,13 +121,13 @@
     <!-- ===== PROMPT GENERATOR ===== -->
     <div class="border border-[color:var(--color-brand-accent)] p-6 rounded-xl bg- transition-all duration-200 hover:shadow-lg hover:-translate-y-1">
       <h3 class="text-2xl font-semibold text-[color:var(--color-brand-primary)] mb-2">Prompt Generator</h3>
-      <p class="mb-4">Creative writing prompts to help you get the most from AI.</p>
+      <p class="mb-4">Creative writing prompts to help you get the most from journaling.</p>
 
       <ul class="list-disc ml-5 mb-4">
-        <li>Works fully offline</li>
-        <li>Business & personal prompts</li>
+        <li>Works offline (coming soon)</li>
+        <li>Personal growth prompts</li>
         <li>Save prompts locally</li>
-        <li>Starter (free)</li>
+        <li>Online demo (free)</li>
       </ul>
 
       <div class="flex flex-col gap-3">
@@ -147,7 +148,7 @@
         </a>
         {% endif %}
 
-        <a href="https://inspirationalguidance.com/tools/"
+        <a href="https://inspirationalguidance.com/tools/" target="_blank" rel="noopener noreferrer" 
            class="px-4 py-2 text-center border border-[color:var(--color-brand-accent)] 
                   rounded-md font-medium">
           View Online Version
@@ -161,8 +162,8 @@
       <p class="mb-4">A simple, private way to set and track goals offline.</p>
 
       <ul class="list-disc ml-5 mb-4">
-        <li>Runs offline</li>
-        <li>No login needed</li>
+        <li>Runs offline (coming soon)</li>
+        <li>Register for Online Version</li>
         <li>Starter + Local Editions</li>
       </ul>
 
@@ -184,7 +185,7 @@
         </a>
         {% endif %}
 
-        <a href="https://inspirationalguidance.com/tools/" 
+        <a href="https://inspirationalguidance.com/" target="_blank" rel="noopener noreferrer"  
            class="px-4 py-2 border border-[color:var(--color-brand-accent)] text-center rounded-md font-medium">
           View Online Version
         </a>
@@ -224,7 +225,7 @@
       <h3 class="text-2xl font-semibold text-[color:var(--color-brand-primary)] mb-2">Project Tracker</h3>
       <p class="mb-4">A handy tool to organise your ideas and ongoing work.</p>
 
-      <ul class="list-disc mb-4">
+      <ul class="list-disc ml-5 mb-4">
         <li>Runs offline</li>
         <li>Keeps tasks local</li>
         <li>Optional future sync</li>

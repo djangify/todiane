@@ -33,17 +33,17 @@
         <!-- Social links -->
         <ul class="flex gap-x-5 mb-4 text-[color:var(--color-brand-primary)]" aria-label="Social media links">
           <li>
-            <a href="https://www.linkedin.com/in/todianedev" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/todianedev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <img src="{% static 'images/social/linkedin.png' %}" alt="LinkedIn" width="25" height="25">
             </a>
           </li>
           <li>
-            <a href="https://www.instagram.com/dicorriette" target="_blank" rel="noopener" aria-label="Instagram">
+            <a href="https://www.instagram.com/dicorriette" target="_blank" rel="noopener noreferrer"  aria-label="Instagram">
               <img src="{% static 'images/social/instagram.png' %}" alt="Instagram" width="25" height="25">
             </a>
           </li>
           <li>
-            <a href="https://github.com/todiane" target="_blank" rel="noopener" aria-label="GitHub">
+            <a href="https://github.com/todiane" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <img src="{% static 'images/social/github.png' %}" alt="GitHub" width="25" height="25">
             </a>
           </li>
@@ -51,11 +51,11 @@
 
         <p class="lg:text-lg text-[color:var(--color-font-main)] leading-relaxed">
           I design and build <strong>Django applications</strong> and <strong>self-hosted tools</strong> for creators and small businesses who want control over their digital systems.  
-          My approach blends modern Django development with a growing focus on <strong>local-first and offline-friendly applications</strong>—giving people software they can run and own themselves.
+          My approach blends modern Django development with a growing focus on <strong>offline-first applications</strong> - giving people software they can run and own themselves.
         </p>
 
         <p class="lg:text-lg text-[color:var(--color-font-main)] leading-relaxed">
-          From micro eCommerce sites to personal productivity systems and privacy-focused tools, my work centres on stability, ownership, and subscription-free simplicity.
+          From micro eCommerce sites to personal productivity systems and privacy-focused tools, my work centres on stability, ownership, and pricing that stays accessible - either low-cost subscriptions or one-off purchases.
         </p>
 
         <!-- CTAs -->
@@ -67,9 +67,9 @@
           </a>
 
           <a 
-            href="{% url 'blog:list' %}" 
-            class="uppercase bg-[color:var(--color-brand-accent)] text-[color:var(--color-font-main)] font-semibold border border-[color:var(--color-brand-accent)] px-6 py-3 rounded-md hover:bg-[color:var(--color-brand-primary)] hover:text-[color:var(--color-font-main)] transition-colors">
-            What Is Local-First?
+            href="{% url 'core:independent_software' %}" 
+            class="uppercase  text-[color:var(--color-font-main)] font-semibold border-2 border-[color:var(--color-brand-primary)] px-6 py-3 rounded-md hover:bg-[color:var(--color-brand-accent)] hover:text-[color:var(--color-brand-light)] transition-colors">
+            What Is Offline-First?
           </a>
         </div>
 
