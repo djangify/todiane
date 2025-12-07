@@ -6,14 +6,41 @@
 <section class="px-6 md:px-16 py-12 bg-[color:var(--color-brand-light)] text-[color:var(--color-font-main)]">
   <div class="max-w-7xl mx-auto">
 
-    <header class="mb-12 space-y-4">
-      <h1 class="text-3xl md:text-4xl font-semibold text-[color:var(--color-brand-primary)] leading-normal mt-16">
-        My Portfolio Blog
-      </h1>
-      <p class="max-w-7xl leading-relaxed">
+    <header class="mb-12 space-y-3">
+    <h1 class="text-2xl font-bold lg:text-3xl text-[color:var(--color-font-main)]">
+        Articles & Insights
+    </h1>
+
+    <nav class="text-[color:var(--color-font-main)]/70 text-sm space-x-4">
+
+      <a href="{% url 'blog:category' slug='ai-search-readiness' %}"
+        class="hover:text-[color:var(--color-brand-primary)]">
+          AI Search Readiness
+      </a>
+
+      <a href="{% url 'blog:category' slug='development-notes' %}"
+        class="hover:text-[color:var(--color-brand-primary)]">
+          Development Notes
+      </a>
+
+      <a href="{% url 'blog:category' slug='reflections' %}"
+        class="hover:text-[color:var(--color-brand-primary)]">
+          Reflections
+      </a>
+
+      <a href="{% url 'blog:category' slug='behind-the-build' %}"
+        class="hover:text-[color:var(--color-brand-primary)]">
+          Behind the Build
+      </a>
+
+    </nav>
+
+
+    <p class="max-w-5xl leading-relaxed text-[color:var(--color-font-main)]/80">
         I learn and document as I go. This blog documents what I build, what I break, and what I learn along the way - from backend logic to AI experiments.
-      </p>
-    </header>
+    </p>
+</header>
+
 
     {% if featured_posts %}
       {% with main_post=featured_posts.0 %}
@@ -66,31 +93,46 @@
     {% if posts %}
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {% for post in posts %}
-          <article class="bg-white border border-[color:var(--color-brand-accent)]/30 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
-            <a href="{{ post.get_absolute_url }}">
-              {% if post.external_image_url %}
-                <img src="{{ post.external_image_url }}" alt="{{ post.title }}" class="w-full h-64 object-cover bg-[color:var(--color-brand-light)]">
-              {% elif post.get_image_url %}
-                <img src="{{ post.get_image_url }}" alt="{{ post.title }}" class="w-full h-64 object-cover bg-[color:var(--color-brand-light)]">
-              {% elif post.youtube_url %}
-                <img src="https://img.youtube.com/vi/{{ post.get_youtube_video_id }}/maxresdefault.jpg"
-                     alt="{{ post.title }}"
-                     class="w-full h-64 object-cover"
-                     onerror="this.onerror=null; this.src='https://img.youtube.com/vi/{{ post.get_youtube_video_id }}/hqdefault.jpg';">
-              {% endif %}
-            </a>
-            <div class="p-6 flex flex-col flex-grow">
-              <h3 class="text-lg font-semibold text-[color:var(--color-font-main)] mb-2">
-                <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-              </h3>
-              <p class="flex-grow text-[color:var(--color-font-main)]/80 mb-4">
-                {{ post.content|striptags|truncatewords:30|safe }}
-              </p>
-              <a href="{{ post.get_absolute_url }}" class="text-[color:var(--color-font-main)] font-semibold hover:text-[color:var(--color-brand-accent)] transition">
-                Read More →
-              </a>
-            </div>
-          </article>
+        <article class="bg-white border border-[color:var(--color-brand-accent)]/30 rounded-md overflow-hidden shadow-sm hover:shadow transition flex flex-col">
+
+      <!-- IMAGE -->
+      <a href="{{ post.get_absolute_url }}">
+          {% if post.external_image_url %}
+              <img src="{{ post.external_image_url }}" alt="{{ post.title }}" class="w-full h-56 object-cover">
+          {% elif post.get_image_url %}
+              <img src="{{ post.get_image_url }}" alt="{{ post.title }}" class="w-full h-56 object-cover">
+          {% elif post.youtube_url %}
+              <img src="https://img.youtube.com/vi/{{ post.get_youtube_video_id }}/maxresdefault.jpg"
+                  alt="{{ post.title }}" class="w-full h-56 object-cover"
+                  onerror="this.onerror=null; this.src='https://img.youtube.com/vi/{{ post.get_youtube_video_id }}/hqdefault.jpg';">
+          {% endif %}
+      </a>
+
+      <!-- TEXT AREA (Padding ONLY here) -->
+      <div class="p-6 flex flex-col flex-grow">
+          <h3 class="text-lg font-semibold text-[color:var(--color-font-main)] mb-3 leading-snug">
+              <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+          </h3>
+
+          <p class="flex-grow text-[color:var(--color-font-main)]/70 mb-6">
+              {{ post.content|striptags|truncatewords:15|safe }}
+          </p>
+      </div>
+
+      <!-- FULL-WIDTH FOOTER -->
+      <div class="w-full bg-[color:var(--color-brand-light)] py-4 flex justify-center">
+          <a href="{{ post.get_absolute_url }}"
+            class="px-4 py-2 border border-[color:var(--color-brand-primary)]
+                    text-[color:var(--color-brand-primary)] font-semibold text-sm
+                    rounded hover:bg-[color:var(--color-brand-primary)]
+                    hover:text-white transition">
+              Read Full Article →
+          </a>
+      </div>
+
+  </article>
+
+
         {% empty %}
           <div class="col-span-3 text-center py-16 bg-white rounded-lg">
             <h2 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-2">No Articles Yet</h2>

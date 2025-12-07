@@ -6,4 +6,3 @@ django-tinymce
 gunicorn
 Pillow
 psycopg[binary]
-whitenoise

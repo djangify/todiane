@@ -16,31 +16,47 @@
     <!-- Posts Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {% for post in posts %}
-      <article class="bg-white border border-[--color-brand-accent]/30 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition flex flex-col">
-        <a href="{{ post.get_absolute_url }}">
-          {% if post.external_image_url %}
-            <img src="{{ post.external_image_url }}" alt="{{ post.title }}" class="w-full h-56 object-cover">
-          {% elif post.get_image_url %}
-            <img src="{{ post.get_image_url }}" alt="{{ post.title }}" class="w-full h-56 object-cover">
-          {% elif post.youtube_url %}
-            <img src="https://img.youtube.com/vi/{{ post.get_youtube_video_id }}/maxresdefault.jpg"
-                 alt="{{ post.title }}" class="w-full h-56 object-cover"
-                 onerror="this.onerror=null; this.src='https://img.youtube.com/vi/{{ post.get_youtube_video_id }}/hqdefault.jpg';">
-          {% else %}
-            <div class="w-full h-56 bg-[--color-brand-light]/50 flex items-center justify-center text-[--color-brand-accent]">
-              No Image Available
-            </div>
-          {% endif %}
-        </a>
+      <article class="bg-white border border-[--color-brand-accent]/30 rounded-md overflow-hidden shadow-sm hover:shadow transition flex flex-col">
 
-        <div class="p-6 flex flex-col flex-grow">
-          <h2 class="text-lg font-bold text-[--color-brand-primary] mb-2">{{ post.title }}</h2>
-          <p class="text-[--color-font-main]/80 text-sm mb-4">{{ post.publish_date|date:"F j, Y" }}</p>
-          <a href="{{ post.get_absolute_url }}" class="text-[--color-brand-secondary] hover:text-[--color-brand-accent] font-semibold mt-auto transition">
-            Read More →
-          </a>
-        </div>
-      </article>
+      <!-- IMAGE -->
+      <a href="{{ post.get_absolute_url }}">
+        {% if post.external_image_url %}
+          <img src="{{ post.external_image_url }}" alt="{{ post.title }}" class="w-full h-56 object-cover">
+        {% elif post.get_image_url %}
+          <img src="{{ post.get_image_url }}" alt="{{ post.title }}" class="w-full h-56 object-cover">
+        {% elif post.youtube_url %}
+          <img src="https://img.youtube.com/vi/{{ post.get_youtube_video_id }}/maxresdefault.jpg"
+              alt="{{ post.title }}" class="w-full h-56 object-cover"
+              onerror="this.onerror=null; this.src='https://img.youtube.com/vi/{{ post.get_youtube_video_id }}/hqdefault.jpg';">
+        {% else %}
+          <div class="w-full h-56 bg-[--color-brand-light]/50 flex items-center justify-center text-[--color-brand-accent]">
+            No Image Available
+          </div>
+        {% endif %}
+      </a>
+
+      <!-- TEXT AREA -->
+      <div class="p-6 flex flex-col flex-grow">
+        <h2 class="text-lg font-semibold text-[--color-brand-primary] mb-2 leading-snug">
+          <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+        </h2>
+
+        <p class="text-[--color-font-main]/80 text-sm mb-4">
+          {{ post.publish_date|date:"F j, Y" }}
+        </p>
+      </div>
+
+      <!-- FULL-WIDTH FOOTER -->
+      <div class="w-full bg-[--color-brand-light] py-4 flex justify-center">
+        <a href="{{ post.get_absolute_url }}"
+          class="px-4 py-2 border border-[--color-brand-primary]
+                  text-[--color-brand-primary] font-semibold text-sm rounded
+                  hover:bg-[--color-brand-primary] hover:text-white transition">
+          Read Full Article →
+        </a>
+      </div>
+    </article>
+
       {% empty %}
       <div class="col-span-3 text-center py-12 bg-white rounded-lg">
         <p class="text-[--color-font-main]/70">New posts coming soon.</p>
