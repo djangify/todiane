@@ -52,3 +52,6 @@ USE_X_FORWARDED_PORT = True
 
 
 SITE_URL = "https://www.todiane.com"
+
+# Logging info for logging_config.py file
+from logging_config import LOGGING  # noqa: F401, E402
