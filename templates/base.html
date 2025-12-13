@@ -146,10 +146,18 @@
         </button>
       </div>
     </div>
+    <div id="gallery-modal" 
+      class="hidden fixed inset-0 bg-black/80 z-50 items-center justify-center"
+      hx-target="this"
+      hx-swap="innerHTML">
+    </div>
 
+    <div id="gallery-modal"></div>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
 
     <!-- 🔹 Deferred JS -->
     <script src="{% static 'js/app.js' %}" defer></script>
+    <script src="{% static 'js/gallery.js' %}"defer></script>
     <script src="{% static 'js/messages.js' %}" defer></script>
     <script src="{% static 'js/category-filter.js' %}" defer></script>
     <script src="{% static 'js/accordion.js' %}" defer></script>

@@ -91,7 +91,11 @@
   <!-- FEATURED TOOLS  -->
   {% include "core/components/featured.html" %}
   <!-- RECENT WORK / COMING SOON -->
-  {% include "core/components/coming-soon.html" %}
+  {% comment %} {% include "core/components/coming-soon.html" %} {% endcomment %}
+  {% if homepage_gallery %}
+    {% include "core/gallery/gallery_home.html" with gallery=homepage_gallery %}
+{% endif %}
+
   <!-- BLOG SECTION -->
   <section id="blog" class="scroll-mt-16">
     {% include "core/components/blog.html" %}

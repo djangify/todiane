@@ -4,13 +4,19 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
 from django.contrib.sitemaps.views import sitemap
-from todiane.sitemap import StaticViewSitemap, BlogPostSitemap, PortfolioSitemap
+from todiane.sitemap import (
+    StaticViewSitemap,
+    BlogPostSitemap,
+    PortfolioSitemap,
+    GallerySitemap,
+)
 
 
 sitemaps = {
     "static": StaticViewSitemap,
     "blog": BlogPostSitemap,
     "portfolio": PortfolioSitemap,
+    "galleries": GallerySitemap,
 }
 
 

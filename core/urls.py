@@ -33,4 +33,12 @@ urlpatterns = [
     path("policy/ai-writing/", views.ai_writing_view, name="ai_writing_policy"),
     path("policy/", views.policies_index_view, name="policies_index"),
     path("robots.txt", views.robots_txt, name="robots_txt"),
+    # gallery modal
+    path(
+        "modal/<int:pk>/",
+        views.gallery_image_modal,
+        name="gallery_image_modal",
+    ),
+    # ⛔ MUST BE LAST ⛔
+    path("<slug:slug>/", views.gallery_view, name="gallery"),
 ]

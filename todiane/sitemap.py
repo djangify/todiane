@@ -3,6 +3,7 @@ from django.urls import reverse
 from blog.models import Post
 from portfolio.models import Portfolio
 from datetime import datetime
+from core.models import Gallery
 
 
 class StaticViewSitemap(Sitemap):
@@ -11,15 +12,27 @@ class StaticViewSitemap(Sitemap):
 
     def items(self):
         # Key static / informational pages
-        return [
-            "core:home",
-            "core:ai_search",
-            "core:local_ai_search",
-            "core:privacy_policy",
-            "core:cookie_policy",
-            "core:affiliate_policy",
-            "core:ai_writing_policy",
-        ]
+        def items(self):
+            return [
+                "core:home",
+                "core:ai_search",
+                "core:independent_software",
+                # studio
+                "core:studio_home",
+                "core:studio_offline_apps",
+                "core:studio_web_apps",
+                "core:studio_pdfs",
+                "core:studio_creative",
+                "core:studio_projects",
+                "core:studio_about",
+                # policies
+                "core:privacy_policy",
+                "core:cookie_policy",
+                "core:terms_policy",
+                "core:affiliate_policy",
+                "core:ai_writing_policy",
+                "core:policies_index",
+            ]
 
     def location(self, item):
         return reverse(item)
@@ -54,3 +67,14 @@ class PortfolioSitemap(Sitemap):
 
     def location(self, obj):
         return obj.get_absolute_url()
+
+
+class GallerySitemap(Sitemap):
+    priority = 0.9
+    changefreq = "monthly"
+
+    def items(self):
+        return Gallery.objects.filter(published=True)
+
+    def location(self, obj):
+        return reverse("core:gallery", kwargs={"slug": obj.slug})

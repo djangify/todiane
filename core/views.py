@@ -8,11 +8,30 @@ from django.http import Http404
 from django.contrib import messages
 from django.urls import reverse
 from .forms import SupportForm
+from .models import Gallery, GalleryImage
 
 
 def home(request):
-    """Homepage view."""
-    return render(request, "core/home.html")
+    homepage_gallery = (
+        Gallery.objects.filter(slug="free-images-download", published=True)
+        .prefetch_related("images")
+        .first()
+    )
+
+    homepage_images = None
+    if homepage_gallery:
+        homepage_images = homepage_gallery.images.filter(published=True).order_by(
+            "order", "id"
+        )[:6]
+
+    return render(
+        request,
+        "core/home.html",
+        {
+            "homepage_gallery": homepage_gallery,
+            "homepage_images": homepage_images,
+        },
+    )
 
 
 # -----------------------------------
@@ -227,3 +246,27 @@ def studio_about(request):
         {"title": "About", "url": ""},
     ]
     return render(request, "core/studio/about.html", {"breadcrumbs": breadcrumbs})
+
+
+def gallery_image_modal(request, pk):
+    image = get_object_or_404(GalleryImage, pk=pk, published=True)
+
+    images = list(image.gallery.images.filter(published=True))
+    index = images.index(image)
+
+    context = {
+        "image": image,
+        "prev_image": images[index - 1] if index > 0 else None,
+        "next_image": images[index + 1] if index < len(images) - 1 else None,
+    }
+
+    return render(request, "core/gallery/modal.html", context)
+
+
+def gallery_view(request, slug):
+    gallery = get_object_or_404(Gallery, slug=slug, published=True)
+    return render(
+        request,
+        "core/gallery/gallery.html",
+        {"gallery": gallery},
+    )
