@@ -1,5 +1,6 @@
 # core/models.py
 from django.db import models
+from django.utils.html import format_html
 
 
 class SupportRequest(models.Model):
@@ -45,3 +46,13 @@ class GalleryImage(models.Model):
 
     def __str__(self):
         return self.title or f"Image {self.pk}"
+
+    def admin_thumbnail(self):
+        if self.image:
+            return format_html(
+                '<img src="{}" style="height: 80px; width: auto; border-radius: 4px;" />',
+                self.image.url,
+            )
+        return "—"
+
+    admin_thumbnail.short_description = "Preview"

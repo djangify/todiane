@@ -11,28 +11,26 @@ class StaticViewSitemap(Sitemap):
     changefreq = "weekly"
 
     def items(self):
-        # Key static / informational pages
-        def items(self):
-            return [
-                "core:home",
-                "core:ai_search",
-                "core:independent_software",
-                # studio
-                "core:studio_home",
-                "core:studio_offline_apps",
-                "core:studio_web_apps",
-                "core:studio_pdfs",
-                "core:studio_creative",
-                "core:studio_projects",
-                "core:studio_about",
-                # policies
-                "core:privacy_policy",
-                "core:cookie_policy",
-                "core:terms_policy",
-                "core:affiliate_policy",
-                "core:ai_writing_policy",
-                "core:policies_index",
-            ]
+        return [
+            "core:home",
+            "core:ai_search",
+            "core:independent_software",
+            # studio
+            "core:studio_home",
+            "core:studio_offline_apps",
+            "core:studio_web_apps",
+            "core:studio_pdfs",
+            "core:studio_creative",
+            "core:studio_projects",
+            "core:studio_about",
+            # policies
+            "core:privacy_policy",
+            "core:cookie_policy",
+            "core:terms_policy",
+            "core:affiliate_policy",
+            "core:ai_writing_policy",
+            "core:policies_index",
+        ]
 
     def location(self, item):
         return reverse(item)

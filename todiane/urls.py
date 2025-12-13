@@ -22,6 +22,7 @@ sitemaps = {
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("", include("blog.urls", namespace="blog")),
     path("prompts/", include("prompts.urls", namespace="prompts")),
     path(
         "prompt_templates/",
@@ -29,9 +30,6 @@ urlpatterns = [
     ),
     path("portfolio/", include("portfolio.urls", namespace="portfolio")),
     path("", include("core.urls", namespace="core")),
-    path(
-        "", include("blog.urls", namespace="blog")
-    ),  # must stay at the bottom to avoid url conflicts
     path(
         "sitemap.xml",
         sitemap,

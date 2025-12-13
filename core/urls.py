@@ -39,6 +39,6 @@ urlpatterns = [
         views.gallery_image_modal,
         name="gallery_image_modal",
     ),
-    # ⛔ MUST BE LAST ⛔
-    path("<slug:slug>/", views.gallery_view, name="gallery"),
+    # ⛔ MUST BE LAST
+    path("gallery/<slug:slug>/", views.gallery_view, name="gallery"),
 ]

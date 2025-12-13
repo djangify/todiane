@@ -15,8 +15,14 @@ class SupportRequestAdmin(admin.ModelAdmin):
 class GalleryImageInline(admin.TabularInline):
     model = GalleryImage
     extra = 0
-    fields = ("image", "title", "caption", "order", "published")
-    ordering = ("order",)
+    readonly_fields = ("admin_thumbnail",)
+    fields = (
+        "admin_thumbnail",
+        "image",
+        "caption",
+        "order",
+        "published",
+    )
 
 
 @admin.register(Gallery)

@@ -13,16 +13,14 @@ from .models import Gallery, GalleryImage
 
 def home(request):
     homepage_gallery = (
-        Gallery.objects.filter(slug="free-images-download", published=True)
-        .prefetch_related("images")
-        .first()
+        Gallery.objects.filter(published=True).prefetch_related("images").first()
     )
 
-    homepage_images = None
-    if homepage_gallery:
-        homepage_images = homepage_gallery.images.filter(published=True).order_by(
-            "order", "id"
-        )[:6]
+    homepage_images = (
+        homepage_gallery.images.filter(published=True).order_by("order", "id")[:6]
+        if homepage_gallery
+        else None
+    )
 
     return render(
         request,
