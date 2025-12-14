@@ -22,13 +22,10 @@ sitemaps = {
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("blog.urls", namespace="blog")),
-    path("prompts/", include("prompts.urls", namespace="prompts")),
-    path(
-        "prompt_templates/",
-        include("prompt_templates.urls", namespace="prompt_templates"),
-    ),
     path("portfolio/", include("portfolio.urls", namespace="portfolio")),
+    path("", include("blog.urls", namespace="blog")),
+    # path("shop/", include("shop.urls")),
+    # path("studio/", include("studio.urls")),
     path("", include("core.urls", namespace="core")),
     path(
         "sitemap.xml",

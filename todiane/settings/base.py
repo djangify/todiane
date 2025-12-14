@@ -28,10 +28,9 @@ INSTALLED_APPS = [
     "django.contrib.sites",
     "blog",
     "core",
-    "prompt_generator",
-    "prompts",
-    "prompt_templates",
     "portfolio",
+    "shop",
+    "studio",
     "widget_tweaks",
     "tinymce",
 ]
