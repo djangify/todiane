@@ -1,0 +1,391 @@
+{% extends "studio/base_landing.html" %}
+{% load static %}
+
+{% block product_name %}Bookkeeping Software{% endblock %}
+{% block meta_desc %}Simple, offline-first bookkeeping for self-employed people in the UK. Track income, expenses, and generate MTD-ready reports without subscriptions or cloud dependencies.{% endblock %}
+{% block meta_keys %}bookkeeping software, self-employed bookkeeping, MTD ready, offline bookkeeping, UK tax software, no subscription accounting{% endblock %}
+
+{% block breadcrumb_extra %}
+<li><span class="mx-2">›</span></li>
+<li><a href="#" class="hover:text-[color:var(--color-brand-accent)] transition-colors">Products</a></li>
+{% endblock %}
+{% block breadcrumb_current %}Bookkeeping{% endblock %}
+
+{% block product_category %}Offline-First Software{% endblock %}
+
+{% block hero_title %}Bookkeeping Software{% endblock %}
+
+{% block product_tagline %}
+Simple bookkeeping. Your data stays local.
+{% endblock %}
+
+{% block product_description %}
+Track income and expenses, categorise transactions, and generate reports for your self-assessment. 
+Works completely offline on your computer — no subscriptions, no cloud sync, no data leaving your device.
+{% endblock %}
+
+{% block product_cta %}
+<a href="#download" class="inline-flex items-center px-8 py-4 bg-[color:var(--color-brand-primary)] text-white font-semibold rounded-lg hover:bg-[color:var(--color-brand-accent)] transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+  Download Free Trial
+  <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+  </svg>
+</a>
+<a href="#" class="inline-flex items-center px-8 py-4 border-2 border-[color:var(--color-brand-primary)] text-[color:var(--color-brand-primary)] font-semibold rounded-lg hover:bg-[color:var(--color-brand-primary)] hover:text-white transition-all duration-300">
+  View Documentation
+</a>
+{% endblock %}
+
+{% block product_icon %}
+<svg class="w-24 h-24 md:w-32 md:h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+</svg>
+{% endblock %}
+
+{% block benefits_items %}
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+  </svg>
+  <span class="text-sm font-medium">100% Offline</span>
+</div>
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+  </svg>
+  <span class="text-sm font-medium">Private & Secure</span>
+</div>
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+  </svg>
+  <span class="text-sm font-medium">MTD Compatible</span>
+</div>
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+  </svg>
+  <span class="text-sm font-medium">No Monthly Fees</span>
+</div>
+{% endblock %}
+
+{% block features_label %}Core Features{% endblock %}
+{% block features_title %}Everything for Self-Employed Bookkeeping{% endblock %}
+{% block features_subtitle %}Track your business finances without the complexity of enterprise accounting software.{% endblock %}
+
+{% block features_content %}
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  
+  {# Income Tracking #}
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Income Tracking</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Log invoices, sales, and other income sources. Attach notes, set payment status, 
+      and track what's been paid and what's outstanding.
+    </p>
+  </div>
+  
+  {# Expense Management #}
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Expense Management</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Record expenses with categories, dates, and notes. Perfect for tracking 
+      business costs for your self-assessment.
+    </p>
+  </div>
+  
+  {# Tax Categories #}
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Tax Categories</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Pre-configured categories aligned with HMRC self-assessment boxes. 
+      Makes tax time much simpler.
+    </p>
+  </div>
+  
+  {# Reports & Exports #}
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Reports & Exports</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Generate profit/loss reports, export to CSV, and get summaries 
+      ready for your self-assessment or accountant.
+    </p>
+  </div>
+  
+  {# Backup & Restore #}
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Backup & Restore</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Create manual backups of your data anytime. Store them wherever you like — 
+      your USB drive, your cloud storage, your choice.
+    </p>
+  </div>
+  
+  {# Multi-Year Support #}
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Multi-Year Support</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Track multiple tax years. Easily switch between years to review 
+      historical data or prepare submissions.
+    </p>
+  </div>
+  
+</div>
+{% endblock %}
+
+{% block how_it_works_title %}Simple Three-Step Setup{% endblock %}
+
+{% block how_it_works_content %}
+<div class="grid md:grid-cols-3 gap-12">
+  <div class="relative text-center">
+    <div class="w-16 h-16 bg-[color:var(--color-brand-primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">1</div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Download</h3>
+    <p class="text-[color:var(--color-font-main)]">
+      Get the installer for Windows, Mac, or Linux. No account required, 
+      no email signup, just download and go.
+    </p>
+  </div>
+  <div class="relative text-center">
+    <div class="w-16 h-16 bg-[color:var(--color-brand-primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">2</div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Set Up Categories</h3>
+    <p class="text-[color:var(--color-font-main)]">
+      Use the default HMRC-aligned categories or customise them 
+      to match your business type.
+    </p>
+  </div>
+  <div class="relative text-center">
+    <div class="w-16 h-16 bg-[color:var(--color-brand-primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">3</div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Start Recording</h3>
+    <p class="text-[color:var(--color-font-main)]">
+      Log your income and expenses as they happen. Generate reports 
+      whenever you need them.
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+{% block pricing_section %}
+<section id="download" class="py-20 bg-white">
+  <div class="w-full max-w-5xl mx-auto px-6 md:px-10 lg:px-16">
+    
+    <div class="text-center mb-12">
+      <p class="uppercase text-sm tracking-widest text-[color:var(--color-brand-accent)] mb-3 font-medium">
+        Get Started
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-[color:var(--color-brand-primary)] mb-4">
+        Download for Your Platform
+      </h2>
+      <p class="text-lg text-[color:var(--color-font-main)]">
+        Try free for 30 days. No credit card required.
+      </p>
+    </div>
+    
+    {# Download Options #}
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+      
+      {# Windows #}
+      <a href="#" class="group bg-white border-2 border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 text-center hover:border-[color:var(--color-brand-primary)] hover:shadow-xl transition-all duration-300">
+        <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] mb-1">Windows</h3>
+        <p class="text-sm text-[color:var(--color-font-main)]/70">Windows 10/11</p>
+      </a>
+      
+      {# Mac #}
+      <a href="#" class="group bg-white border-2 border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 text-center hover:border-[color:var(--color-brand-primary)] hover:shadow-xl transition-all duration-300">
+        <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-8 h-8 text-gray-600" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] mb-1">macOS</h3>
+        <p class="text-sm text-[color:var(--color-font-main)]/70">Intel & Apple Silicon</p>
+      </a>
+      
+      {# Linux #}
+      <a href="#" class="group bg-white border-2 border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 text-center hover:border-[color:var(--color-brand-primary)] hover:shadow-xl transition-all duration-300">
+        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+          <svg class="w-8 h-8 text-orange-600" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071.771-.06 1.592-.536 2.257-1.306.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.357.357 0 00-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139zm.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105a.086.086 0 01-.004-.021l-.004-.024a1.807 1.807 0 01-.15.706.953.953 0 01-.213.335.71.71 0 00-.088-.042c-.104-.045-.198-.064-.284-.133a1.312 1.312 0 00-.22-.066c.05-.06.146-.133.183-.198.053-.128.082-.264.088-.402v-.02a1.21 1.21 0 00-.061-.4c-.045-.134-.101-.2-.183-.333-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 00-.205.334 1.18 1.18 0 00-.09.4v.019c.002.089.008.179.02.267-.193-.067-.438-.135-.607-.202a1.635 1.635 0 01-.018-.2v-.02a1.772 1.772 0 01.15-.768c.082-.22.232-.406.43-.533a.985.985 0 01.594-.2zm-2.962.059h.036c.142 0 .27.048.399.135.146.129.264.288.344.465.09.199.14.4.153.667v.004c.007.134.006.2-.002.266v.08c-.03.007-.056.018-.083.024-.152.055-.274.135-.393.2.012-.09.013-.18.003-.267v-.015c-.012-.133-.04-.2-.082-.333a.613.613 0 00-.166-.267.248.248 0 00-.183-.064h-.021c-.071.006-.13.04-.186.132a.552.552 0 00-.12.27.944.944 0 00-.023.33v.015c.012.135.037.2.08.334.046.134.098.2.166.268.01.009.02.018.034.024-.07.057-.117.07-.176.136a.304.304 0 01-.131.068 2.62 2.62 0 01-.275-.402 1.772 1.772 0 01-.155-.667 1.759 1.759 0 01.08-.668 1.43 1.43 0 01.283-.535c.128-.133.26-.2.418-.2zm1.37 1.706c.332 0 .733.065 1.216.399.293.2.523.269 1.052.468h.003c.255.136.405.266.478.399v-.131a.571.571 0 01.016.47c-.123.31-.516.643-1.063.842v.002c-.268.135-.501.333-.775.465-.276.135-.588.292-1.012.267a1.139 1.139 0 01-.448-.067 3.566 3.566 0 01-.322-.198c-.195-.135-.363-.332-.612-.465v-.005h-.005c-.4-.246-.616-.512-.686-.71-.07-.268-.005-.47.193-.6.224-.135.38-.271.483-.336.104-.074.143-.102.176-.131h.002v-.003c.169-.202.436-.47.839-.601.139-.036.294-.065.466-.065zm2.8 2.142c.358 1.417 1.196 3.475 1.735 4.473.286.534.855 1.659 1.102 3.024.156-.005.33.018.513.064.646-1.671-.546-3.467-1.089-3.966-.22-.2-.232-.335-.123-.335.59.534 1.365 1.572 1.646 2.757.13.535.16 1.104.021 1.67.067.028.135.06.205.067 1.032.534 1.413.938 1.23 1.537v-.002c-.06.194-.24.4-.615.468-.046.008-.098.014-.15.019.033.166.054.266.062.398v.004c.004.064.003.13-.004.194h.04c.424.017.673.1.673.267 0 .133-.146.267-.446.333h-.003c-.259.066-.578.1-.93.1-.08.002-.16 0-.24-.003-.02.135-.05.265-.088.398v.004a.961.961 0 01-.12.27c-.01.018-.025.035-.038.052.063.009.128.013.192.014.25 0 .478-.014.668-.066a.455.455 0 00.11-.032c.055-.026.11-.057.154-.103a.256.256 0 00.07-.152c.005-.043.004-.088-.002-.133h.003a.442.442 0 00-.053-.132.51.51 0 00-.089-.116.556.556 0 00-.239-.131c.166-.064.332-.133.459-.27.095-.102.149-.226.149-.357 0-.133-.054-.269-.154-.4.48-.135.783-.402.783-.602 0-.1-.062-.198-.182-.268-.119-.066-.3-.132-.546-.198h-.003a2.09 2.09 0 00-.143-.034 7.32 7.32 0 00-.156-.03 1.592 1.592 0 00-.418-.038c.066-.333.063-.667-.053-1.003-.181-.53-.604-1.082-1.232-1.581l-.003-.003a4.8 4.8 0 00-.291-.207c.166-.335.257-.669.286-1.002a2.99 2.99 0 00-.047-.87c-.039-.166-.097-.333-.173-.5h.003l-.003-.003c-.3-.634-.818-1.203-1.435-1.67-.31-.234-.646-.439-.988-.606l-.079-.04c.15-.2.285-.398.39-.6.345-.67.493-1.335.451-1.936-.042-.534-.216-1-.547-1.336-.076-.068-.16-.132-.251-.195 0 0-.011-.004-.021-.01l-.021-.004-.022-.01h-.002c-.098-.049-.2-.096-.304-.135h-.007l-.173-.063h-.003l-.086-.027-.022-.005h-.003c-.045-.015-.093-.026-.14-.039a.906.906 0 00-.134-.032c.012-.198.018-.397.013-.598v-.003c-.003-.2-.02-.4-.047-.602v-.004l-.004-.02a3.004 3.004 0 00-.093-.398v-.002h-.003c-.225-.8-.627-1.471-1.15-1.87-.521-.4-1.158-.536-1.826-.302-.67.232-1.179.702-1.521 1.27a4.092 4.092 0 00-.594 1.67c-.03.199-.047.4-.05.6v.003a7.99 7.99 0 00.005.467c-.45.134-.884.335-1.283.6-.15.1-.302.207-.443.32h-.003c-.07.058-.137.117-.202.18v.002l-.032.032c-.086.086-.168.176-.246.268l-.081.098-.01.012-.003.003c-.267.333-.468.735-.582 1.168-.115.434-.143.9-.061 1.37.08.468.26.938.541 1.37l.01.018c.046.066.093.133.143.198a7.18 7.18 0 01-.265.866 8.836 8.836 0 00-.323 1.338c-.076.533-.079 1.067.057 1.537.136.47.411.87.833 1.135l.077.046c-.002.097-.003.2.002.3.012.233.049.464.11.694.023.088.05.176.08.263-.067-.062-.146-.117-.238-.166h-.003c-.162-.087-.345-.135-.539-.135-.194 0-.41.048-.646.135h-.003c-.061.025-.122.055-.181.084l-.092.044c-.075.04-.148.082-.217.132h-.002c-.3.225-.461.534-.461.866 0 .333.16.668.42.935.26.268.634.466 1.084.552.45.086.91.054 1.305-.106.395-.16.724-.448.92-.838.196-.39.26-.877.155-1.423-.024-.129-.058-.258-.103-.387-.033-.095-.07-.188-.113-.277a.778.778 0 00.046-.133c.089-.265.095-.535.015-.768v-.003a1.08 1.08 0 00-.091-.194c.142-.206.237-.45.271-.715.04-.3-.006-.6-.122-.867h.002a1.6 1.6 0 00-.093-.185c.103-.2.177-.4.22-.6v-.003c.06-.268.057-.534-.018-.735h-.003c.02-.082.038-.165.048-.25v-.003c.018-.135.023-.266.015-.4h-.002v-.003c.003-.1.005-.2.003-.3l.082-.015c.13-.025.258-.053.38-.086.168-.046.328-.104.47-.183a.905.905 0 00.34-.298.699.699 0 00.1-.402.674.674 0 00-.187-.4c-.163-.17-.417-.28-.74-.333l-.136-.016c.005-.004.01-.01.017-.013l.002-.003c.032-.023.063-.046.093-.07l.068-.053.003-.003c.21-.17.363-.398.445-.659a1.42 1.42 0 00-.01-.818 1.703 1.703 0 00-.338-.64 2.114 2.114 0 00-.533-.466h-.002a2.432 2.432 0 00-.467-.244l-.002-.002a2.86 2.86 0 00-.257-.086h-.002c-.1-.028-.2-.053-.3-.074l-.166-.032a5.51 5.51 0 00-.258-.035l-.124-.01-.128-.003c-.14-.002-.28.004-.42.017-.134.015-.266.038-.396.067h-.002c-.133.03-.263.068-.39.112a2.57 2.57 0 00-.367.155l-.086.043a2.3 2.3 0 00-.273.168l-.096.07-.087.07c-.2.17-.364.377-.48.615a1.508 1.508 0 00-.145.473c-.5.002-1 .087-1.48.261-.234.084-.463.185-.682.3l-.112.06c-.25.135-.485.285-.7.455a4.32 4.32 0 00-.58.54 3.633 3.633 0 00-.445.615c-.14.235-.254.485-.336.75h-.002v.003c-.068.2-.12.402-.157.607v.002c-.148.82-.077 1.724.272 2.56.35.837.943 1.604 1.772 2.135.155.1.32.184.49.26-.002.066-.003.132-.001.2.011.334.077.667.21.982.132.316.33.615.598.874h.002l.003.003c.183.179.395.325.624.443.23.117.476.202.73.261-.047.066-.093.135-.135.204h-.003c-.131.207-.236.43-.31.667-.15.476-.17 1 .007 1.503.177.503.527.978 1.022 1.352.495.375 1.138.65 1.902.75.762.097 1.42-.022 1.96-.27.538-.245.96-.61 1.273-1.04.312-.428.517-.914.621-1.422.104-.507.104-1.03.004-1.527-.1-.495-.3-.966-.593-1.368a3.6 3.6 0 00-.5-.578c.079-.038.158-.078.235-.12.154-.086.303-.18.445-.283.074-.054.145-.11.214-.17.28.402.66.72 1.11.912.45.191.957.258 1.477.179.52-.08 1.013-.3 1.423-.633h.002c.205-.165.385-.36.534-.578.062.085.124.167.189.247.378.468.855.827 1.39 1.056.535.23 1.13.333 1.74.306a3.9 3.9 0 001.64-.435c.5-.27.935-.643 1.268-1.1.333-.457.563-.99.664-1.568.1-.58.07-1.2-.095-1.82a4.66 4.66 0 00-.32-.836c.195-.018.39-.047.58-.086.474-.1.926-.275 1.32-.527.394-.25.73-.578.974-.975.245-.398.396-.866.417-1.397h-.002c.013-.32-.018-.64-.1-.946a3.26 3.26 0 00-.36-.87c.296-.09.576-.21.835-.361.303-.176.58-.393.82-.65.24-.255.445-.548.603-.87a3.62 3.62 0 00.324-1.068c.03-.2.047-.402.047-.6 0-.2-.017-.4-.055-.6a3.023 3.023 0 00-.184-.6 2.69 2.69 0 00-.324-.536h-.002a2.463 2.463 0 00-.451-.453 2.42 2.42 0 00-.577-.323 2.582 2.582 0 00-.696-.167 3.5 3.5 0 00-.4-.018c.035-.13.06-.264.078-.4l.003-.02a3.23 3.23 0 00-.026-.87 2.84 2.84 0 00-.244-.735 2.49 2.49 0 00-.41-.598 2.37 2.37 0 00-.548-.448h-.002a2.32 2.32 0 00-.324-.17 2.4 2.4 0 00-.381-.128 2.704 2.704 0 00-.432-.06 3.298 3.298 0 00-.8.046c-.13.024-.258.054-.382.09l-.082.025c.01-.083.02-.166.026-.25.016-.2.017-.403.002-.6a2.7 2.7 0 00-.103-.555 2.3 2.3 0 00-.208-.49 2.052 2.052 0 00-.308-.41 1.945 1.945 0 00-.395-.32 1.97 1.97 0 00-.468-.2 2.152 2.152 0 00-.536-.067c-.274 0-.532.042-.77.122a2.38 2.38 0 00-.65.326l-.037.025c.002-.066.006-.132.006-.198 0-.4-.067-.8-.21-1.17a2.68 2.68 0 00-.596-.93 2.606 2.606 0 00-.903-.6 2.707 2.707 0 00-1.1-.21c-.38 0-.754.07-1.105.21-.35.14-.67.35-.936.62l-.083.088c-.055-.028-.112-.054-.17-.078a2.53 2.53 0 00-.554-.178 3 3 0 00-.649-.06 3.22 3.22 0 00-.723.077 2.82 2.82 0 00-.655.236l-.054.026a2.98 2.98 0 00-.188-.318 2.4 2.4 0 00-.314-.367 2.28 2.28 0 00-.41-.3 2.244 2.244 0 00-.496-.198 2.402 2.402 0 00-.569-.067 2.47 2.47 0 00-.767.117 2.3 2.3 0 00-.666.34 2.213 2.213 0 00-.498.523 2.24 2.24 0 00-.288.652 2.28 2.28 0 00-.076.707c.01.147.033.292.071.435l-.058.017c-.276.082-.537.2-.773.354l-.075.05c-.025-.17-.058-.34-.1-.507a4.18 4.18 0 00-.282-.754 3.57 3.57 0 00-.447-.697 3.093 3.093 0 00-.604-.568c-.23-.173-.487-.31-.767-.408a2.77 2.77 0 00-.891-.14c-.32 0-.628.047-.92.14a2.68 2.68 0 00-.79.408c-.235.182-.44.402-.608.652-.17.25-.304.535-.398.85a4.18 4.18 0 00-.173 1.14c.002.196.017.393.045.587l.002.014c.012.085.028.17.047.253.013.058.027.117.043.175h-.017a3.53 3.53 0 00-.64.077c-.21.05-.41.122-.6.215a2.51 2.51 0 00-.515.34 2.38 2.38 0 00-.404.453 2.31 2.31 0 00-.27.544 2.32 2.32 0 00-.1.6v.002c-.004.102-.003.204.003.305.005.101.017.202.036.302a2.262 2.262 0 00.21.617c.052.098.113.19.182.278l.002.002c.036.046.075.09.115.132.04.043.083.084.128.123l.044.038c-.08.14-.147.288-.201.441a2.59 2.59 0 00-.13.521 2.82 2.82 0 00-.02.539c.01.18.038.357.085.53.047.172.113.34.2.5.086.161.192.314.318.454l.003.003c.082.09.17.174.265.25.094.077.195.147.3.208l.048.028-.06.08c-.14.195-.253.413-.332.65a2.66 2.66 0 00-.107.537 2.792 2.792 0 00.02.55c.03.183.08.362.154.532.075.17.17.33.287.477.116.147.252.28.406.395l.003.003c.12.089.25.165.387.227.137.063.282.112.432.145l.062.013-.035.073a2.52 2.52 0 00-.178.514 2.68 2.68 0 00-.047.54c.007.181.038.36.093.533.054.172.133.338.236.492a2.03 2.03 0 00.382.417c.078.065.161.124.249.177l.007.004c.17.1.35.175.54.223.19.05.387.074.587.074.2 0 .403-.024.6-.074.196-.048.386-.123.562-.223.35-.2.642-.5.845-.866a2.43 2.43 0 00.31-.87c.032-.163.048-.33.05-.496l.042-.004c.2-.018.397-.049.59-.093a3.03 3.03 0 00.564-.19c.093-.04.183-.085.27-.133l.052-.03c.003.037.008.074.013.11a2.99 2.99 0 00.127.547c.065.186.15.365.258.53.107.167.235.32.383.455a2.28 2.28 0 00.502.34c.096.05.197.09.3.123.104.034.212.06.322.074l.057.008.003.057c.02.192.058.382.113.567.055.185.128.365.217.537.09.173.197.338.32.49a2.26 2.26 0 00.424.405c.08.06.164.114.252.162.087.048.178.09.271.125l.047.018-.02.05a2.67 2.67 0 00-.13.519 2.78 2.78 0 00-.025.548c.014.183.05.364.108.538.058.175.14.343.243.498a2.09 2.09 0 00.365.42c.073.064.15.122.233.174l.007.004c.17.104.352.18.543.226.192.047.39.068.59.068.2 0 .402-.023.6-.074.197-.05.39-.127.567-.23a2.09 2.09 0 00.468-.406c.13-.163.236-.345.314-.543.079-.197.13-.41.15-.633.02-.222.008-.45-.037-.674-.045-.225-.12-.443-.223-.645a2.58 2.58 0 00-.188-.3l.115-.05c.186-.084.363-.187.528-.31.165-.12.32-.26.458-.415a2.28 2.28 0 00.344-.512 2.33 2.33 0 00.202-.59c.043-.2.065-.406.066-.613a2.61 2.61 0 00-.052-.519 2.46 2.46 0 00-.157-.49 2.33 2.33 0 00-.264-.44 2.27 2.27 0 00-.36-.37 2.32 2.32 0 00-.436-.276l-.034-.018.044-.053c.127-.16.235-.334.322-.52.086-.186.151-.382.196-.585.045-.202.068-.41.07-.618.003-.21-.015-.417-.055-.62a2.49 2.49 0 00-.165-.586 2.32 2.32 0 00-.28-.52 2.25 2.25 0 00-.386-.428 2.33 2.33 0 00-.475-.31 2.54 2.54 0 00-.548-.175l-.031-.006.024-.037c.106-.17.193-.35.262-.538.07-.188.12-.382.152-.58.032-.2.045-.402.04-.605a2.6 2.6 0 00-.078-.593 2.46 2.46 0 00-.193-.55 2.33 2.33 0 00-.306-.478 2.28 2.28 0 00-.407-.384 2.36 2.36 0 00-.49-.266l-.02-.008.03-.05c.09-.153.162-.316.218-.485.055-.17.093-.346.115-.524.022-.178.026-.36.014-.54a2.53 2.53 0 00-.1-.538 2.42 2.42 0 00-.205-.504 2.34 2.34 0 00-.307-.443 2.31 2.31 0 00-.398-.361 2.38 2.38 0 00-.471-.26l-.032-.013.035-.06c.083-.146.15-.3.2-.46.05-.16.084-.326.103-.493a2.6 2.6 0 00-.008-.505 2.53 2.53 0 00-.117-.493 2.45 2.45 0 00-.218-.454 2.38 2.38 0 00-.313-.39 2.37 2.37 0 00-.392-.312l-.022-.014.033-.06c.073-.134.13-.275.173-.42.042-.145.07-.295.083-.446.013-.152.012-.305-.004-.458a2.45 2.45 0 00-.087-.445 2.4 2.4 0 00-.166-.416 2.36 2.36 0 00-.243-.373 2.38 2.38 0 00-.311-.315 2.5 2.5 0 00-.369-.244l-.046-.025.044-.067c.068-.107.126-.22.175-.338.05-.118.09-.24.12-.365.031-.125.052-.253.063-.382a2.41 2.41 0 00-.017-.393 2.38 2.38 0 00-.096-.387 2.36 2.36 0 00-.174-.357 2.39 2.39 0 00-.244-.312 2.49 2.49 0 00-.306-.26l-.038-.027.052-.073c.064-.094.12-.193.169-.296.049-.103.09-.21.124-.32.034-.11.06-.223.079-.338a2.33 2.33 0 00-.01-.692 2.35 2.35 0 00-.151-.385 2.38 2.38 0 00-.224-.343 2.48 2.48 0 00-.288-.287l-.02-.017.04-.064c.044-.074.083-.15.117-.23.034-.078.064-.16.089-.243.025-.083.046-.168.062-.254a2.23 2.23 0 00.033-.26c.005-.088.005-.176 0-.264a2.26 2.26 0 00-.042-.263 2.3 2.3 0 00-.082-.255 2.37 2.37 0 00-.12-.24 2.46 2.46 0 00-.153-.218l-.023-.028.036-.054c.035-.055.067-.112.095-.171.028-.059.053-.12.075-.182.021-.062.04-.125.055-.19a2.17 2.17 0 00.056-.395c.006-.134.002-.27-.013-.403a2.22 2.22 0 00-.074-.398 2.27 2.27 0 00-.133-.378 2.33 2.33 0 00-.19-.35l-.018-.026.03-.043c.03-.045.056-.092.08-.14.024-.049.046-.099.065-.15.019-.052.035-.104.049-.158a2.1 2.1 0 00.054-.33c.009-.112.011-.225.007-.337a2.2 2.2 0 00-.043-.337 2.26 2.26 0 00-.094-.325 2.33 2.33 0 00-.143-.303l-.01-.018.025-.036c.02-.032.04-.065.057-.1.017-.033.033-.068.047-.103.014-.036.026-.072.037-.11a2.04 2.04 0 00.048-.226 2.1 2.1 0 00.022-.232c.003-.078.002-.156-.003-.233a2.14 2.14 0 00-.03-.232 2.19 2.19 0 00-.058-.226 2.27 2.27 0 00-.085-.218l-.007-.015.018-.027c.017-.026.032-.053.046-.08l.04-.08c.012-.028.023-.056.033-.085a1.98 1.98 0 00.042-.175c.011-.06.02-.12.026-.18a2.06 2.06 0 00-.004-.37 2.1 2.1 0 00-.05-.18 2.15 2.15 0 00-.074-.172l-.007-.015.013-.02c.014-.022.027-.045.038-.068l.032-.07c.01-.024.018-.048.026-.073a1.92 1.92 0 00.036-.152c.01-.052.017-.104.023-.157a2 2 0 00-.003-.318 2.06 2.06 0 00-.043-.156 2.13 2.13 0 00-.062-.15l-.006-.013.01-.016a1.87 1.87 0 00.064-.116l.024-.052c.007-.018.014-.036.02-.054a1.87 1.87 0 00.027-.117c.007-.04.012-.08.016-.121a1.96 1.96 0 00-.002-.248 2.03 2.03 0 00-.035-.122 2.1 2.1 0 00-.052-.12l-.005-.01.007-.012a1.79 1.79 0 00.05-.093l.018-.04c.006-.013.01-.027.015-.04a1.8 1.8 0 00.02-.086c.005-.03.01-.06.012-.09a1.91 1.91 0 00-.003-.19 2 2 0 00-.027-.093 2.08 2.08 0 00-.042-.093l-.004-.008.005-.008a1.71 1.71 0 00.038-.074l.013-.03c.004-.01.007-.02.01-.03a1.72 1.72 0 00.015-.064c.004-.022.006-.044.009-.066a1.87 1.87 0 00-.004-.14 1.98 1.98 0 00-.02-.07 2.06 2.06 0 00-.033-.073l-.003-.006.004-.006a1.61 1.61 0 00.028-.055l.01-.022.007-.022a1.64 1.64 0 00.01-.046c.003-.016.005-.032.006-.048a1.83 1.83 0 00-.004-.1 1.95 1.95 0 00-.015-.054 2.03 2.03 0 00-.025-.055l-.002-.004.003-.005a1.47 1.47 0 00.02-.04l.006-.016.005-.016a1.52 1.52 0 00.006-.034c.002-.012.003-.023.004-.035a1.77 1.77 0 00-.003-.074 1.91 1.91 0 00-.01-.04 2 2 0 00-.018-.042l-.002-.003.002-.003a1.33 1.33 0 00.014-.03l.004-.011.003-.012a1.39 1.39 0 00.004-.025c.001-.008.002-.017.003-.025a1.7 1.7 0 00-.002-.054 1.86 1.86 0 00-.008-.03 1.96 1.96 0 00-.013-.032l-.001-.002.001-.002a1.16 1.16 0 00.01-.022l.003-.008.002-.009a1.23 1.23 0 00.003-.018c.001-.006.001-.012.002-.018a1.62 1.62 0 00-.001-.039 1.81 1.81 0 00-.006-.022 1.9 1.9 0 00-.01-.024l-.001-.001.001-.001a.96.96 0 00.007-.015l.002-.006.001-.006a1.05 1.05 0 00.002-.012c.001-.004.001-.009.001-.013a1.51 1.51 0 00-.001-.028 1.73 1.73 0 00-.004-.016 1.84 1.84 0 00-.007-.018l-.001-.001c0-.001 0-.001 0-.001a.74.74 0 00.005-.01l.001-.004.001-.005a.8.8 0 00.001-.008c0-.003.001-.006.001-.009a1.38 1.38 0 00-.001-.02 1.62 1.62 0 00-.003-.011 1.76 1.76 0 00-.005-.013c0 0 0 0 0-.001a.52.52 0 00.003-.006l.001-.003v-.003a.57.57 0 00.001-.006v-.006a1.24 1.24 0 00-.001-.014 1.48 1.48 0 00-.002-.008 1.65 1.65 0 00-.004-.01zm-6.57 2.535c.107 0 .216.028.312.084.096.054.18.135.235.232.056.098.084.212.084.33 0 .118-.028.232-.085.332a.7.7 0 01-.233.236.57.57 0 01-.313.087.57.57 0 01-.313-.087.7.7 0 01-.234-.235.66.66 0 01-.085-.332c0-.119.028-.233.085-.332a.7.7 0 01.234-.232.567.567 0 01.313-.083zm3.54 0a.57.57 0 01.312.084c.096.054.18.135.235.232.056.098.085.212.085.33 0 .118-.029.232-.085.332a.702.702 0 01-.235.236.57.57 0 01-.312.087.572.572 0 01-.313-.087.702.702 0 01-.235-.235.66.66 0 01-.085-.332c0-.119.029-.233.085-.332a.7.7 0 01.235-.232.57.57 0 01.313-.083z"/>
+          </svg>
+        </div>
+        <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] mb-1">Linux</h3>
+        <p class="text-sm text-[color:var(--color-font-main)]/70">Ubuntu/Debian</p>
+      </a>
+      
+    </div>
+    
+    {# Pricing #}
+    <div class="bg-gradient-to-br from-emerald-50 to-white border border-emerald-200 rounded-2xl p-8 max-w-lg mx-auto text-center">
+      <h3 class="text-2xl font-bold text-[color:var(--color-brand-primary)] mb-2">Full License</h3>
+      <div class="flex items-baseline justify-center gap-2 mb-4">
+        <span class="text-4xl font-bold text-[color:var(--color-brand-primary)]">£49</span>
+        <span class="text-[color:var(--color-font-main)]">one-time</span>
+      </div>
+      <p class="text-[color:var(--color-font-main)] mb-6">
+        After your 30-day trial, purchase once and use forever. 
+        Includes all future updates.
+      </p>
+      <ul class="text-left space-y-2 mb-6">
+        <li class="flex items-center gap-2 text-[color:var(--color-font-main)]">
+          <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          Unlimited transactions
+        </li>
+        <li class="flex items-center gap-2 text-[color:var(--color-font-main)]">
+          <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          All reports and exports
+        </li>
+        <li class="flex items-center gap-2 text-[color:var(--color-font-main)]">
+          <svg class="w-5 h-5 text-emerald-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+          </svg>
+          Lifetime updates
+        </li>
+      </ul>
+    </div>
+    
+  </div>
+</section>
+{% endblock %}
+
+{% block faq_content %}
+{# FAQ 1 #}
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group" open>
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        What does "offline-first" mean?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        The software runs entirely on your computer without needing an internet connection. Your financial data never leaves your device — it's stored locally in a database file that you control. No accounts, no cloud sync, no data harvesting.
+      </div>
+    </div>
+  </details>
+</div>
+
+{# FAQ 2 #}
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        Is this suitable for UK self-assessment?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        Yes! The software includes categories aligned with HMRC self-assessment boxes for self-employed income and expenses. Reports are designed to give you the figures you need for your tax return. However, this is a bookkeeping tool, not tax software — you'll still submit your return through HMRC or your accountant.
+      </div>
+    </div>
+  </details>
+</div>
+
+{# FAQ 3 #}
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        Can I use this on multiple computers?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        Your license covers personal use on your own computers. You can install it on your desktop and laptop. To sync data between machines, simply copy the database file using your preferred method (USB drive, Dropbox, etc.).
+      </div>
+    </div>
+  </details>
+</div>
+
+{# FAQ 4 #}
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        What if I lose my data?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        The software includes a backup feature that creates a copy of your database file. We recommend backing up regularly and storing copies somewhere safe — an external drive, cloud storage, or both. You're in control of your backups, just like you're in control of your data.
+      </div>
+    </div>
+  </details>
+</div>
+{% endblock %}
+
+{% block final_cta_title %}Ready for Simpler Bookkeeping?{% endblock %}
+{% block final_cta_text %}Download the free trial and see how easy self-employed bookkeeping can be. No account required.{% endblock %}
+
+{% block final_cta_buttons %}
+<div class="flex flex-wrap justify-center gap-4">
+  <a href="#download" class="inline-flex items-center px-8 py-4 bg-white text-[color:var(--color-brand-primary)] font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+    Download Free Trial
+    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+    </svg>
+  </a>
+  <a href="#" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+    View Documentation
+  </a>
+</div>
+{% endblock %}
+
+{% block docs_link %}{% url 'studio:bookkeeping_docs' %}{% endblock %}

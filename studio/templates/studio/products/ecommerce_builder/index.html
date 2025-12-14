@@ -1,0 +1,491 @@
+{% extends "studio/base_landing.html" %}
+{% load static %}
+
+{% block product_name %}Mini eCommerce Builder{% endblock %}
+{% block meta_desc %}Build your own digital download store without monthly fees. A complete Django-based eCommerce system for selling digital products, courses, and downloads. Self-hosted and fully customisable.{% endblock %}
+{% block meta_keys %}ecommerce builder, digital download store, Django ecommerce, sell digital products, self-hosted store, no subscription ecommerce{% endblock %}
+
+{% block breadcrumb_extra %}
+<li><span class="mx-2">›</span></li>
+<li><a href="{% url 'studio:products_index' %}" class="hover:text-[color:var(--color-brand-accent)] transition-colors">Products</a></li>
+{% endblock %}
+{% block breadcrumb_current %}eCommerce Builder{% endblock %}
+
+{% block product_category %}Flagship Product{% endblock %}
+
+{% block hero_title %}Mini eCommerce Builder{% endblock %}
+
+{% block product_tagline %}
+Build your digital store. Own it forever.
+{% endblock %}
+
+{% block product_description %}
+A complete Django-based eCommerce system for selling digital products, courses, and downloads. 
+No monthly fees, no revenue share, no platform lock-in. Self-host on any VPS and keep 100% of your sales.
+{% endblock %}
+
+{% block product_cta %}
+<a href="#pricing" class="inline-flex items-center px-8 py-4 bg-[color:var(--color-brand-primary)] text-white font-semibold rounded-lg hover:bg-[color:var(--color-brand-accent)] transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+  Get Started — £149
+  <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+  </svg>
+</a>
+<a href="{% url 'studio:ecommerce_builder_docs' %}" class="inline-flex items-center px-8 py-4 border-2 border-[color:var(--color-brand-primary)] text-[color:var(--color-brand-primary)] font-semibold rounded-lg hover:bg-[color:var(--color-brand-primary)] hover:text-white transition-all duration-300">
+  View Documentation
+</a>
+{% endblock %}
+
+{% block product_icon %}
+<svg class="w-24 h-24 md:w-32 md:h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+</svg>
+{% endblock %}
+
+{% block benefits_items %}
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+  </svg>
+  <span class="text-sm font-medium">No Monthly Fees</span>
+</div>
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+  </svg>
+  <span class="text-sm font-medium">Self-Hosted</span>
+</div>
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+  </svg>
+  <span class="text-sm font-medium">Full Source Code</span>
+</div>
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+  </svg>
+  <span class="text-sm font-medium">100% Revenue Yours</span>
+</div>
+{% endblock %}
+
+{% block features_label %}What's Included{% endblock %}
+{% block features_title %}Everything You Need to Sell Digital Products{% endblock %}
+{% block features_subtitle %}A complete eCommerce solution built with Django and Tailwind CSS, ready to deploy.{% endblock %}
+
+{% block features_content %}
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  
+  {# Product Management #}
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Product Management</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Create unlimited products with descriptions, pricing, categories, and secure file delivery. 
+      Support for PDFs, videos, courses, and any digital format.
+    </p>
+  </div>
+  
+  {# Secure Checkout #}
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Secure Checkout</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Stripe integration for secure payments. PCI-compliant checkout flow with 
+      instant delivery after purchase. Accept cards from anywhere.
+    </p>
+  </div>
+  
+  {# Download Protection #}
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Download Protection</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Time-limited download links, download counting, and secure file storage. 
+      Prevent unauthorised sharing while keeping it simple for customers.
+    </p>
+  </div>
+  
+  {# Customer Accounts #}
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Customer Accounts</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Optional customer registration with order history, re-download access, 
+      and purchase management. Or allow guest checkout for simplicity.
+    </p>
+  </div>
+  
+  {# Tailwind CSS v4 #}
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Tailwind CSS v4</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Modern, responsive design with Tailwind CSS v4. Fully customisable templates, 
+      dark mode support, and beautiful out-of-the-box styling.
+    </p>
+  </div>
+  
+  {# Django 6 Ready #}
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Django 6 Ready</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Built on Django 6 with best practices. Clean architecture, comprehensive tests, 
+      and detailed documentation. Easy to extend and maintain.
+    </p>
+  </div>
+  
+</div>
+{% endblock %}
+
+{% block demo_section %}
+<section class="py-20 bg-slate-900">
+  <div class="w-full max-w-6xl mx-auto px-6 md:px-10 lg:px-16">
+    
+    <div class="text-center mb-12">
+      <p class="uppercase text-sm tracking-widest text-purple-400 mb-3 font-medium">
+        See It In Action
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Built for Real Businesses
+      </h2>
+    </div>
+    
+    {# Screenshot mockup #}
+    <div class="relative max-w-4xl mx-auto">
+      <div class="bg-slate-800 rounded-t-xl p-3 flex items-center gap-2">
+        <div class="flex gap-1.5">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+        <div class="flex-1 text-center">
+          <span class="text-slate-400 text-sm">yourstore.com/products</span>
+        </div>
+      </div>
+      <div class="bg-white rounded-b-xl p-8">
+        <div class="grid md:grid-cols-3 gap-6">
+          {# Product cards mockup #}
+          <div class="border border-gray-200 rounded-lg p-4">
+            <div class="aspect-video bg-gradient-to-br from-purple-100 to-purple-50 rounded-lg mb-4"></div>
+            <div class="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
+            <div class="h-3 bg-gray-100 rounded w-full mb-3"></div>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-[color:var(--color-brand-primary)]">£29</span>
+              <span class="px-3 py-1 bg-purple-600 text-white text-sm rounded">Buy Now</span>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-lg p-4">
+            <div class="aspect-video bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-lg mb-4"></div>
+            <div class="h-4 bg-gray-200 rounded w-2/3 mb-2"></div>
+            <div class="h-3 bg-gray-100 rounded w-5/6 mb-3"></div>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-[color:var(--color-brand-primary)]">£49</span>
+              <span class="px-3 py-1 bg-purple-600 text-white text-sm rounded">Buy Now</span>
+            </div>
+          </div>
+          <div class="border border-gray-200 rounded-lg p-4">
+            <div class="aspect-video bg-gradient-to-br from-blue-100 to-blue-50 rounded-lg mb-4"></div>
+            <div class="h-4 bg-gray-200 rounded w-4/5 mb-2"></div>
+            <div class="h-3 bg-gray-100 rounded w-full mb-3"></div>
+            <div class="flex justify-between items-center">
+              <span class="font-bold text-[color:var(--color-brand-primary)]">£19</span>
+              <span class="px-3 py-1 bg-purple-600 text-white text-sm rounded">Buy Now</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+{% endblock %}
+
+{% block how_it_works_title %}Get Your Store Live in 3 Steps{% endblock %}
+
+{% block how_it_works_content %}
+<div class="grid md:grid-cols-3 gap-12">
+  <div class="relative text-center">
+    <div class="w-16 h-16 bg-[color:var(--color-brand-primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">1</div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Purchase & Download</h3>
+    <p class="text-[color:var(--color-font-main)]">
+      Get instant access to the complete source code, documentation, and deployment guides. 
+      One payment, lifetime access.
+    </p>
+  </div>
+  <div class="relative text-center">
+    <div class="w-16 h-16 bg-[color:var(--color-brand-primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">2</div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Configure & Customise</h3>
+    <p class="text-[color:var(--color-font-main)]">
+      Set up your Stripe account, customise the design, and add your products. 
+      Follow the step-by-step documentation.
+    </p>
+  </div>
+  <div class="relative text-center">
+    <div class="w-16 h-16 bg-[color:var(--color-brand-primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">3</div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Deploy & Sell</h3>
+    <p class="text-[color:var(--color-font-main)]">
+      Deploy to any VPS or hosting service. Start selling immediately with 
+      zero transaction fees beyond Stripe's standard rates.
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+{% block pricing_section %}
+<section id="pricing" class="py-20 bg-white">
+  <div class="w-full max-w-4xl mx-auto px-6 md:px-10 lg:px-16">
+    
+    <div class="text-center mb-12">
+      <p class="uppercase text-sm tracking-widest text-[color:var(--color-brand-accent)] mb-3 font-medium">
+        Simple Pricing
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-[color:var(--color-brand-primary)] mb-4">
+        One Price. Forever Yours.
+      </h2>
+      <p class="text-lg text-[color:var(--color-font-main)]">
+        No subscriptions, no hidden fees, no revenue share.
+      </p>
+    </div>
+    
+    {# Pricing Card #}
+    <div class="max-w-lg mx-auto">
+      <div class="relative bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200 rounded-2xl p-8 shadow-xl">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+          <span class="px-4 py-1 bg-purple-600 text-white text-sm font-semibold rounded-full">Most Popular</span>
+        </div>
+        
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-bold text-[color:var(--color-brand-primary)] mb-2">Complete Package</h3>
+          <div class="flex items-baseline justify-center gap-2">
+            <span class="text-5xl font-bold text-[color:var(--color-brand-primary)]">£149</span>
+            <span class="text-[color:var(--color-font-main)]">one-time</span>
+          </div>
+        </div>
+        
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Complete source code (Django 6 + Tailwind v4)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Stripe payment integration</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Secure download delivery system</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Step-by-step deployment documentation</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Lifetime updates via GitHub</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Commercial license for unlimited sites</span>
+          </li>
+        </ul>
+        
+        <a href="#" class="block w-full text-center px-8 py-4 bg-[color:var(--color-brand-primary)] text-white font-semibold rounded-lg hover:bg-[color:var(--color-brand-accent)] transition-all duration-300 shadow-lg hover:shadow-xl">
+          Buy Now — £149
+        </a>
+        
+        <p class="text-center text-sm text-[color:var(--color-font-main)]/70 mt-4">
+          30-day money-back guarantee
+        </p>
+      </div>
+    </div>
+    
+    {# Comparison #}
+    <div class="mt-16 text-center">
+      <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-6">Compare to SaaS alternatives</h3>
+      <div class="inline-flex flex-wrap justify-center gap-4 text-sm">
+        <div class="px-4 py-2 bg-gray-100 rounded-lg">
+          <span class="text-[color:var(--color-font-main)]">Gumroad: </span>
+          <span class="text-red-600 font-medium">10% + fees per sale</span>
+        </div>
+        <div class="px-4 py-2 bg-gray-100 rounded-lg">
+          <span class="text-[color:var(--color-font-main)]">Shopify: </span>
+          <span class="text-red-600 font-medium">£25+/month</span>
+        </div>
+        <div class="px-4 py-2 bg-gray-100 rounded-lg">
+          <span class="text-[color:var(--color-font-main)]">Teachable: </span>
+          <span class="text-red-600 font-medium">£39+/month</span>
+        </div>
+        <div class="px-4 py-2 bg-emerald-100 rounded-lg">
+          <span class="text-[color:var(--color-font-main)]">Mini eCommerce: </span>
+          <span class="text-emerald-600 font-medium">£149 once</span>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+{% endblock %}
+
+{% block faq_content %}
+{# FAQ 1 #}
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        What technical skills do I need to use this?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        Basic familiarity with Django is helpful but not required. The documentation covers everything from setup to deployment. If you can follow instructions and use a terminal, you can get this running. For customisation, some Python/Django knowledge is beneficial.
+      </div>
+    </div>
+  </details>
+</div>
+
+{# FAQ 2 #}
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        What hosting do I need?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        Any VPS that can run Python/Django works. We recommend Digital Ocean, Hetzner, or Railway. A basic £5-10/month VPS is plenty for most stores. The documentation includes deployment guides for popular hosting platforms.
+      </div>
+    </div>
+  </details>
+</div>
+
+{# FAQ 3 #}
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        Can I use this for physical products too?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        This system is optimised for digital products with instant delivery. While you could adapt it for physical products, you'd need to add shipping logic yourself. For physical products, a dedicated solution like WooCommerce might be better suited.
+      </div>
+    </div>
+  </details>
+</div>
+
+{# FAQ 4 #}
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        Do you offer support?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        The package includes comprehensive documentation. For additional help, you can reach out via email for guidance. This is indie software — I'm one developer, not a support team — but I do my best to help customers succeed.
+      </div>
+    </div>
+  </details>
+</div>
+
+{# FAQ 5 #}
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        Can I see a demo before buying?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        Yes! Check out the live demo store at demo.todiane.com (link in documentation). You can browse products, test the checkout flow, and see how everything works. Plus there's a 30-day money-back guarantee if it's not right for you.
+      </div>
+    </div>
+  </details>
+</div>
+{% endblock %}
+
+{% block final_cta_title %}Ready to Own Your Store?{% endblock %}
+{% block final_cta_text %}Stop paying monthly fees. Start keeping 100% of your sales. Get the Mini eCommerce Builder today.{% endblock %}
+
+{% block final_cta_buttons %}
+<div class="flex flex-wrap justify-center gap-4">
+  <a href="#" class="inline-flex items-center px-8 py-4 bg-white text-[color:var(--color-brand-primary)] font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+    Buy Now — £149
+    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+    </svg>
+  </a>
+  <a href="{% url 'studio:ecommerce_builder_docs' %}" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+    Read the Docs
+  </a>
+</div>
+{% endblock %}
+
+{% block docs_link %}{% url 'studio:ecommerce_builder_docs' %}{% endblock %}

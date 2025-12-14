@@ -6,3 +6,4 @@ django-tinymce
 gunicorn
 Pillow
 psycopg[binary]
+stripe
