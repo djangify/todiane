@@ -7,3 +7,4 @@ gunicorn
 Pillow
 psycopg[binary]
 stripe
+beautifulsoup4

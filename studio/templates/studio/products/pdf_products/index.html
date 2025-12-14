@@ -1,0 +1,508 @@
+{% extends "studio/base_landing.html" %}
+{% load static %}
+
+{% block product_name %}PDF Products{% endblock %}
+{% block meta_desc %}Ready-to-use PDF templates and tools for your business. Professional planners, worksheets, ebooks, and lead magnets. Customisable Canva templates included.{% endblock %}
+{% block meta_keys %}PDF templates, digital planners, Canva templates, lead magnets, worksheets, ebook templates, printable products{% endblock %}
+
+{% block breadcrumb_extra %}
+<li><span class="mx-2">›</span></li>
+<li><a href="#" class="hover:text-[color:var(--color-brand-accent)] transition-colors">Products</a></li>
+{% endblock %}
+{% block breadcrumb_current %}PDF Products{% endblock %}
+
+{% block product_category %}Digital Products{% endblock %}
+
+{% block hero_title %}PDF Products{% endblock %}
+
+{% block product_tagline %}
+Professional templates. Ready to use.
+{% endblock %}
+
+{% block product_description %}
+Beautiful, ready-to-use PDF templates for planners, worksheets, ebooks, and lead magnets. 
+Includes editable Canva templates so you can customise everything to match your brand.
+{% endblock %}
+
+{% block product_cta %}
+<a href="#products" class="inline-flex items-center px-8 py-4 bg-[color:var(--color-brand-primary)] text-white font-semibold rounded-lg hover:bg-[color:var(--color-brand-accent)] transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+  Browse Products
+  <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+  </svg>
+</a>
+<a href="#" class="inline-flex items-center px-8 py-4 border-2 border-[color:var(--color-brand-primary)] text-[color:var(--color-brand-primary)] font-semibold rounded-lg hover:bg-[color:var(--color-brand-primary)] hover:text-white transition-all duration-300">
+  Custom Requests
+</a>
+{% endblock %}
+
+{% block product_icon %}
+<svg class="w-24 h-24 md:w-32 md:h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+</svg>
+{% endblock %}
+
+{% block benefits_items %}
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+  </svg>
+  <span class="text-sm font-medium">Instant Download</span>
+</div>
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
+  </svg>
+  <span class="text-sm font-medium">Canva Editable</span>
+</div>
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+  </svg>
+  <span class="text-sm font-medium">Print Ready</span>
+</div>
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+  </svg>
+  <span class="text-sm font-medium">Commercial License</span>
+</div>
+{% endblock %}
+
+{% block features_label %}Product Categories{% endblock %}
+{% block features_title %}Templates for Every Need{% endblock %}
+{% block features_subtitle %}Professional designs ready to download and customise for your brand or business.{% endblock %}
+
+{% block features_content %}
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  
+  <!-- Planners -->
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Digital Planners</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Daily, weekly, and monthly planners with hyperlinked tabs. Perfect for GoodNotes, 
+      Notability, or print. Multiple colour themes included.
+    </p>
+  </div>
+  
+  <!-- Worksheets -->
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Worksheets</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Goal-setting worksheets, habit trackers, budget planners, and more. 
+      Designed for coaches, educators, and content creators.
+    </p>
+  </div>
+  
+  <!-- Ebook Templates -->
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Ebook Templates</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Professional ebook layouts ready for your content. Cover designs, chapter layouts, 
+      and formatting guides included.
+    </p>
+  </div>
+  
+  <!-- Lead Magnets -->
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Lead Magnets</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Checklists, cheat sheets, and quick-start guides designed to grow your email list. 
+      High-converting designs that look professional.
+    </p>
+  </div>
+  
+  <!-- Canva Templates -->
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Canva Templates</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Every PDF comes with editable Canva templates. Change colours, fonts, images, 
+      and text with no design skills required.
+    </p>
+  </div>
+  
+  <!-- Commercial License -->
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Commercial License</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Use these templates in products you sell or give away. Perfect for coaches, 
+      course creators, and digital product sellers.
+    </p>
+  </div>
+  
+</div>
+{% endblock %}
+
+{% block demo_section %}
+<section id="products" class="py-20 bg-slate-900">
+  <div class="w-full max-w-6xl mx-auto px-6 md:px-10 lg:px-16">
+    
+    <div class="text-center mb-12">
+      <p class="uppercase text-sm tracking-widest text-purple-400 mb-3 font-medium">
+        Featured Products
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Ready to Download
+      </h2>
+    </div>
+    
+    <!-- Product grid mockup -->
+    <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+      <!-- Product 1 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+        <div class="aspect-[4/5] bg-gradient-to-br from-purple-100 to-purple-50 p-6 flex items-center justify-center">
+          <div class="w-full h-full border-2 border-dashed border-purple-200 rounded-lg flex items-center justify-center">
+            <svg class="w-16 h-16 text-purple-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="p-4">
+          <h4 class="font-semibold text-[color:var(--color-brand-primary)] mb-1">2025 Digital Planner</h4>
+          <p class="text-sm text-[color:var(--color-font-main)] mb-3">Hyperlinked PDF + Canva</p>
+          <span class="font-bold text-[color:var(--color-brand-primary)]">£19</span>
+        </div>
+      </div>
+      
+      <!-- Product 2 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+        <div class="aspect-[4/5] bg-gradient-to-br from-emerald-100 to-emerald-50 p-6 flex items-center justify-center">
+          <div class="w-full h-full border-2 border-dashed border-emerald-200 rounded-lg flex items-center justify-center">
+            <svg class="w-16 h-16 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+            </svg>
+          </div>
+        </div>
+        <div class="p-4">
+          <h4 class="font-semibold text-[color:var(--color-brand-primary)] mb-1">Goal Setting Bundle</h4>
+          <p class="text-sm text-[color:var(--color-font-main)] mb-3">10 Worksheets + Canva</p>
+          <span class="font-bold text-[color:var(--color-brand-primary)]">£12</span>
+        </div>
+      </div>
+      
+      <!-- Product 3 -->
+      <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+        <div class="aspect-[4/5] bg-gradient-to-br from-blue-100 to-blue-50 p-6 flex items-center justify-center">
+          <div class="w-full h-full border-2 border-dashed border-blue-200 rounded-lg flex items-center justify-center">
+            <svg class="w-16 h-16 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+        </div>
+        <div class="p-4">
+          <h4 class="font-semibold text-[color:var(--color-brand-primary)] mb-1">Ebook Template Pack</h4>
+          <p class="text-sm text-[color:var(--color-font-main)] mb-3">3 Layouts + Canva</p>
+          <span class="font-bold text-[color:var(--color-brand-primary)]">£24</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-10">
+      <p class="text-slate-400 text-sm">More products coming soon</p>
+    </div>
+    
+  </div>
+</section>
+{% endblock %}
+
+{% block how_it_works_title %}How It Works{% endblock %}
+
+{% block how_it_works_content %}
+<div class="grid md:grid-cols-3 gap-12">
+  <div class="relative text-center">
+    <div class="w-16 h-16 bg-[color:var(--color-brand-primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">1</div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Choose Your Product</h3>
+    <p class="text-[color:var(--color-font-main)]">
+      Browse the collection and pick the templates that fit your needs. 
+      Each product includes PDF and Canva versions.
+    </p>
+  </div>
+  <div class="relative text-center">
+    <div class="w-16 h-16 bg-[color:var(--color-brand-primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">2</div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Download & Customise</h3>
+    <p class="text-[color:var(--color-font-main)]">
+      Get instant access after purchase. Use the PDFs as-is or open 
+      in Canva to customise colours, fonts, and content.
+    </p>
+  </div>
+  <div class="relative text-center">
+    <div class="w-16 h-16 bg-[color:var(--color-brand-primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">3</div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Use or Sell</h3>
+    <p class="text-[color:var(--color-font-main)]">
+      Use for yourself, give to clients, or sell as your own product. 
+      Commercial license included with every purchase.
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+{% block pricing_section %}
+<section id="pricing" class="py-20 bg-white">
+  <div class="w-full max-w-4xl mx-auto px-6 md:px-10 lg:px-16">
+    
+    <div class="text-center mb-12">
+      <p class="uppercase text-sm tracking-widest text-[color:var(--color-brand-accent)] mb-3 font-medium">
+        Save With Bundles
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-[color:var(--color-brand-primary)] mb-4">
+        Get More For Less
+      </h2>
+      <p class="text-lg text-[color:var(--color-font-main)]">
+        Individual products or money-saving bundles — you choose.
+      </p>
+    </div>
+    
+    <!-- Pricing Cards -->
+    <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+      
+      <!-- Individual -->
+      <div class="bg-white border-2 border-gray-200 rounded-2xl p-8">
+        <div class="text-center mb-8">
+          <h3 class="text-xl font-bold text-[color:var(--color-brand-primary)] mb-2">Individual Products</h3>
+          <div class="flex items-baseline justify-center gap-2">
+            <span class="text-4xl font-bold text-[color:var(--color-brand-primary)]">£12-£29</span>
+            <span class="text-[color:var(--color-font-main)]">each</span>
+          </div>
+        </div>
+        
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">PDF files ready to use</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Canva template link</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Commercial license</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Instant download</span>
+          </li>
+        </ul>
+        
+        <a href="#products" class="block w-full text-center px-8 py-4 border-2 border-[color:var(--color-brand-primary)] text-[color:var(--color-brand-primary)] font-semibold rounded-lg hover:bg-[color:var(--color-brand-primary)] hover:text-white transition-all duration-300">
+          Browse Products
+        </a>
+      </div>
+      
+      <!-- Bundle -->
+      <div class="relative bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200 rounded-2xl p-8 shadow-xl">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+          <span class="px-4 py-1 bg-purple-600 text-white text-sm font-semibold rounded-full">Best Value</span>
+        </div>
+        
+        <div class="text-center mb-8">
+          <h3 class="text-xl font-bold text-[color:var(--color-brand-primary)] mb-2">Complete Bundle</h3>
+          <div class="flex items-baseline justify-center gap-2">
+            <span class="text-4xl font-bold text-[color:var(--color-brand-primary)]">£79</span>
+            <span class="text-[color:var(--color-font-main)] line-through">£150+</span>
+          </div>
+        </div>
+        
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">All current PDF products</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">All Canva templates</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Future products included</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Extended commercial license</span>
+          </li>
+        </ul>
+        
+        <a href="#" class="block w-full text-center px-8 py-4 bg-[color:var(--color-brand-primary)] text-white font-semibold rounded-lg hover:bg-[color:var(--color-brand-accent)] transition-all duration-300 shadow-lg hover:shadow-xl">
+          Get the Bundle — £79
+        </a>
+        
+        <p class="text-center text-sm text-[color:var(--color-font-main)]/70 mt-4">
+          Save over 45%
+        </p>
+      </div>
+      
+    </div>
+    
+  </div>
+</section>
+{% endblock %}
+
+{% block faq_content %}
+<!-- FAQ 1 -->
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        Do I need Canva Pro to edit the templates?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        No, the free version of Canva works perfectly. Some templates may use Pro elements which you can easily swap for free alternatives. The core templates are fully editable with a free Canva account.
+      </div>
+    </div>
+  </details>
+</div>
+
+<!-- FAQ 2 -->
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        Can I sell products I create with these templates?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        Yes! The commercial license allows you to use these templates in products you sell. You can customise them with your branding and sell as your own. You just can't resell the original template files themselves.
+      </div>
+    </div>
+  </details>
+</div>
+
+<!-- FAQ 3 -->
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        What file formats are included?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        Each product includes ready-to-use PDF files plus a link to the editable Canva template. From Canva, you can export to PDF, PNG, JPG, or print directly. Some products also include PNG versions.
+      </div>
+    </div>
+  </details>
+</div>
+
+<!-- FAQ 4 -->
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        Are the digital planners compatible with GoodNotes/Notability?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        Yes! The digital planners include hyperlinked tabs that work in GoodNotes, Notability, PDF Expert, and similar apps. They're designed for iPad but also work on other tablets and desktops.
+      </div>
+    </div>
+  </details>
+</div>
+
+<!-- FAQ 5 -->
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        Do you take custom requests?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        Yes, I do take on custom PDF and template projects. Get in touch via the contact form with details about what you need, and I'll let you know if it's something I can help with.
+      </div>
+    </div>
+  </details>
+</div>
+{% endblock %}
+
+{% block final_cta_title %}Ready to Create?{% endblock %}
+{% block final_cta_text %}Get professional templates that make you look good. Download instantly and start creating today.{% endblock %}
+
+{% block final_cta_buttons %}
+<div class="flex flex-wrap justify-center gap-4">
+  <a href="#products" class="inline-flex items-center px-8 py-4 bg-white text-[color:var(--color-brand-primary)] font-semibold rounded-lg  transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+    Browse Products
+    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+    </svg>
+  </a>
+  <a href="#" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg  transition-all duration-300">
+    Get the Bundle
+  </a>
+</div>
+{% endblock %}

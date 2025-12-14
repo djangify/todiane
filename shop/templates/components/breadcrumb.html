@@ -1,0 +1,71 @@
+<!-- JSON-LD BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "{{ request.scheme }}://{{ request.get_host }}{% url 'home' %}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Shop",
+      "item": "{{ request.scheme }}://{{ request.get_host }}{% url 'shop:product_list' %}"
+    }
+    {% if product.category %}
+    ,{
+      "@type": "ListItem",
+      "position": 3,
+      "name": "{{ product.category.name }}",
+      "item": "{{ request.scheme }}://{{ request.get_host }}{{ product.category.get_absolute_url }}"
+    }
+    {% endif %}
+    ,{
+      "@type": "ListItem",
+      "position": 4,
+      "name": "{{ product.title }}",
+      "item": "{{ request.build_absolute_uri }}"
+    }
+  ]
+}
+</script>
+
+<nav class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-3 mb-8" aria-label="Breadcrumb">
+  <ol class="flex items-center text-sm text-[color:var(--color-font-main)] gap-2">
+
+    <!-- Home -->
+    <li class="flex items-center text-sm">
+      <a href="/" class="hover:text-[color:var(--color-primary)] transition-colors">Home</a>
+      <i class="fa-solid fa-angle-right text-sm mx-2 text-[color:var(--color-accent)]"></i>
+    </li>
+
+    <!-- Shop -->
+    <li class="flex items-center text-sm">
+      <a href="{% url 'shop:product_list' %}" class="hover:text-[color:var(--color-primary)]  text-sm transition-colors">Shop</a>
+      {% if product.category %}
+      <i class="fa-solid fa-angle-right mx-2 text-[color:var(--color-accent)] text-sm"></i>
+      {% endif %}
+    </li>
+
+    <!-- Category -->
+    {% if product.category %}
+    <li class="flex items-center text-sm">
+      <a href="{{ product.category.get_absolute_url }}" class="hover:text-[color:var(--color-primary)] transition-colors text-sm">
+        {{ product.category.name }}
+      </a>
+      <i class="fa-solid text-sm fa-angle-right mx-2 text-[color:var(--color-brand-accent)]/70"></i>
+    </li>
+    {% endif %}
+
+    <!-- Current Product -->
+    {% if product %}
+    <li class="text-[color:var(--color-brand-accent)] text-sm">
+      {{ product.title|truncatechars:50 }}
+    </li>
+    {% endif %}
+  </ol>
+</nav>

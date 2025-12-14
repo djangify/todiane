@@ -53,5 +53,31 @@ USE_X_FORWARDED_PORT = True
 
 SITE_URL = "https://www.todiane.com"
 
-# Logging info for logging_config.py file
+
 from logging_config import LOGGING  # noqa: F401, E402
+
+
+# Admin configuration
+ADMINS = [
+    (
+        env("ADMIN_NAME", default="Admin"),  # noqa: F405
+        env("ADMIN_EMAIL", default="noreply@todiane.com"),  # noqa: F405
+    ),
+]
+
+DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL", default="noreply@todiane.com")  # noqa: F405
+SERVER_EMAIL = env("SERVER_EMAIL", default="noreply@todiane.com")  # noqa: F405
+
+# Additional security headers
+SECURE_HSTS_SECONDS = 31536000  # 1 year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+# Email settings for production
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = env("EMAIL_HOST", default="mail.privateemail.com")  # noqa: F405
+EMAIL_PORT = env("EMAIL_PORT", default=587)  # noqa: F405
+EMAIL_HOST_USER = env("EMAIL_HOST_USER")  # noqa: F405
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")  # noqa: F405
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False

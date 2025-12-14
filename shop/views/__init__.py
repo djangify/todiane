@@ -1,5 +1,3 @@
-from shop.views import product_list
-
 from .catalog import (
     product_list,
     product_detail,

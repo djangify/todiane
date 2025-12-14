@@ -1,0 +1,494 @@
+{% extends "studio/base_landing.html" %}
+{% load static %}
+
+{% block product_name %}Invoice Generator{% endblock %}
+{% block meta_desc %}Create professional invoices in seconds with this Django-based invoice generator. Self-hosted, customisable templates, PDF export, and client management built-in.{% endblock %}
+{% block meta_keys %}invoice generator, Django invoice, PDF invoices, self-hosted invoicing, freelancer invoices, small business invoicing{% endblock %}
+
+{% block breadcrumb_extra %}
+<li><span class="mx-2">›</span></li>
+<li><a href="#" class="hover:text-[color:var(--color-brand-accent)] transition-colors">Products</a></li>
+{% endblock %}
+{% block breadcrumb_current %}Invoice Generator{% endblock %}
+
+{% block product_category %}Business Tool{% endblock %}
+
+{% block hero_title %}Invoice Generator{% endblock %}
+
+{% block product_tagline %}
+Professional invoices. Zero hassle.
+{% endblock %}
+
+{% block product_description %}
+A complete Django-based invoicing system for freelancers and small businesses. 
+Create branded invoices, track payments, manage clients, and export to PDF. Self-hosted with no monthly fees.
+{% endblock %}
+
+{% block product_cta %}
+<a href="#pricing" class="inline-flex items-center px-8 py-4 bg-[color:var(--color-brand-primary)] text-white font-semibold rounded-lg hover:bg-[color:var(--color-brand-accent)] transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+  Get Started — £49
+  <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+  </svg>
+</a>
+<a href="#" class="inline-flex items-center px-8 py-4 border-2 border-[color:var(--color-brand-primary)] text-[color:var(--color-brand-primary)] font-semibold rounded-lg hover:bg-[color:var(--color-brand-primary)] hover:text-white transition-all duration-300">
+  View Documentation
+</a>
+{% endblock %}
+
+{% block product_icon %}
+<svg class="w-24 h-24 md:w-32 md:h-32 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+</svg>
+{% endblock %}
+
+{% block benefits_items %}
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+  </svg>
+  <span class="text-sm font-medium">Create in Seconds</span>
+</div>
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+  </svg>
+  <span class="text-sm font-medium">PDF Export</span>
+</div>
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+  </svg>
+  <span class="text-sm font-medium">Client Management</span>
+</div>
+<div class="flex flex-col items-center">
+  <svg class="w-8 h-8 mb-2 opacity-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+  </svg>
+  <span class="text-sm font-medium">No Monthly Fees</span>
+</div>
+{% endblock %}
+
+{% block features_label %}What's Included{% endblock %}
+{% block features_title %}Everything You Need for Professional Invoicing{% endblock %}
+{% block features_subtitle %}A complete invoicing solution built with Django and Tailwind CSS, ready to deploy.{% endblock %}
+
+{% block features_content %}
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+  
+  <!-- Invoice Templates -->
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Professional Templates</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Clean, professional invoice templates that you can customise with your logo, colours, 
+      and branding. Multiple layouts included.
+    </p>
+  </div>
+  
+  <!-- PDF Export -->
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">PDF Export</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Generate high-quality PDF invoices with one click. Perfect for emailing to clients 
+      or printing for your records.
+    </p>
+  </div>
+  
+  <!-- Client Management -->
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Client Management</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Store client details, addresses, and contact information. Quickly select clients 
+      when creating new invoices.
+    </p>
+  </div>
+  
+  <!-- Payment Tracking -->
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Payment Tracking</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Mark invoices as paid, pending, or overdue. Track outstanding payments and 
+      see your income at a glance.
+    </p>
+  </div>
+  
+  <!-- Recurring Invoices -->
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Recurring Invoices</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Set up recurring invoices for retainer clients. Automatically generate monthly 
+      or weekly invoices with ease.
+    </p>
+  </div>
+  
+  <!-- Django 6 Ready -->
+  <div class="group bg-white border border-[color:var(--color-brand-accent)]/30 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+      <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+      </svg>
+    </div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Django 6 Ready</h3>
+    <p class="text-[color:var(--color-font-main)] leading-relaxed">
+      Built on Django 6 with Tailwind CSS v4. Clean codebase, well-documented, 
+      and easy to extend for your needs.
+    </p>
+  </div>
+  
+</div>
+{% endblock %}
+
+{% block demo_section %}
+<section class="py-20 bg-slate-900">
+  <div class="w-full max-w-6xl mx-auto px-6 md:px-10 lg:px-16">
+    
+    <div class="text-center mb-12">
+      <p class="uppercase text-sm tracking-widest text-purple-400 mb-3 font-medium">
+        See It In Action
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+        Professional Invoices Made Simple
+      </h2>
+    </div>
+    
+    <!-- Invoice mockup -->
+    <div class="relative max-w-2xl mx-auto">
+      <div class="bg-slate-800 rounded-t-xl p-3 flex items-center gap-2">
+        <div class="flex gap-1.5">
+          <div class="w-3 h-3 rounded-full bg-red-500"></div>
+          <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+          <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        </div>
+        <div class="flex-1 text-center">
+          <span class="text-slate-400 text-sm">invoice-INV-2024-001.pdf</span>
+        </div>
+      </div>
+      <div class="bg-white rounded-b-xl p-8">
+        <!-- Invoice header -->
+        <div class="flex justify-between items-start mb-8">
+          <div>
+            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-lg mb-3"></div>
+            <div class="h-4 bg-gray-200 rounded w-32 mb-2"></div>
+            <div class="h-3 bg-gray-100 rounded w-24"></div>
+          </div>
+          <div class="text-right">
+            <div class="text-2xl font-bold text-[color:var(--color-brand-primary)] mb-2">INVOICE</div>
+            <div class="h-3 bg-gray-100 rounded w-28 ml-auto mb-1"></div>
+            <div class="h-3 bg-gray-100 rounded w-24 ml-auto"></div>
+          </div>
+        </div>
+        <!-- Invoice table mockup -->
+        <div class="border-t border-b border-gray-200 py-4 mb-4">
+          <div class="flex justify-between mb-3">
+            <div class="h-3 bg-gray-200 rounded w-1/3"></div>
+            <div class="h-3 bg-gray-200 rounded w-16"></div>
+          </div>
+          <div class="flex justify-between mb-3">
+            <div class="h-3 bg-gray-100 rounded w-1/2"></div>
+            <div class="h-3 bg-gray-100 rounded w-12"></div>
+          </div>
+          <div class="flex justify-between">
+            <div class="h-3 bg-gray-100 rounded w-2/5"></div>
+            <div class="h-3 bg-gray-100 rounded w-14"></div>
+          </div>
+        </div>
+        <!-- Total -->
+        <div class="flex justify-end">
+          <div class="text-right">
+            <span class="text-sm text-gray-500 mr-4">Total:</span>
+            <span class="text-xl font-bold text-[color:var(--color-brand-primary)]">£1,250.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+{% endblock %}
+
+{% block how_it_works_title %}Get Invoicing in 3 Steps{% endblock %}
+
+{% block how_it_works_content %}
+<div class="grid md:grid-cols-3 gap-12">
+  <div class="relative text-center">
+    <div class="w-16 h-16 bg-[color:var(--color-brand-primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">1</div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Purchase & Install</h3>
+    <p class="text-[color:var(--color-font-main)]">
+      Get instant access to the complete source code. Follow the setup guide to 
+      deploy on your own server.
+    </p>
+  </div>
+  <div class="relative text-center">
+    <div class="w-16 h-16 bg-[color:var(--color-brand-primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">2</div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Add Your Branding</h3>
+    <p class="text-[color:var(--color-font-main)]">
+      Upload your logo, set your business details, and customise the invoice 
+      templates to match your brand.
+    </p>
+  </div>
+  <div class="relative text-center">
+    <div class="w-16 h-16 bg-[color:var(--color-brand-primary)] text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-6 shadow-lg">3</div>
+    <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-3">Create & Send</h3>
+    <p class="text-[color:var(--color-font-main)]">
+      Start creating professional invoices. Export to PDF and send to your 
+      clients in seconds.
+    </p>
+  </div>
+</div>
+{% endblock %}
+
+{% block pricing_section %}
+<section id="pricing" class="py-20 bg-white">
+  <div class="w-full max-w-4xl mx-auto px-6 md:px-10 lg:px-16">
+    
+    <div class="text-center mb-12">
+      <p class="uppercase text-sm tracking-widest text-[color:var(--color-brand-accent)] mb-3 font-medium">
+        Simple Pricing
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-[color:var(--color-brand-primary)] mb-4">
+        One Price. Unlimited Invoices.
+      </h2>
+      <p class="text-lg text-[color:var(--color-font-main)]">
+        No subscriptions, no per-invoice fees, no limits.
+      </p>
+    </div>
+    
+    <!-- Pricing Card -->
+    <div class="max-w-lg mx-auto">
+      <div class="relative bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200 rounded-2xl p-8 shadow-xl">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2">
+          <span class="px-4 py-1 bg-purple-600 text-white text-sm font-semibold rounded-full">Best Value</span>
+        </div>
+        
+        <div class="text-center mb-8">
+          <h3 class="text-2xl font-bold text-[color:var(--color-brand-primary)] mb-2">Complete Package</h3>
+          <div class="flex items-baseline justify-center gap-2">
+            <span class="text-5xl font-bold text-[color:var(--color-brand-primary)]">£49</span>
+            <span class="text-[color:var(--color-font-main)]">one-time</span>
+          </div>
+        </div>
+        
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Complete source code (Django 6 + Tailwind v4)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Multiple professional templates</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">PDF export functionality</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Client and payment management</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Setup and deployment documentation</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-6 h-6 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span class="text-[color:var(--color-font-main)]">Lifetime updates via GitHub</span>
+          </li>
+        </ul>
+        
+        <a href="#" class="block w-full text-center px-8 py-4 bg-[color:var(--color-brand-primary)] text-white font-semibold rounded-lg hover:bg-[color:var(--color-brand-accent)] transition-all duration-300 shadow-lg hover:shadow-xl">
+          Buy Now — £49
+        </a>
+        
+        <p class="text-center text-sm text-[color:var(--color-font-main)]/70 mt-4">
+          30-day money-back guarantee
+        </p>
+      </div>
+    </div>
+    
+    <!-- Comparison -->
+    <div class="mt-16 text-center">
+      <h3 class="text-xl font-semibold text-[color:var(--color-brand-primary)] mb-6">Compare to SaaS alternatives</h3>
+      <div class="inline-flex flex-wrap justify-center gap-4 text-sm">
+        <div class="px-4 py-2 bg-gray-100 rounded-lg">
+          <span class="text-[color:var(--color-font-main)]">FreshBooks: </span>
+          <span class="text-red-600 font-medium">£12+/month</span>
+        </div>
+        <div class="px-4 py-2 bg-gray-100 rounded-lg">
+          <span class="text-[color:var(--color-font-main)]">QuickBooks: </span>
+          <span class="text-red-600 font-medium">£10+/month</span>
+        </div>
+        <div class="px-4 py-2 bg-gray-100 rounded-lg">
+          <span class="text-[color:var(--color-font-main)]">Xero: </span>
+          <span class="text-red-600 font-medium">£15+/month</span>
+        </div>
+        <div class="px-4 py-2 bg-emerald-100 rounded-lg">
+          <span class="text-[color:var(--color-font-main)]">Invoice Generator: </span>
+          <span class="text-emerald-600 font-medium">£49 once</span>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+{% endblock %}
+
+{% block faq_content %}
+<!-- FAQ 1 -->
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        Can I customise the invoice templates?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        Absolutely. The templates are built with Django and Tailwind CSS, so you can customise colours, fonts, layouts, and add your logo. The documentation includes guidance on making common customisations.
+      </div>
+    </div>
+  </details>
+</div>
+
+<!-- FAQ 2 -->
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        Does this include payment processing?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        This tool focuses on creating and tracking invoices. Payment processing is not included — you can add your payment details to invoices and track payments manually, or extend the system to integrate with payment providers if needed.
+      </div>
+    </div>
+  </details>
+</div>
+
+<!-- FAQ 3 -->
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        Can I use this for VAT invoices?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        Yes, the system supports VAT and tax calculations. You can set your VAT rate and the templates include proper VAT number display and breakdown. Suitable for UK and EU businesses.
+      </div>
+    </div>
+  </details>
+</div>
+
+<!-- FAQ 4 -->
+<div class="border-b border-[color:var(--color-brand-accent)]/20" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        What hosting do I need?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        Any VPS that runs Python/Django works well. Railway, Digital Ocean, or Hetzner are all good options. A basic £5-10/month server is plenty for personal or small business use.
+      </div>
+    </div>
+  </details>
+</div>
+
+<!-- FAQ 5 -->
+<div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <details class="group">
+    <summary class="flex justify-between items-center cursor-pointer py-5 text-left list-none">
+      <h3 class="text-lg font-semibold text-[color:var(--color-brand-primary)] pr-8" itemprop="name">
+        Is there a limit on invoices?
+      </h3>
+      <span class="flex-shrink-0 w-8 h-8 rounded-full bg-[color:var(--color-brand-light)] flex items-center justify-center group-open:rotate-180 transition-transform duration-300">
+        <svg class="w-5 h-5 text-[color:var(--color-brand-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </span>
+    </summary>
+    <div class="pb-5 pr-12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="text-[color:var(--color-font-main)] leading-relaxed" itemprop="text">
+        No limits whatsoever. Create as many invoices, clients, and PDF exports as you need. It's your system on your server — you're only limited by your hosting resources.
+      </div>
+    </div>
+  </details>
+</div>
+{% endblock %}
+
+{% block final_cta_title %}Ready to Simplify Your Invoicing?{% endblock %}
+{% block final_cta_text %}Stop paying monthly fees for something you do a few times a month. Own your invoicing system forever.{% endblock %}
+
+{% block final_cta_buttons %}
+<div class="flex flex-wrap justify-center gap-4">
+  <a href="#" class="inline-flex items-center px-8 py-4 bg-white text-[color:var(--color-brand-primary)] font-semibold rounded-lg  transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+    Buy Now — £49
+    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+    </svg>
+  </a>
+  <a href="#" class="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg  transition-all duration-300">
+    Read the Docs
+  </a>
+</div>
+{% endblock %}

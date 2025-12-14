@@ -119,14 +119,14 @@ def send_admin_new_order_email(order):
         ]
         items_list = "\n".join(items_data)
 
-        subject = f"New MTDify Order Received — #{order.order_id}"
+        subject = f"New ToDianeDev Order Received — #{order.order_id}"
         from_email = settings.DEFAULT_FROM_EMAIL
         to_email = [
             settings.DEFAULT_FROM_EMAIL
         ]  # or replace with specific admin email(s)
 
         message = (
-            f"A new order has been completed on MTDify.\n\n"
+            f"A new order has been completed on ToDianeDev.\n\n"
             f"Order ID: {order.order_id}\n"
             f"Customer: {order.email}\n"
             f"Status: {order.status}\n"

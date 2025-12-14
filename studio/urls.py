@@ -42,4 +42,21 @@ urlpatterns = [
         TemplateView.as_view(template_name="studio/tools/index.html"),
         name="tools_index",
     ),
+    # Sites
+    path(
+        "sites/",
+        TemplateView.as_view(template_name="studio/sites/index.html"),
+        name="sites_index",
+    ),
+    # Tools
+    path(
+        "tools/",
+        TemplateView.as_view(template_name="studio/tools/index.html"),
+        name="tools_index",
+    ),
+    path(
+        "tools/creative/",
+        TemplateView.as_view(template_name="studio/tools/creative/index.html"),
+        name="creative_tools",
+    ),
 ]

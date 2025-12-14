@@ -1,0 +1,47 @@
+<!--Assumptions:
+  
+  - Buttons appear ONLY when a corresponding file exists-->
+  
+
+{% if product.available_platforms %}
+
+  {% for platform in product.available_platforms %}
+    <form
+      method="post"
+      action="{% url 'shop:cart_add' product.id %}"
+      class="flex items-center justify-between gap-4 mb-4"
+    >
+      {% csrf_token %}
+
+      <input type="hidden" name="platform" value="{{ platform }}">
+
+      <div class="flex items-center gap-3">
+        <label class="text-sm font-medium text-[color:var(--color-font-main)]">
+          Qty:
+        </label>
+        <input
+          type="number"
+          name="quantity"
+          value="1"
+          min="1"
+          max="10"
+          class="w-16 px-3 py-2 border border-[color:var(--color-brand-accent)] rounded text-center"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="flex-1 bg-[color:var(--color-brand-primary)] hover:bg-[color:var(--color-brand-accent)] text-white font-bold py-3 px-6 rounded-sm transition duration-300 hover:scale-105 shadow-sm"
+      >
+        {% if platform == "windows" %}
+          Buy Windows Version
+        {% elif platform == "mac" %}
+          Buy Mac Version
+        {% elif platform == "pdf" %}
+          Buy PDF
+        {% endif %}
+      </button>
+    </form>
+  {% endfor %}
+
+{% endif %}

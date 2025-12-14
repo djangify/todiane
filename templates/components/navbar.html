@@ -13,10 +13,7 @@
       <li>
         <a href="/" class="text-[color:var(--color-font-main)] hover:text-[color:var(--color-brand-primary)] transition">Home</a>
       </li>
-
-      <li>
-        <a href="/studio/about/" class="text-[color:var(--color-font-main)] hover:text-[color:var(--color-brand-primary)] transition">About</a>
-      </li>
+      
 
       <li>
         <a href="{% url 'blog:list' %}" class="text-[color:var(--color-font-main)] hover:text-[color:var(--color-brand-primary)] transition">Blog</a>
@@ -26,12 +23,24 @@
     <!-- Right Section -->
     <div class="flex items-center gap-4">
       
-      <!-- Studio Button -->
-      <a href="/studio/"
+      <!-- Shop Button -->
+      <a href="/shop/"
          class="uppercase border-2 border-[color:var(--color-brand-primary)] text-[color:var(--color-brand-primary)] text-xs sm:text-sm px-3 py-1.5 rounded font-semibold hover:bg-[color:var(--color-brand-primary)] hover:text-white transition">
-        Studio
+        Shop
       </a>
-
+             <!-- Cart Icon -->
+        <a href="{% url 'shop:cart_detail' %}" class="relative text-[color:var(--color-brand-primary)] hover:text-[color:var(--color-brand-accent)]">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-1.2 6h12.4M10 21a1 1 0 11-2 0 1 1 0 012 0zm8 0a1 1 0 11-2 0 1 1 0 012 0z" />
+          </svg>
+          {% with total_items=cart|length %}
+            {% if total_items > 0 %}
+              <span class="absolute -top-2 -right-2 bg-red-600 text-white text-xs rounded-full px-1">{{ total_items }}</span>
+            {% endif %}
+          {% endwith %}
+        </a>
+      </div>
       <!-- Hamburger -->
       <button id="menu-toggle" aria-label="Toggle menu"
               aria-expanded="false"
@@ -49,9 +58,10 @@
        class="hidden fixed inset-0 z-40 flex-col items-center justify-center bg-[color:var(--color-brand-light)] text-[color:var(--color-font-main)] py-4 space-y-3 border-t border-[color:var(--color-brand-accent)] backdrop-blur-md sm:hidden">
 
     <a href="/" class="block w-full text-center py-2 text-[color:var(--color-font-main)] transition">Home</a>
-    <a href="/studio/about/" class="block w-full text-center py-2 hover:text-[color:var(--color-font-main)] transition">About</a>
-    <a href="{% url 'blog:list' %}" class="block w-full text-center py-2 hover:text-[color:var(--color-font-main)] transition">Blog</a>
+    
+    
     <a href="/studio/" class="block w-full text-center py-2 hover:text-[color:var(--color-font-main)] transition font-semibold">Studio</a>
+    <a href="{% url 'blog:list' %}" class="block w-full text-center py-2 hover:text-[color:var(--color-font-main)] transition">Blog</a>
   </div>
 
   <!-- Mobile Menu Script -->

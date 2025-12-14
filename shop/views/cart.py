@@ -6,7 +6,7 @@ from django.contrib import messages
 from django.conf import settings
 import stripe
 import logging
-from .cart import Cart
+from ..cart import Cart
 
 
 stripe.api_key = settings.STRIPE_SECRET_KEY

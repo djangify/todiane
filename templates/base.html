@@ -44,7 +44,7 @@
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript><link rel="stylesheet" href="{% static 'css/output.css' %}" /></noscript>
-
+    <script src="https://js.stripe.com/v3/" defer></script>
     <link
       rel="preload"
       href="{% static 'css/custom.css' %}"
@@ -155,12 +155,13 @@
     <div id="gallery-modal"></div>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
 
+ 
     <!-- 🔹 Deferred JS -->
     <script src="{% static 'js/app.js' %}" defer></script>
     <script src="{% static 'js/gallery.js' %}"defer></script>
     <script src="{% static 'js/messages.js' %}" defer></script>
     <script src="{% static 'js/category-filter.js' %}" defer></script>
-    <script src="{% static 'js/accordion.js' %}" defer></script>
+   
 
     <!-- 🔹 Cookie Logic -->
     <script>

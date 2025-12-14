@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     "portfolio",
     "shop",
     "studio",
+    "infopages",
+    "accounts",
     "widget_tweaks",
     "tinymce",
 ]
@@ -83,6 +85,15 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+# Stripe settings
+STRIPE_PUBLIC_KEY = env("STRIPE_PUBLIC_KEY", default="pk_test_placeholder")
+STRIPE_SECRET_KEY = env("STRIPE_SECRET_KEY", default="sk_test_placeholder")
+STRIPE_WEBHOOK_SECRET = env("STRIPE_WEBHOOK_SECRET", default="whsec_placeholder")
+
+CART_SESSION_ID = "cart"
+
 
 TINYMCE_DEFAULT_CONFIG = {
     "height": 700,
