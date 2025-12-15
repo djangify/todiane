@@ -17,7 +17,10 @@ ALLOWED_HOSTS = ["*"]
 
 SITE_ID = 1
 
-AUTH_USER_MODEL = "accounts.User"
+AUTHENTICATION_BACKENDS = [
+    "accounts.backends.EmailModelBackend",
+    "django.contrib.auth.backends.ModelBackend",
+]
 
 INSTALLED_APPS = [
     "django.contrib.admin",

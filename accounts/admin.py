@@ -1,88 +1,24 @@
 from django.contrib import admin
-from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from django.utils.translation import gettext_lazy as _
 
-from .models import User
+from .models import AccountStatus, EmailVerificationToken, MemberResource
 
 
-@admin.register(User)
-class UserAdmin(BaseUserAdmin):
-    """
-    Admin configuration for custom email-only User model
-    """
+@admin.register(AccountStatus)
+class AccountStatusAdmin(admin.ModelAdmin):
+    list_display = ("user", "is_verified", "verified_at")
+    list_filter = ("is_verified",)
+    search_fields = ("user__email", "user__username")
 
-    ordering = ("email",)
-    list_display = (
-        "email",
-        "first_name",
-        "last_name",
-        "is_verified",
-        "is_staff",
-        "is_active",
-        "date_joined",
-    )
-    list_filter = (
-        "is_verified",
-        "is_staff",
-        "is_active",
-        "is_superuser",
-    )
 
-    search_fields = ("email", "first_name", "last_name")
+@admin.register(EmailVerificationToken)
+class EmailVerificationTokenAdmin(admin.ModelAdmin):
+    list_display = ("user", "token", "created_at")
+    search_fields = ("user__email", "user__username")
+    readonly_fields = ("token", "created_at")
 
-    fieldsets = (
-        (None, {"fields": ("email", "password")}),
-        (_("Personal info"), {"fields": ("first_name", "last_name")}),
-        (
-            _("Permissions"),
-            {
-                "fields": (
-                    "is_verified",
-                    "is_active",
-                    "is_staff",
-                    "is_superuser",
-                    "groups",
-                    "user_permissions",
-                )
-            },
-        ),
-        (_("Important dates"), {"fields": ("last_login", "date_joined")}),
-    )
 
-    add_fieldsets = (
-        (
-            None,
-            {
-                "classes": ("wide",),
-                "fields": (
-                    "email",
-                    "first_name",
-                    "last_name",
-                    "password1",
-                    "password2",
-                    "is_verified",
-                    "is_staff",
-                    "is_active",
-                ),
-            },
-        ),
-    )
-
-    readonly_fields = ("last_login", "date_joined")
-
-    filter_horizontal = (
-        "groups",
-        "user_permissions",
-    )
-
-    def get_fieldsets(self, request, obj=None):
-        """
-        Simplify admin form for non-superusers
-        """
-        if not request.user.is_superuser:
-            return (
-                (None, {"fields": ("email",)}),
-                (_("Personal info"), {"fields": ("first_name", "last_name")}),
-                (_("Status"), {"fields": ("is_verified", "is_active")}),
-            )
-        return super().get_fieldsets(request, obj)
+@admin.register(MemberResource)
+class MemberResourceAdmin(admin.ModelAdmin):
+    list_display = ("title", "is_active", "created_at")
+    list_filter = ("is_active",)
+    search_fields = ("title", "description")

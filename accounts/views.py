@@ -1,7 +1,5 @@
-# accounts/views.py
-
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import login, logout, authenticate, get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.urls import reverse
@@ -9,9 +7,12 @@ from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.conf import settings
+from django.utils import timezone
 
-from .models import User, EmailVerificationToken, MemberResource
+from .models import EmailVerificationToken, MemberResource, AccountStatus
 from shop.models import OrderItem
+
+User = get_user_model()
 
 
 # -------------------------
@@ -26,12 +27,17 @@ def register_view(request):
             messages.error(request, "An account with this email already exists.")
             return redirect("accounts:register")
 
+        # username is required internally; generate one quietly
+        username = email.split("@")[0]
+
         user = User.objects.create_user(
+            username=username,
             email=email,
             password=password,
             is_active=True,
-            is_verified=False,
         )
+
+        AccountStatus.objects.create(user=user, is_verified=False)
 
         token = EmailVerificationToken.objects.create(user=user)
         send_verification_email(request, user, token)
@@ -69,17 +75,16 @@ def verification_sent(request):
 
 
 def verify_email(request, token):
-    try:
-        token_obj = EmailVerificationToken.objects.get(token=token)
-    except EmailVerificationToken.DoesNotExist:
-        return render(request, "accounts/verification_failed.html")
+    token_obj = get_object_or_404(EmailVerificationToken, token=token)
 
     if not token_obj.is_valid():
         return render(request, "accounts/verification_failed.html")
 
-    user = token_obj.user
-    user.is_verified = True
-    user.save()
+    status, _ = AccountStatus.objects.get_or_create(user=token_obj.user)
+    status.is_verified = True
+    status.verified_at = timezone.now()
+    status.save()
+
     token_obj.delete()
 
     return render(request, "accounts/verification_success.html")
@@ -93,10 +98,11 @@ def login_view(request):
         email = request.POST.get("email")
         password = request.POST.get("password")
 
-        user = authenticate(request, email=email, password=password)
+        user = authenticate(request, username=email, password=password)
 
         if user:
-            if not user.is_verified:
+            status = AccountStatus.objects.filter(user=user).first()
+            if not status or not status.is_verified:
                 messages.error(request, "Please verify your email first.")
                 return redirect("accounts:verification_sent")
 
